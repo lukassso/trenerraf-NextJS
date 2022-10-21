@@ -1,7 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-};
+require("dotenv").config();
 
-module.exports = nextConfig;
+module.exports = {
+  env: {
+    NEXT_EXAMPLE_CMS_DATOCMS_API_TOKEN:
+    process.env.NEXT_EXAMPLE_CMS_DATOCMS_API_TOKEN,
+  },
+};
