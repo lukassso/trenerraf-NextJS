@@ -15,6 +15,10 @@ export default function Meta({ title, description }: LayoutProps) {
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000" />
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap"
+          rel="stylesheet"
+        />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
         <meta name="theme-color" content="#000" />

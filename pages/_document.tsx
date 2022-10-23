@@ -1,7 +1,4 @@
 import { Html, Head, Main, NextScript } from 'next/document';
-import Meta from '@/components/meta';
-import createEmotionCache from '../providers/create-emotion-cache';
-import createEmotionServer from '@emotion/server/create-instance';
 
 export default function Document() {
   return (
