@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-import Container from '@/components/container';
 import PostBody from '@/components/post-body';
 import MoreStories from '@/components/more-stories';
 import Header from '@/components/header';
@@ -20,7 +19,7 @@ export default function Post({ post, morePosts, preview }) {
   }
   return (
     <Layout preview={preview} description="blog post description" title="blog post title">
-      <Container>
+      <div>
         <Header />
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
@@ -40,7 +39,7 @@ export default function Post({ post, morePosts, preview }) {
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </>
         )}
-      </Container>
+      </div>
     </Layout>
   );
 }
