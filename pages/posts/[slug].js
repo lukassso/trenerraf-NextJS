@@ -10,9 +10,8 @@ import Layout from '@/components/layout';
 import PostTitle from '@/components/post-title';
 import Head from 'next/head';
 import { CMS_NAME } from '@/lib/constants';
-// import markdownToHtml from '@/lib/markdownToHtml';
-import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api';
-import markdownToHtml from '../../lib/markdownToHtml';
+import { getAllPostsWithSlug, getPostAndMorePosts } from '@/lib/api';
+import markdownToHtml from '@/lib/markdownToHtml';
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
@@ -20,7 +19,7 @@ export default function Post({ post, morePosts, preview }) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <Layout preview={preview}>
+    <Layout preview={preview} description="blog post description" title="blog post title">
       <Container>
         <Header />
         {router.isFallback ? (

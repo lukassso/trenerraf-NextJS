@@ -22,10 +22,10 @@ const Navbar = () => {
       <div>
         <div>
           <div>
-            <Link href="/" passHref>
-              <div>logo</div>
-              {navigationList}
-            </Link>
+            {/*<Link href="/" passHref>*/}
+            <div>logo</div>
+            {navigationList}
+            {/*</Link>*/}
           </div>
           {/*{!mobile && (*/}
           {/*    <div className={styles.hamburger}>*/}
