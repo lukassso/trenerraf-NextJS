@@ -1,5 +1,6 @@
-import Meta, { LayoutProps } from './meta';
-import Navbar from '../layouts/navbar';
+import Navbar from '@/layouts/navbar';
+import { LayoutProps } from '@/interfaces/interface-home-page';
+import Meta from '@/components/meta';
 
 export default function Layout({ children, title, description }: LayoutProps) {
   return (

@@ -10,7 +10,9 @@
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "dependencies": {
+    "@emotion/cache": "^11.10.3",
     "@emotion/react": "^11.10.4",
+    "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.4",
     "@mui/material": "^5.10.10",
     "classnames": "^2.3.2",
