@@ -4,7 +4,7 @@ import { Box, Stack } from '@mui/material';
 export default function TestimonialsSection() {
   return (
     <CustomContainer sx={{ bgcolor: 'tomato' }} maxWidth={false}>
-      <Box sx={{ bgcolor: '#d0b5a1', height: '70vh' }}>
+      <Box id="opinie" sx={{ bgcolor: '#d0b5a1', height: '70vh' }}>
         <Stack
           justifyContent="center"
           alignItems="center"

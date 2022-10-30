@@ -4,12 +4,12 @@ export const navigations: INavbar[] = [
   {
     id: 1,
     path: '/',
-    label: 'home',
+    label: 'Home',
     singlePage: false,
   },
   {
     id: 2,
-    path: '/metamorfozy',
+    path: 'metamorfozy',
     label: 'Metamorfozy',
     singlePage: true,
   },
@@ -21,7 +21,7 @@ export const navigations: INavbar[] = [
   },
   {
     id: 4,
-    path: '/opinie',
+    path: 'opinie',
     label: 'Opinie',
     singlePage: true,
   },
@@ -33,7 +33,7 @@ export const navigations: INavbar[] = [
   },
   {
     id: 6,
-    path: '/kontakt',
+    path: 'kontakt',
     label: 'Kontakt',
     singlePage: true,
   },

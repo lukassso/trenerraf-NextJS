@@ -1,6 +1,6 @@
 import { Box, Stack } from '@mui/material';
 import CustomContainer from '@/components/custom-container';
-import { Link as ScrollLink } from 'react-scroll';
+import { motion } from 'framer-motion';
 
 export default function AboutSection() {
   return (

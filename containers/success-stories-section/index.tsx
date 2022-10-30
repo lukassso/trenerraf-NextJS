@@ -4,7 +4,7 @@ import { Box, Stack } from '@mui/material';
 export default function SuccessStoriesSection() {
   return (
     <CustomContainer sx={{ bgcolor: 'tomato' }} maxWidth={false}>
-      <Box sx={{ bgcolor: '#d0a1ce', height: '25vh' }}>
+      <Box id="metamorfozy" sx={{ bgcolor: '#d0a1ce', height: '25vh' }}>
         <Stack
           justifyContent="center"
           alignItems="center"
