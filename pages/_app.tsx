@@ -1,11 +1,13 @@
-import '@/styles/index.css';
 import { AppProps } from 'next/app';
 import { useEffect, useState } from 'react';
 import AppLoader from '@/components/app-loader';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import theme from '@/styles/theme';
+import '@/styles/react-slick.css';
 import createEmotionCache from '@/lib/create-emotion-cache';
 import { CacheProvider, EmotionCache } from '@emotion/react';
+import 'slick-carousel/slick/slick.css';
+// import 'slick-carousel/slick/slick-theme.css';
 
 const clientSideEmotionCache = createEmotionCache();
 

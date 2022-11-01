@@ -1,9 +1,9 @@
 import { Box, Grid, Typography, useMediaQuery, useTheme, Fade, Fab } from '@mui/material';
 import PhoneIcon from '@mui/icons-material/Phone';
-import YellowPlumSvg from '../../assets/yellowPlumSvg';
-import trenerRafalHero from '../../assets/trener-rafal-tlo-hero.png';
 import Image from 'next/image';
 import { HeroClaimStyle } from '@/containers/hero-section/hero-section.styled';
+import YellowPlumSvg from '@/assets/yellowPlumSvg';
+import trenerRafalHero from '@/assets/trener-rafal-tlo-hero.png';
 
 const HeroSection = () => {
   const { breakpoints } = useTheme();
