@@ -7,15 +7,15 @@ const theme = createTheme({
     },
   },
   palette: {
+    mode: 'light',
     common: {
       black: '#101010',
       white: '#ffffff',
-      // type: 'light',
     },
     primary: {
       light: '#213b87',
       main: '#101010',
-      dark: '#101010',
+      // dark: '#101010',
     },
     secondary: {
       main: '#FDC100',

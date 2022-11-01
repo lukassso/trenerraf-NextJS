@@ -1,11 +1,14 @@
-import React, { FC } from 'react';
-import Box from '@mui/material/Box';
+import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
-import { navigations } from './navbar.data';
+import { navigations } from './navigation.data';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { MenuItem, Box } from '@mui/material';
 
-export const Navbar: FC = () => {
+export const Navigation: ({ Element, onClick }: { Element: any; onClick?: () => void }) => JSX.Element = ({
+  Element = MenuItem,
+  onClick,
+}) => {
   const router = useRouter();
 
   const addRoute = (destination: string) => {
@@ -16,7 +19,7 @@ export const Navbar: FC = () => {
   };
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
+    <>
       {navigations.map(({ path: destination, label, singlePage }) => (
         <>
           {router.pathname === '/' ? (
@@ -29,27 +32,35 @@ export const Navbar: FC = () => {
                 spy={true}
                 smooth={true}
                 duration={350}
+                onClick={onClick}
+                sx={{ cursor: 'pointer' }}
               >
-                {label}
+                <Element>{label}</Element>
               </Box>
             ) : (
-              <Link href={destination} prefetch={false}>
-                <a>{label}</a>
+              <Link href={destination}>
+                <a>
+                  <Element>{label}</Element>
+                </a>
               </Link>
             )
           ) : singlePage ? (
-            <Link href={addRoute(destination)} prefetch={false}>
-              <a>{label}</a>
+            <Link href={addRoute(destination)}>
+              <a>
+                <Element>{label}</Element>
+              </a>
             </Link>
           ) : (
-            <Link href={destination} prefetch={false}>
-              <a>{label}</a>
+            <Link href={destination}>
+              <a>
+                <Element>{label}</Element>
+              </a>
             </Link>
           )}
         </>
       ))}
-    </Box>
+    </>
   );
 };
 
-export default Navbar;
+export default Navigation;
