@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { MenuItem, Box } from '@mui/material';
 
-export const Navigation: ({ Element, onClick }: { Element: any; onClick?: () => void }) => JSX.Element = ({
+const Navigation: ({ Element, onClick }: { Element: any; onClick?: () => void }) => JSX.Element = ({
   Element = MenuItem,
   onClick,
 }) => {

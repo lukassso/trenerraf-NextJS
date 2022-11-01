@@ -1,1 +1,1 @@
-export * from './header-navigation';
+export { default } from './header-navigation';

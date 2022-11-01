@@ -6,7 +6,7 @@ import { BoxStyle, MenuItemStyle } from './header-navigation.styled';
 import LogoSvg from '../../assets/logoSvg';
 import Link from 'next/link';
 
-export const HeaderNavigation = () => {
+const HeaderNavigation = () => {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const { breakpoints } = useTheme();
@@ -74,3 +74,5 @@ export const HeaderNavigation = () => {
     </>
   );
 };
+
+export default HeaderNavigation;
