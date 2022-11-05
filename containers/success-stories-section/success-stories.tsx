@@ -90,7 +90,7 @@ const SuccessStories: FC = () => {
           <Grid item xs={12}>
             <Slider {...sliderConfig}>
               {stories.map((item) => (
-                <CardItem key={String(item.id)} item={item} />
+                <CardItem key={String(item.id)} story={item} />
               ))}
             </Slider>
           </Grid>
