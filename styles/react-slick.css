@@ -52,81 +52,84 @@
   left: -25px;
 }
 
+.slick-slider {
+  padding-bottom: 30px;
+}
 /* Dots */
-.slick-dotted.slick-slider {
-  margin-bottom: 30px;
-}
+/*.slick-dotted.slick-slider {*/
+/*  margin-bottom: 30px;*/
+/*}*/
 
-.slick-dots {
-  position: absolute;
-  bottom: -25px;
+/*.slick-dots {*/
+/*  position: absolute;*/
+/*  bottom: -25px;*/
 
-  display: block;
+/*  display: block;*/
 
-  width: 100%;
-  padding: 0;
-  margin: 0;
+/*  width: 100%;*/
+/*  padding: 0;*/
+/*  margin: 0;*/
 
-  list-style: none;
+/*  list-style: none;*/
 
-  text-align: center;
-}
-.slick-dots li {
-  position: relative;
+/*  text-align: center;*/
+/*}*/
+/*.slick-dots li {*/
+/*  position: relative;*/
 
-  display: inline-block;
+/*  display: inline-block;*/
 
-  width: 20px;
-  height: 20px;
-  margin: 0 5px;
-  padding: 0;
+/*  width: 20px;*/
+/*  height: 20px;*/
+/*  margin: 0 5px;*/
+/*  padding: 0;*/
 
-  cursor: pointer;
-}
-.slick-dots li button {
-  line-height: 0;
+/*  cursor: pointer;*/
+/*}*/
+/*.slick-dots li button {*/
+/*  line-height: 0;*/
 
-  display: block;
+/*  display: block;*/
 
-  width: 20px;
-  height: 20px;
-  padding: 5px;
+/*  width: 20px;*/
+/*  height: 20px;*/
+/*  padding: 5px;*/
 
-  cursor: pointer;
+/*  cursor: pointer;*/
 
-  border: 0;
-  outline: none;
-  background: transparent;
-}
-.slick-dots li button:hover,
-.slick-dots li button:focus {
-  outline: none;
-}
-.slick-dots li button:hover:before,
-.slick-dots li button:focus:before {
-  opacity: 1;
-}
-.slick-dots li button:before {
-  font-size: 6px;
-  line-height: 20px;
+/*  border: 0;*/
+/*  outline: none;*/
+/*  background: transparent;*/
+/*}*/
+/*.slick-dots li button:hover,*/
+/*.slick-dots li button:focus {*/
+/*  outline: none;*/
+/*}*/
+/*.slick-dots li button:hover:before,*/
+/*.slick-dots li button:focus:before {*/
+/*  opacity: 1;*/
+/*}*/
+/*.slick-dots li button:before {*/
+/*  font-size: 6px;*/
+/*  line-height: 20px;*/
 
-  position: absolute;
-  top: 0;
-  left: 0;
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
 
-  width: 20px;
-  height: 20px;
+/*  width: 20px;*/
+/*  height: 20px;*/
 
-  content: '•';
-  text-align: center;
+/*  content: '•';*/
+/*  text-align: center;*/
 
-  opacity: 0.25;
-  color: black;
+/*  opacity: 0.25;*/
+/*  color: black;*/
 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.slick-dots li.slick-active button:before {
-  opacity: 0.75;
-  color: black;
-}
+/*  -webkit-font-smoothing: antialiased;*/
+/*  -moz-osx-font-smoothing: grayscale;*/
+/*}*/
+/*.slick-dots li.slick-active button:before {*/
+/*  opacity: 0.75;*/
+/*  color: black;*/
+/*}*/

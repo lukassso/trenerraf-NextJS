@@ -89,7 +89,7 @@ const HeroSection = () => {
             p={4}
             // className={classes.heroPicturesWrapper}
           >
-            <Box>
+            <Box sx={{ display: 'flex', position: 'relative' }}>
               <Box
                 sx={{
                   position: 'absolute',
