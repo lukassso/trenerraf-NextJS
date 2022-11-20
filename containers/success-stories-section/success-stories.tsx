@@ -44,7 +44,7 @@ const SuccessStories: FC = () => {
     speed: 300,
     slidesToShow: matchMobileView ? 1 : 3,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: !matchMobileView && true,
     prevArrow: <SliderArrow type="prev" />,
     nextArrow: <SliderArrow type="next" />,
     customPaging: () => (
@@ -59,11 +59,14 @@ const SuccessStories: FC = () => {
       component="section"
       id="metamorfozy"
       sx={{
-        pt: {
+        mt: {
           xs: 6,
           md: 8,
         },
-        pb: 14,
+        mb: {
+          xs: 0,
+          md: 30,
+        },
         backgroundColor: 'background.default',
       }}
     >
