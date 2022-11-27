@@ -14,7 +14,7 @@ const Navigation: ({ Element, onClick }: { Element: any; onClick?: () => void })
   const addRoute = (destination: string) => {
     const path = '/#';
     const concatStrings: string = path.concat(destination);
-    console.log('concat', concatStrings);
+    // console.log('concat', concatStrings);
     return concatStrings;
   };
 

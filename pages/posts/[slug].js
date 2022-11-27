@@ -11,6 +11,7 @@ import Head from 'next/head';
 import { CMS_NAME } from '@/lib/constants';
 import { getAllPostsWithSlug, getPostAndMorePosts } from '@/lib/api';
 import markdownToHtml from '@/lib/markdownToHtml';
+import { Image, StructuredText } from 'react-datocms';
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
@@ -33,7 +34,23 @@ export default function Post({ post, morePosts, preview }) {
                 {/*<meta property="og:image" content={post.ogImage.url} />*/}
               </Head>
               <PostHeader title={post.title} coverImage={post.coverImage} date={post.date} author={post.author} />
-              <PostBody content={post.content} />
+              {/*<PostBody content={post.content} />*/}
+              <StructuredText
+                data={post.content}
+                renderBlock={({ record }) => {
+                  switch (record.__typename) {
+                    case 'ImageBlockRecord':
+                      let responsiveImage = record.image.responsiveImage;
+                      return (
+                        <p>
+                          <Image data={responsiveImage} />
+                        </p>
+                      );
+                    default:
+                      return null;
+                  }
+                }}
+              />
             </article>
             <SectionSeparator />
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}
@@ -53,7 +70,7 @@ export async function getStaticProps({ params, preview = false }) {
       preview,
       post: {
         ...data?.post,
-        content,
+        // content,
       },
       morePosts: data?.morePosts ?? [],
     },
