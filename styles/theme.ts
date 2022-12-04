@@ -68,7 +68,7 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: 'Montserrat, Roboto',
-    fontSize: 13,
+    fontSize: 14,
     h1: {
       fontSize: '2.5rem',
       lineHeight: 1.2,
