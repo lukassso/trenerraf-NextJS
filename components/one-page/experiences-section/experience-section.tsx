@@ -1,6 +1,6 @@
-import { experiencesSectionData } from '@/containers/experiences-section/experiences-section.data';
+import { experiencesSectionData } from '@/components/one-page/experiences-section/experiences-section.data';
 import { Box, Container, Grid, Paper, Typography } from '@mui/material';
-import { PaperBox, PriceHeader, PrizesText } from '@/containers/experiences-section/experience-section.styled';
+import { PaperBox, PriceHeader, PrizesText } from '@/components/one-page/experiences-section/experience-section.styled';
 
 export default function ExperiencesSection() {
   return (

@@ -1,6 +1,6 @@
 import { LayoutProps } from '@/interfaces/interface-home-page';
-import Meta from '@/components/meta';
-import HeaderNavigation from '@/containers/navbar/header-navigation';
+import Meta from '@/components/common/meta';
+import HeaderNavigation from '@/components/navbar';
 
 export default function Layout({ children, title, description }: LayoutProps) {
   return (

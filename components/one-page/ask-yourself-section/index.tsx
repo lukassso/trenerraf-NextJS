@@ -1,4 +1,4 @@
-import CustomContainer from '@/components/custom-container';
+import CustomContainer from '@/components/common/custom-container';
 import { Box, Stack } from '@mui/material';
 
 export default function AskYourselfSection() {

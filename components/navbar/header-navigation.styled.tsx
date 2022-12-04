@@ -1,5 +1,5 @@
 import { styled } from '@mui/system';
-import { AppBar, Box, MenuItem } from '@mui/material';
+import { MenuItem } from '@mui/material';
 
 export const MenuItemStyle = styled(MenuItem)(({ theme }) => ({
   backgroundColor: theme.palette.background.paper,

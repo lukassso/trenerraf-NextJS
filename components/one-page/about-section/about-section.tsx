@@ -1,5 +1,5 @@
 import { Box, Container, Typography, useMediaQuery, useTheme } from '@mui/material';
-import { BoxRoot } from '@/containers/about-section/about-section.styled';
+import { BoxRoot } from '@/components/one-page/about-section/about-section.styled';
 
 export default function AboutSection() {
   const { breakpoints } = useTheme();

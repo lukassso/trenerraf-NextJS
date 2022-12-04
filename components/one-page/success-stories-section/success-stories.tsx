@@ -3,8 +3,8 @@ import { FC } from 'react';
 import Slider, { Settings } from 'react-slick';
 import IconArrowBack from '@mui/icons-material/ArrowBack';
 import IconArrowForward from '@mui/icons-material/ArrowForward';
-import { stories } from '@/containers/success-stories-section/success-stories.data';
-import CardItem from '@/containers/success-stories-section/card-item';
+import { stories } from '@/components/one-page/success-stories-section/success-stories.data';
+import CardItem from '@/components/one-page/success-stories-section/card-item';
 
 interface SliderArrowArrow {
   onClick?: () => void;

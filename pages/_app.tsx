@@ -1,6 +1,6 @@
 import { AppProps } from 'next/app';
 import { useEffect, useState } from 'react';
-import AppLoader from '@/components/app-loader';
+import AppLoader from '@/components/common/app-loader';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import theme from '@/styles/theme';
 import '@/styles/react-slick.css';

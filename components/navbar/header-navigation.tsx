@@ -1,9 +1,9 @@
 import { AppBar, Box, IconButton, Menu, Toolbar, useMediaQuery, useTheme } from '@mui/material';
 import React, { useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
-import Navbar from '@/containers/navbar/navigation';
+import Navbar from '@/components/navbar/navigation';
 import { BoxStyle, MenuItemStyle } from './header-navigation.styled';
-import LogoSvg from '../../assets/logoSvg';
+import LogoSvg from '@/assets/logoSvg';
 import Link from 'next/link';
 
 const HeaderNavigation = () => {

@@ -1,5 +1,5 @@
 import { Avatar, Box, Button, CircularProgress, Container, Divider, Typography } from '@mui/material';
-import { testimonials, testimonials2 } from '@/containers/testimonials-section/testimonials-section.data';
+import { testimonials, testimonials2 } from '@/components/one-page/testimonials-section/testimonials-section.data';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useReducer } from 'react';

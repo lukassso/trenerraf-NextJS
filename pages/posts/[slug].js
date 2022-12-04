@@ -1,17 +1,15 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-import PostBody from '@/components/post-body';
-import MoreStories from '@/components/more-stories';
-import Header from '@/components/header';
-import PostHeader from '@/components/post-header';
-import SectionSeparator from '@/components/section-separator';
-import Layout from '@/components/layout';
-import PostTitle from '@/components/post-title';
+// import PostBody from '@/components/post-body';
+import Layout from '@/components/common/layout';
 import Head from 'next/head';
 import { CMS_NAME } from '@/lib/constants';
 import { getAllPostsWithSlug, getPostAndMorePosts } from '@/lib/api';
 import markdownToHtml from '@/lib/markdownToHtml';
 import { Image, StructuredText } from 'react-datocms';
+import { Box } from '@mui/material';
+import PostHeader from '@/components/blog/blog-posts/post-header';
+import MoreStories from '@/components/blog/blog-list/more-stories';
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
@@ -21,12 +19,11 @@ export default function Post({ post, morePosts, preview }) {
   return (
     <Layout preview={preview} description="blog post description" title="blog post title">
       <div>
-        <Header />
         {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
+          <Box>Loading…</Box>
         ) : (
           <>
-            <article>
+            <Box component="article" sx={{ mt: 24 }}>
               <Head>
                 <title>
                   {post.title} | Next.js Blog Example with {CMS_NAME}
@@ -51,8 +48,7 @@ export default function Post({ post, morePosts, preview }) {
                   }
                 }}
               />
-            </article>
-            <SectionSeparator />
+            </Box>
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </>
         )}

@@ -1,12 +1,12 @@
-import Layout from '@/components/layout';
+import Layout from '@/components/common/layout';
 import Head from 'next/head';
 import { CMS_NAME } from '@/lib/constants';
-import AboutSection from '@/containers/about-section';
-import HeroSection from '@/containers/hero-section';
-import SuccessStories from '@/containers/success-stories-section';
-import TestimonialsSection from '@/containers/testimonials-section';
-import ExperiencesSection from '@/containers/experiences-section';
-import AskYourselfSection from '@/containers/ask-yourself-section';
+import AboutSection from '@/containers/../components/one-page/about-section';
+import HeroSection from '@/containers/../components/one-page/hero-section';
+import SuccessStories from '@/containers/../components/one-page/success-stories-section';
+import TestimonialsSection from '@/containers/../components/one-page/testimonials-section';
+import ExperiencesSection from '@/containers/../components/one-page/experiences-section';
+import AskYourselfSection from '@/containers/../components/one-page/ask-yourself-section';
 
 export default function Index() {
   return (
