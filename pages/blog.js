@@ -2,9 +2,9 @@ import Layout from '@/components/common/layout';
 import { getAllPostsForHome } from '@/lib/api';
 import Head from 'next/head';
 import { CMS_NAME } from '@/lib/constants';
-import { BoxRoot } from './blog.styled';
 import MoreStories from '@/components/blog/blog-list/more-stories';
 import HeroPost from '@/components/blog/blog-list/hero-post';
+import BoxRoot from './blog.styled';
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0];
