@@ -1,8 +1,10 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
 
+// width={899} height={814}
+
 const YellowPlumSvg = (props: SVGProps<SVGSVGElement>) => (
-  <svg width={899} height={814} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+  <svg width="100%" height="100%" fill="none" viewBox="0 0 899 814" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path
       d="M156.727 169.359C223 82.5 367.5 10.585 716.839 10.585 1066.18 10.585 871 763.5 475.944 804.673 80.887 845.846 31.227 732.859 13.227 661c-18-71.858 77.226-404.783 143.5-491.641Z"
       fill="#000"

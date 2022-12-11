@@ -39,11 +39,13 @@ const HeaderNavigation = () => {
       <AppBar elevation={2} color="inherit" position="fixed">
         <Toolbar>
           <Box display="flex" alignItems="center" justifyContent="space-between" flexGrow="1">
-            <Link color="inherit" href="/">
-              <a>
-                <LogoSvg width={140} height={50} viewBox="0 0 354 111" />
-              </a>
-            </Link>
+            <Box sx={{ display: 'flex', height: '100%', width: '100%', maxWidth: 140, maxHeight: 50 }}>
+              <Link color="inherit" href="/">
+                <a>
+                  <LogoSvg viewBox="0 0 354 111" />
+                </a>
+              </Link>
+            </Box>
             <Box
               component="nav"
               sx={{

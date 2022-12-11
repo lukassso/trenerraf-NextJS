@@ -1,5 +1,35 @@
 import { styled } from '@mui/system';
-import { Box } from '@mui/material';
+import { Box, Fab } from '@mui/material';
+import TextLoop from 'react-text-loop';
+
+export const TextLoopStyle = styled(TextLoop)(() => ({
+  marginLeft: 5,
+  position: 'relative',
+  top: -1,
+}));
+
+export const FabPhonePulse = styled(Fab)(({ theme }) => ({
+  '@keyframes pulse': {
+    '0%': {
+      boxShadow: '0 0 0 0 rgba(204,169,44, 0.8)',
+    },
+    '20%': {
+      boxShadow: '0 0 0 20px rgba(204,169,44, 0)',
+    },
+    '100%': {
+      boxShadow: '0 0 0 0 rgba(204,169,44, 0)',
+    },
+  },
+  width: theme.spacing(30),
+  height: theme.spacing(30),
+  borderRadius: '50%',
+  background: theme.palette.primary.main,
+  animation: `pulse 3.5s infinite linear`,
+  [theme.breakpoints.down('sm')]: {
+    width: theme.spacing(22),
+    height: theme.spacing(22),
+  },
+}));
 
 export const HeroClaimStyle = styled(Box)(({ theme }) => ({
   padding: theme.spacing(55, 10, 10, 40),
@@ -17,7 +47,7 @@ export const HeroClaimStyle = styled(Box)(({ theme }) => ({
   },
   [theme.breakpoints.down('sm')]: {
     padding: theme.spacing(5),
-    paddingTop: theme.spacing(7),
+    paddingTop: theme.spacing(27),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -29,9 +59,6 @@ export const HeroClaimStyle = styled(Box)(({ theme }) => ({
     textAlign: 'left',
     paddingBottom: theme.spacing(8),
     paddingTop: theme.spacing(5),
-    // transform: '',
-    // opacity: 1,
-    // transition: 'opacity 4.75s ease-in-out',
     [theme.breakpoints.down('lg')]: {
       fontSize: '3rem',
     },

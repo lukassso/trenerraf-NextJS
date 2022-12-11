@@ -1,7 +1,7 @@
 import { Box, Grid, Typography, useMediaQuery, useTheme, Fade, Fab } from '@mui/material';
 import PhoneIcon from '@mui/icons-material/Phone';
 import Image from 'next/image';
-import { HeroClaimStyle } from '@/components/one-page/hero-section/hero-section.styled';
+import { FabPhonePulse, HeroClaimStyle, TextLoopStyle } from '@/components/one-page/hero-section/hero-section.styled';
 import YellowPlumSvg from '@/assets/yellowPlumSvg';
 import trenerRafalHero from '@/assets/trener-rafal-tlo-hero.png';
 
@@ -10,96 +10,51 @@ const HeroSection = () => {
   const matchMobileView = useMediaQuery(breakpoints.down('md'));
 
   return (
-    <section
-    // className={classes.root}
-    >
-      <Grid
-        container
-        // className={classes.container}
-      >
+    <section>
+      <Grid container>
         <Grid item xs={12} md={7}>
           <HeroClaimStyle>
             <Box>
-              <Typography
-                // className={classes.testAnimate}
-                variant="h1"
-                component="h3"
-              >
+              <Typography variant="h1" component="h3">
                 Stań się lepszą wersją siebie!
               </Typography>
-              <Typography
-                variant="h3"
-                component="h2"
-                // className={classes.textLoopWrapper}
-              >
+              <Typography variant="h3" component="h2">
                 Rafał Kiszło - Trener Personalny i najlepszy motywator w mieście! Zapraszam na wspólne treningi
-                {/*<TextLoop*/}
-                {/*    // className={classes.textLoopWrapper}*/}
-                {/*    springConfig={{*/}
-                {/*        stiffness: 70,*/}
-                {/*        damping: 31,*/}
-                {/*    }}*/}
-                {/*    interval={5000}*/}
-                {/*    adjustingSpeed={500}*/}
-                {/*>*/}
-                <Typography
-                  component="span"
-                  // className={classes.textLoopWrapper}
+                <TextLoopStyle
+                  springConfig={{
+                    stiffness: 70,
+                    damping: 31,
+                  }}
+                  interval={5000}
+                  adjustingSpeed={500}
                 >
-                  na Mokotowie
-                </Typography>
-                {/*<Typography*/}
-                {/*    component="span"*/}
-                {/*    // className={classes.textLoopWrapper}*/}
-                {/*>*/}
-                {/*    {' '}*/}
-                {/*    na Wilanowie{' '}*/}
-                {/*</Typography>*/}
-                {/* <Typography variant="h3" component="h2"  className={classes.textLoopWrapper}>
-                                    // Rafał Kiszło - Trener Personalny i najlepszy
-                                    // motywator w mieście! Zapraszam na wspólne
-                                    // treningi na Mokotowie.
-                                </Typography> */}
-                {/*</TextLoop>*/}
-                {/*{' '}.*/}
+                  <Typography> na Mokotowie</Typography>
+                  <Typography> na Wilanowie </Typography>
+                </TextLoopStyle>
               </Typography>
             </Box>
-            <Box
-              display="flex"
-              alignItems="center"
-              justifyContent="center"
-              height="100%"
-              // className={classes.iconPhoneWrapper}
-            >
-              <Fade in appear={false} timeout={1500}>
-                <Fab
-                  // className={classes.phonePulse}
-                  color="primary"
-                  aria-label="call"
-                  href="tel:+48608472294"
-                >
-                  <PhoneIcon color="secondary" style={{ fontSize: 57 }} />
-                </Fab>
-              </Fade>
+            <Box display="flex" alignItems="center" justifyContent="center" height="100%">
+              <FabPhonePulse color="primary" aria-label="call" href="tel:+48608472294">
+                <PhoneIcon color="secondary" style={{ fontSize: 57 }} />
+              </FabPhonePulse>
             </Box>
           </HeroClaimStyle>
         </Grid>
         <Grid item xs={12} md={5}>
-          <Box
-            p={4}
-            // className={classes.heroPicturesWrapper}
-          >
-            <Box sx={{ display: 'flex', position: 'relative' }}>
-              <Box
-                sx={{
-                  position: 'absolute',
-                }}
-              >
-                <Image src={trenerRafalHero} alt="hero picture" />
-              </Box>
+          <Box sx={{ p: 4, overflow: 'hidden', position: 'relative', height: 'auto' }}>
+            <Box
+              sx={{
+                position: 'absolute',
+                zIndex: -1,
+                width: 'auto',
+                height: '100%',
+                maxWidth: 899,
+                maxHeight: 814,
+              }}
+            >
               <YellowPlumSvg />
             </Box>
-            <Box></Box>
+            <Image src={trenerRafalHero} alt="hero picture" />
           </Box>
         </Grid>
       </Grid>
