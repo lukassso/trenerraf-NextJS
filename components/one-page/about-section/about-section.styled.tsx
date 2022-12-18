@@ -10,5 +10,6 @@ export const BoxRoot = styled(Box)(({ theme }) => ({
   // maxHeight: 800,
   [theme.breakpoints.down('sm')]: {
     // maxHeight: 1000,
+    textAlign: 'center',
   },
 }));

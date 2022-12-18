@@ -20,7 +20,7 @@ export default function Index() {
         <ExperiencesSection />
         <AboutSection />
         <TestimonialsSection />
-        <AskYourselfSection />
+        {/*<AskYourselfSection />*/}
       </Layout>
     </>
   );

@@ -1,6 +1,7 @@
 import { LayoutProps } from '@/interfaces/interface-home-page';
 import Meta from '@/components/common/meta';
 import HeaderNavigation from '@/components/navbar';
+import Footer from '@/components/common/footer';
 
 export default function Layout({ children, title, description }: LayoutProps) {
   return (
@@ -10,7 +11,7 @@ export default function Layout({ children, title, description }: LayoutProps) {
         <HeaderNavigation />
         {children}
       </div>
-      <div>footer section</div>
+      <Footer />
     </>
   );
 }

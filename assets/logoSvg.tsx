@@ -26,7 +26,7 @@ const LogoSvg = ({ title, titleId, logoSvgFill, ...props }: SVGProps<SVGSVGEleme
 );
 
 LogoSvg.defaultProps = {
-  logoSvgFill: theme.palette.primary.light,
+  logoSvgFill: theme.palette.primary.main,
 };
 
 export default LogoSvg;
