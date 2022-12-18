@@ -8,7 +8,7 @@ export default function ExperiencesSection() {
     <>
       <Box
         component="section"
-        id="experience"
+        id="doswiadczenie"
         sx={{
           mt: 10,
           mb: 20,

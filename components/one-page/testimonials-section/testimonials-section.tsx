@@ -155,7 +155,7 @@ function opinion() {
 
 export default function TestimonialsSection() {
   return (
-    <section id="testimonials">
+    <section id="opinie">
       <Container maxWidth="md">
         <Box display="flex" alignItems="center" flexDirection="column">
           <Box

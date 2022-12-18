@@ -39,22 +39,22 @@ const Navigation: ({ Element, onClick }: { Element: any; onClick?: () => void })
               </Box>
             ) : (
               <Link href={destination}>
-                <a>
+                <Box component="a">
                   <Element>{label}</Element>
-                </a>
+                </Box>
               </Link>
             )
           ) : singlePage ? (
             <Link href={addRoute(destination)}>
-              <a>
+              <Box component="a">
                 <Element>{label}</Element>
-              </a>
+              </Box>
             </Link>
           ) : (
             <Link href={destination}>
-              <a>
+              <Box component="a">
                 <Element>{label}</Element>
-              </a>
+              </Box>
             </Link>
           )}
         </>
