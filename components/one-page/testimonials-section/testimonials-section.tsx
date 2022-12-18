@@ -40,8 +40,15 @@ function App2() {
   return (
     <div>
       {data.map((testimonial: ITestimonials) => (
-        <Box key={testimonial.id} sx={{ p: 10 }}>
-          <Box sx={{ alignText: 'center', width: '100%', m: 0, mt: 10 }}>
+        <Box key={testimonial.id} sx={{ p: 10, pt: 4 }}>
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              mb: 3,
+              mt: 2,
+            }}
+          >
             <ChatBubbleOutlineIcon />
           </Box>
           <Box pl={8} pr={8}>
@@ -76,7 +83,13 @@ function App2() {
         </Box>
       )}
       {!loading && more && (
-        <Box pt={11} textAlign="center">
+        <Box
+          sx={{
+            pt: 11,
+            pb: 10,
+            textAlign: 'center',
+          }}
+        >
           <Button
             onClick={() => {
               dispatch({ type: types.start });
@@ -101,18 +114,18 @@ function App2() {
 function opinion() {
   return testimonials2.map((testimonial2, index) => (
     <>
-      <Box key={testimonial2.id} sx={{ p: 10 }}>
+      <Box key={testimonial2.id} sx={{ p: 10, pt: 4 }}>
         <Box
           sx={{
-            alignText: 'center',
-            width: '100%',
-            m: 0,
+            display: 'flex',
+            justifyContent: 'center',
+            mb: 3,
             mt: 2,
           }}
         >
           <ChatBubbleOutlineIcon />
         </Box>
-        <Box pl={8} pr={8}>
+        <Box px={8}>
           <Typography key={testimonial2.text}>{testimonial2.text}</Typography>
           <Box display="flex" py={5} alignItems="center">
             <Box>
@@ -145,7 +158,12 @@ export default function TestimonialsSection() {
     <section id="testimonials">
       <Container maxWidth="md">
         <Box display="flex" alignItems="center" flexDirection="column">
-          <Box pb={10}>
+          <Box
+            sx={{
+              pb: 15,
+              pt: 16,
+            }}
+          >
             <Typography variant="h3" align="center">
               Opinie Klientów
             </Typography>

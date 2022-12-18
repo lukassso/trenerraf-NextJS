@@ -1,7 +1,7 @@
 import { styled } from '@mui/system';
 import { Box, Paper } from '@mui/material';
 
-export const PriceHeader = styled(Box)(({ theme }) => ({
+export const PrizeHeader = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   paddingTop: 40,

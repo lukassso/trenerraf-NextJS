@@ -10,12 +10,14 @@ import {
   CardActions,
   CardContent,
   CardMedia,
+  IconButton,
   SwipeableDrawer,
   useMediaQuery,
   useTheme,
 } from '@mui/material';
 import { TransitionProps } from '@mui/material/transitions';
 import Slide from '@mui/material/Slide';
+import CloseIcon from '@mui/icons-material/Close';
 
 interface Props {
   story: ISuccessStories;
@@ -59,7 +61,7 @@ const CardItem: FC<Props> = ({ story }) => {
   };
 
   return (
-    <Card sx={{ mx: 2, mb: 5, minHeight: matchMobileView ? '655px' : '600px' }} elevation={5}>
+    <Card sx={{ mx: 2, mb: 5, minHeight: matchMobileView ? '540px' : '560px' }} elevation={5}>
       <CardMedia key={story.id} title={story.name}>
         <Image src={story.image} alt={`Efekty treningu osobistego ` + story.name} />
       </CardMedia>
@@ -88,7 +90,27 @@ const CardItem: FC<Props> = ({ story }) => {
         </Button>
       </CardActions>
       <SwipeableDrawer anchor="bottom" open={openDrawer} onClose={toggleDrawer(false)} onOpen={toggleDrawer(true)}>
-        <Box sx={{ minHeight: '70vh' }}>test</Box>
+        <Box sx={{ minHeight: '40vh' }}>
+          <Box
+            sx={{
+              pt: 2,
+              pr: 5,
+              display: 'flex',
+              justifyContent: 'flex-end',
+            }}
+          >
+            <IconButton onClick={toggleDrawer(false)} aria-label="delete">
+              <CloseIcon />
+            </IconButton>
+          </Box>
+          <Box
+            sx={{
+              p: 4,
+            }}
+          >
+            <Typography>{story.text}</Typography>
+          </Box>
+        </Box>
       </SwipeableDrawer>
       <Dialog
         open={openDialog}

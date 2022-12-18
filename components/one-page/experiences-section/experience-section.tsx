@@ -1,6 +1,7 @@
 import { experiencesSectionData } from '@/components/one-page/experiences-section/experiences-section.data';
 import { Box, Container, Grid, Paper, Typography } from '@mui/material';
-import { PaperBox, PriceHeader, PrizesText } from '@/components/one-page/experiences-section/experience-section.styled';
+import { PaperBox, PrizeHeader, PrizesText } from '@/components/one-page/experiences-section/experience-section.styled';
+import SuperfmSvg from '@/assets/superfmSvg';
 
 export default function ExperiencesSection() {
   return (
@@ -14,12 +15,14 @@ export default function ExperiencesSection() {
         }}
       >
         <Container maxWidth="sm">
-          <PriceHeader>
-            <Box sx={{ width: '30%' }}>{/*<Img fluid={data.pic1.childImageSharp.fluid} alt="" />*/}</Box>
+          <PrizeHeader>
+            <Box>
+              <SuperfmSvg />
+            </Box>
             <Box>
               <PrizesText>Zwycięzca konkursu Fitness Motywatory 2017 w kategorii Trener Personalny</PrizesText>
             </Box>
-          </PriceHeader>
+          </PrizeHeader>
 
           <Box pt={12} pb={1}>
             <Typography
