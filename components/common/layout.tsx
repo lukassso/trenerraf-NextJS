@@ -1,4 +1,4 @@
-import { LayoutProps } from '@/interfaces/interface-home-page';
+import { LayoutProps } from '@/interfaces/i-layout-page';
 import Meta from '@/components/common/meta';
 import HeaderNavigation from '@/components/navbar';
 import Footer from '@/components/common/footer';

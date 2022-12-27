@@ -1,4 +1,4 @@
-import Avatar from '@/components/blog/components/avatar';
+import Avatar from '@/components/blog/components/avatar-component';
 import Date from '@/components/common/date';
 import CoverImage from '@/components/blog/components/cover-image';
 import Link from 'next/link';
@@ -12,7 +12,7 @@ const PostPreview: FunctionComponent<IBlogPostCard> = ({ title, date, descriptio
         {/*<CoverImage slug={slug} title={title} responsiveImage={coverImage.responsiveImage} />*/}
       </div>
       <h3 className="text-3xl mb-3 leading-snug">
-        <Link href={`/posts/${slug}`}>
+        <Link href={`/blog/${slug}`}>
           <a className="hover:underline">{title}</a>
         </Link>
       </h3>

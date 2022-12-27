@@ -1,45 +1,53 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-// import PostBody from '@/components/post-body';
 import Layout from '@/components/common/layout';
-import Head from 'next/head';
-import { CMS_NAME } from '@/lib/constants';
 import { getAllPostsWithSlug, getPostAndMorePosts } from '@/lib/api';
 import markdownToHtml from '@/lib/markdownToHtml';
-import { Image, StructuredText } from 'react-datocms';
+import { Image, StructuredText, StructuredTextGraphQlResponse } from 'react-datocms';
 import { Box } from '@mui/material';
 import PostHeader from '@/components/blog/blog-posts/post-header';
 import MoreStories from '@/components/blog/blog-list/more-stories';
+import AppLoader from '@/components/common/app-loader';
+import { IBlogPostCard } from '@/interfaces/i-blog-post-card';
+import { LayoutProps } from '@/interfaces/i-layout-page';
+import { AvatarComponentProps } from '@/components/blog/components/avatar-component';
 
-export default function Post({ post, morePosts, preview }) {
+interface PostProps {
+  post: IBlogPostCard & LayoutProps & AvatarComponentProps;
+  morePosts: any;
+}
+export default function Post({ post, morePosts }: PostProps) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <Layout preview={preview} description="blog post description" title="blog post title">
+    <Layout description={post.description} title={`${post.title} - Trener personalny Mokotów Rafał Kiszło`}>
       <div>
         {router.isFallback ? (
-          <Box>Loading…</Box>
+          <AppLoader />
         ) : (
           <>
-            <Box component="article" sx={{ mt: 24 }}>
-              <Head>
-                <title>
-                  {post.title} | Next.js Blog Example with {CMS_NAME}
-                </title>
-                {/*<meta property="og:image" content={post.ogImage.url} />*/}
-              </Head>
-              <PostHeader title={post.title} coverImage={post.coverImage} date={post.date} author={post.author} />
+            <Box component="article" sx={{ mt: 12 }}>
+              <PostHeader
+                coverImage={post.coverImage}
+                date={post.date}
+                slug={post.slug}
+                title={post.title}
+                name={post?.author?.name}
+                picture={post?.author?.picture.url}
+              />
               {/*<PostBody content={post.content} />*/}
               <StructuredText
                 data={post.content}
                 renderBlock={({ record }) => {
                   switch (record.__typename) {
                     case 'ImageBlockRecord':
-                      let responsiveImage = record.image.responsiveImage;
+                      // @ts-ignore
+                      let responsiveImage = record?.image?.responsiveImage;
                       return (
                         <p>
+                          {/* eslint-disable-next-line jsx-a11y/alt-text */}
                           <Image data={responsiveImage} />
                         </p>
                       );
@@ -57,7 +65,7 @@ export default function Post({ post, morePosts, preview }) {
   );
 }
 
-export async function getStaticProps({ params, preview = false }) {
+export async function getStaticProps({ params, preview = false }: any) {
   const data = await getPostAndMorePosts(params.slug, preview);
   const content = await markdownToHtml(data?.post?.content || '');
 
@@ -76,7 +84,7 @@ export async function getStaticProps({ params, preview = false }) {
 export async function getStaticPaths() {
   const allPosts = await getAllPostsWithSlug();
   return {
-    paths: allPosts?.map((post) => `/posts/${post.slug}`) || [],
+    paths: allPosts?.map((post: { slug: string }) => `/blog/${post.slug}`) || [],
     fallback: true,
   };
 }

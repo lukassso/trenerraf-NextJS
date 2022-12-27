@@ -12,13 +12,21 @@ import Image from 'next/image';
 // }
 
 import * as React from 'react';
-import { Avatar as MuiAvatar } from '@mui/material';
+import { Avatar } from '@mui/material';
 import Stack from '@mui/material/Stack';
+import { FC } from 'react';
 
-export default function Avatar({ name, picture }) {
+export interface AvatarComponentProps {
+  name: string | undefined;
+  picture: string | undefined;
+}
+
+const AvatarComponent: FC<AvatarComponentProps> = ({ name, picture }) => {
   return (
     <Stack direction="row" spacing={2}>
-      <MuiAvatar alt={name} src={picture.url} sx={{ width: 56, height: 56 }} />
+      <Avatar alt={name} src={picture} sx={{ width: 56, height: 56 }} />
     </Stack>
   );
-}
+};
+
+export default AvatarComponent;

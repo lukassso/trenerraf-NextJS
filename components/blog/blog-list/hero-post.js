@@ -1,7 +1,8 @@
-import Avatar from '@/components/blog/components/avatar';
+import Avatar from '@/components/blog/components/avatar-component';
 import Date from '@/components/common/date';
 import CoverImage from '@/components/blog/components/cover-image';
 import Link from 'next/link';
+import AvatarComponent from '@/components/blog/components/avatar-component';
 
 export default function HeroPost({ title, coverImage, date, excerpt, author, slug }) {
   return (
@@ -12,7 +13,7 @@ export default function HeroPost({ title, coverImage, date, excerpt, author, slu
       <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
         <div>
           <h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
-            <Link href={`/posts/${slug}`}>
+            <Link href={`/blog/${slug}`}>
               <a className="hover:underline">{title}</a>
             </Link>
           </h3>
@@ -22,7 +23,7 @@ export default function HeroPost({ title, coverImage, date, excerpt, author, slu
         </div>
         <div>
           <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-          <Avatar name={author.name} picture={author.picture} />
+          <AvatarComponent name={author.name} src={author.picture} />
         </div>
       </div>
     </section>

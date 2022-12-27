@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { CMS_NAME, HOME_OG_IMAGE_URL } from '@/lib/constants';
 import { NextSeo } from 'next-seo';
-import { LayoutProps } from '@/interfaces/interface-home-page';
+import { LayoutProps } from '@/interfaces/i-layout-page';
 
 export default function Meta({ title, description }: LayoutProps) {
   return (

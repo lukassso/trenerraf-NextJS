@@ -8,4 +8,5 @@ export interface IArticleCard {
   cardTeaser?: boolean;
   href: string;
   children?: ReactNode;
+  slug: string;
 }
