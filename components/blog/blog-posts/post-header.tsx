@@ -1,6 +1,6 @@
 import Date from '@/components/common/date';
 import CoverImage from '@/components/blog/components/cover-image';
-import { Box, Container, Typography } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import { IBlogPostCard } from '@/interfaces/i-blog-post-card';
 import { FC } from 'react';
 import AvatarComponent, { AvatarComponentProps } from '@/components/blog/components/avatar-component';

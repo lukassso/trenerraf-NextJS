@@ -36,6 +36,7 @@ export default function Post({ post, morePosts }: PostProps) {
                 title={post.title}
                 name={post?.author?.name}
                 avatarPicture={post?.author?.picture.url}
+                excerpt={post.excerpt}
               />
               {/*<PostBody content={post.content} />*/}
               <Container maxWidth="sm" sx={{ padding: 5 }}>
@@ -59,7 +60,15 @@ export default function Post({ post, morePosts }: PostProps) {
                 />
               </Container>
             </Box>
-            {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+            {morePosts.length > 0 && (
+              <MoreStories
+                posts={morePosts}
+                date={post.date}
+                excerpt={post.excerpt}
+                slug={post.slug}
+                title={post.title}
+              />
+            )}
           </>
         )}
       </div>
