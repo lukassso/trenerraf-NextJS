@@ -7,8 +7,8 @@ import { PostHeaderProps } from '@/components/blog/blog-posts/post-header';
 import { FC } from 'react';
 import { IBlogPostCard } from '@/interfaces/i-blog-post-card';
 
-interface HeroPostProps {
-  excerpt: any;
+export interface HeroPostProps {
+  excerpt: string;
 }
 
 const HeroPost: FC<HeroPostProps & PostHeaderProps & AvatarComponentProps & IBlogPostCard> = ({

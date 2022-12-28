@@ -4,8 +4,16 @@ import CoverImage from '@/components/blog/components/cover-image';
 import Link from 'next/link';
 import { FunctionComponent } from 'react';
 import { IBlogPostCard } from '@/interfaces/i-blog-post-card';
+import { PostHeaderProps } from '@/components/blog/blog-posts/post-header';
+import { HeroPostProps } from '@/components/blog/blog-list/hero-post';
 
-const PostPreview: FunctionComponent<IBlogPostCard> = ({ title, date, description, author, slug }) => {
+const PostPreview: FunctionComponent<IBlogPostCard & HeroPostProps & PostHeaderProps> = ({
+  title,
+  date,
+  excerpt,
+  author,
+  slug,
+}) => {
   return (
     <div>
       <div className="mb-5">
@@ -19,7 +27,7 @@ const PostPreview: FunctionComponent<IBlogPostCard> = ({ title, date, descriptio
       <div className="text-lg mb-4">
         <Date dateString={date} />
       </div>
-      <p className="text-lg leading-relaxed mb-4">{description}</p>
+      <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
       {/*<Avatar name={author.name} picture={author.picture} />*/}
     </div>
   );

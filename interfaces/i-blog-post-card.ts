@@ -1,7 +1,8 @@
 import { StructuredTextGraphQlResponse } from 'react-datocms';
 
 export interface IBlogPostCard {
-  // title: string;
+  title: string;
+  excerpt: string;
   // description?: string;
   slug: string;
   date: string;
