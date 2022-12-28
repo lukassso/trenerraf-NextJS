@@ -11,19 +11,21 @@ export default function Index({ allPosts }) {
   const morePosts = allPosts.slice(1);
   return (
     <>
-      <Layout description="Blog page description" title="Blog page title">
-        <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
-        </Head>
+      <Layout
+        description="Nowy rok, czy też zbliżające się lato to czas, kiedy wielu z nas postanawia zadbać o swoją kondycję lub sylwetkę. Pomogę Tobie zaplanować przyszłość i zrobić formę."
+        title="Treningi z trenerem Rafałem Kiszło na Mokotowie i Wilanowie | Trenerrafal.pl"
+      >
         <BoxRoot component="main" maxWidth="sm">
           {heroPost && (
             <HeroPost
               title={heroPost.title}
-              coverImage={heroPost.coverImage}
               date={heroPost.date}
-              author={heroPost.author}
+              author={heroPost.author.name}
               slug={heroPost.slug}
               excerpt={heroPost.excerpt}
+              name={heroPost.title}
+              avatarPicture={heroPost?.author?.picture.url}
+              coverImage={heroPost.coverImage.responsiveImage}
             />
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}

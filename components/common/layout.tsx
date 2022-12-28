@@ -7,7 +7,7 @@ export default function Layout({ children, title, description }: LayoutProps) {
   return (
     <>
       <Meta description={description} title={title} />
-      <div className="min-h-screen">
+      <div>
         <HeaderNavigation />
         {children}
       </div>

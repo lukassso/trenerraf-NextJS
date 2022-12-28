@@ -1,6 +1,4 @@
 import Layout from '@/components/common/layout';
-import Head from 'next/head';
-import { CMS_NAME } from '@/lib/constants';
 import HeroSection from '@/components/one-page/hero-section';
 import SuccessStories from '@/components/one-page/success-stories-section';
 import ExperiencesSection from '@/components/one-page/experiences-section';
@@ -8,13 +6,14 @@ import AboutSection from '@/components/one-page/about-section';
 import TestimonialsSection from '@/components/one-page/testimonials-section';
 import AskYourselfSection from '@/components/one-page/ask-yourself-section';
 
+const MAIN_DESCRIPTION =
+  'Zapraszam na wspólne treningi na Mokotowie - Trener personalny Rafał Kiszło. Trening osobisty w Warszawie dostosowany do Twoich potrzeb. Stań się lepszą wersją siebie!';
+const MAIN_TITLE = 'Trener personalny Mokotów - Rafał Kiszło';
+
 export default function Index() {
   return (
     <>
-      <Layout description="Main description" title="Main title">
-        <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
-        </Head>
+      <Layout description={MAIN_DESCRIPTION} title={MAIN_TITLE}>
         <HeroSection />
         <SuccessStories />
         <ExperiencesSection />

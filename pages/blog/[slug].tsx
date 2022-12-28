@@ -4,7 +4,7 @@ import Layout from '@/components/common/layout';
 import { getAllPostsWithSlug, getPostAndMorePosts } from '@/lib/api';
 import markdownToHtml from '@/lib/markdownToHtml';
 import { Image, StructuredText, StructuredTextGraphQlResponse } from 'react-datocms';
-import { Box } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import PostHeader from '@/components/blog/blog-posts/post-header';
 import MoreStories from '@/components/blog/blog-list/more-stories';
 import AppLoader from '@/components/common/app-loader';
@@ -35,27 +35,29 @@ export default function Post({ post, morePosts }: PostProps) {
                 slug={post.slug}
                 title={post.title}
                 name={post?.author?.name}
-                picture={post?.author?.picture.url}
+                avatarPicture={post?.author?.picture.url}
               />
               {/*<PostBody content={post.content} />*/}
-              <StructuredText
-                data={post.content}
-                renderBlock={({ record }) => {
-                  switch (record.__typename) {
-                    case 'ImageBlockRecord':
-                      // @ts-ignore
-                      let responsiveImage = record?.image?.responsiveImage;
-                      return (
-                        <p>
-                          {/* eslint-disable-next-line jsx-a11y/alt-text */}
-                          <Image data={responsiveImage} />
-                        </p>
-                      );
-                    default:
-                      return null;
-                  }
-                }}
-              />
+              <Container maxWidth="sm" sx={{ padding: 5 }}>
+                <StructuredText
+                  data={post.content}
+                  renderBlock={({ record }) => {
+                    switch (record.__typename) {
+                      case 'ImageBlockRecord':
+                        // @ts-ignore
+                        let responsiveImage = record?.image?.responsiveImage;
+                        return (
+                          <p>
+                            {/* eslint-disable-next-line jsx-a11y/alt-text */}
+                            <Image data={responsiveImage} />
+                          </p>
+                        );
+                      default:
+                        return null;
+                    }
+                  }}
+                />
+              </Container>
             </Box>
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </>

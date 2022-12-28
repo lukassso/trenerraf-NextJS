@@ -1,6 +1,11 @@
 import { parseISO, format } from 'date-fns';
+import { Typography } from '@mui/material';
 
 export default function Date({ dateString }) {
   const date = parseISO(dateString);
-  return <time dateTime={dateString}>{format(date, 'LLLL	d, yyyy')}</time>;
+  return (
+    <Typography component="time" sx={{ fontSize: '13px' }} dateTime={dateString}>
+      {format(date, 'LLLL	d, yyyy')}
+    </Typography>
+  );
 }
