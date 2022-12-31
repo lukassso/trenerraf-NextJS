@@ -1,14 +1,18 @@
 import { StructuredTextGraphQlResponse } from 'react-datocms';
+import { LayoutProps } from '@/interfaces/i-layout-page';
 
 export interface IBlogPostCard {
-  title: string;
   excerpt: string;
-  // description?: string;
+  description: string;
   slug: string;
   date: string;
   // author: string;
   coverImage: {
     responsiveImage: string;
+  };
+  seoSettings: {
+    description: string;
+    title: string;
   };
   author?: {
     name: string;

@@ -65,8 +65,8 @@ const CardItem: FC<Props> = ({ story }) => {
       <CardMedia key={story.id} title={story.name}>
         <Image src={story.image} alt={`Efekty treningu osobistego ` + story.name} />
       </CardMedia>
-      <CardContent key={story.id}>
-        <Typography align="center" key={story.id} variant="h2" component="p" color="initial">
+      <CardContent key={`${story.id}-${story.name}`}>
+        <Typography align="center" variant="h2" component="p" color="initial">
           {story.weight}
         </Typography>
         <Typography sx={{ p: 4 }} align="center" key={story.name} variant="h3" component="p" color="initial">

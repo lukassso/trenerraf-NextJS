@@ -20,13 +20,13 @@ const Navigation: ({ Element, onClick }: { Element: any; onClick?: () => void })
 
   return (
     <>
-      {navigations.map(({ path: destination, label, singlePage }) => (
+      {navigations.map(({ path: destination, label, singlePage, id }) => (
         <>
           {router.pathname === '/' ? (
             singlePage ? (
               <Box
                 component={ScrollLink}
-                key={destination}
+                key={`${id}.${label}`}
                 activeClass="current"
                 to={destination}
                 spy={true}
@@ -38,20 +38,20 @@ const Navigation: ({ Element, onClick }: { Element: any; onClick?: () => void })
                 <Element>{label}</Element>
               </Box>
             ) : (
-              <Link href={destination}>
+              <Link key={`${label}.${id}`} href={destination}>
                 <Box component="a">
                   <Element>{label}</Element>
                 </Box>
               </Link>
             )
           ) : singlePage ? (
-            <Link href={addRoute(destination)}>
+            <Link key={`${destination}.${id}`} href={addRoute(destination)}>
               <Box component="a">
                 <Element>{label}</Element>
               </Box>
             </Link>
           ) : (
-            <Link href={destination}>
+            <Link key={`${id}.${destination}`} href={destination}>
               <Box component="a">
                 <Element>{label}</Element>
               </Box>

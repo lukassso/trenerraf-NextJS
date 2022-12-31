@@ -38,8 +38,8 @@ export default function ExperiencesSection() {
         </Container>
         <Container maxWidth="md">
           <Grid container spacing={5}>
-            {experiencesSectionData.map((experience) => (
-              <Grid key={experience.id} item xs={6} sm={4}>
+            {experiencesSectionData.map((experience, index) => (
+              <Grid key={`${experience}.${index}`} item xs={6} sm={4}>
                 <PaperBox elevation={0} variant="outlined">
                   <Typography key={experience.name} variant="h5" component="h2">
                     {experience.name}

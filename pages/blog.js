@@ -10,8 +10,8 @@ export default function Index({ allPosts }) {
   return (
     <>
       <Layout
-        description="Nowy rok, czy też zbliżające się lato to czas, kiedy wielu z nas postanawia zadbać o swoją kondycję lub sylwetkę. Pomogę Tobie zaplanować przyszłość i zrobić formę."
-        title="Treningi z trenerem Rafałem Kiszło na Mokotowie i Wilanowie | Trenerrafal.pl"
+        description="Nowy rok to czas, kiedy wielu z nas postanawia zadbać o swoją kondycję lub sylwetkę. Pomogę Tobie zaplanować przyszłość i zrobić formę!"
+        title="Rafał Kiszło | Trening personalny Mokotów"
       >
         <BoxRoot component="main" maxWidth="sm">
           {heroPost && (
@@ -24,6 +24,7 @@ export default function Index({ allPosts }) {
               name={heroPost.title}
               avatarPicture={heroPost?.author?.picture.url}
               coverImage={heroPost.coverImage.responsiveImage}
+              description={heroPost.description}
             />
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}

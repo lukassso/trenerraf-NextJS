@@ -2,7 +2,7 @@ import { Avatar, Box, Button, CircularProgress, Container, Divider, Typography }
 import { testimonials, testimonials2 } from '@/components/one-page/testimonials-section/testimonials-section.data';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { useReducer } from 'react';
+import React, { useReducer } from 'react';
 import { ITestimonials } from '@/interfaces/i-testimonials';
 
 const SHOW_PER_PAGE = 4;
@@ -40,7 +40,7 @@ function App2() {
   return (
     <div>
       {data.map((testimonial: ITestimonials) => (
-        <Box key={testimonial.id} sx={{ p: 10, pt: 4 }}>
+        <Box key={`${testimonial.id}.${testimonial.name}`} sx={{ p: 10, pt: 4 }}>
           <Box
             sx={{
               display: 'flex',
@@ -111,48 +111,6 @@ function App2() {
   );
 }
 
-function opinion() {
-  return testimonials2.map((testimonial2, index) => (
-    <>
-      <Box key={testimonial2.id} sx={{ p: 10, pt: 4 }}>
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            mb: 3,
-            mt: 2,
-          }}
-        >
-          <ChatBubbleOutlineIcon />
-        </Box>
-        <Box px={8}>
-          <Typography key={testimonial2.text}>{testimonial2.text}</Typography>
-          <Box display="flex" py={5} alignItems="center">
-            <Box>
-              <Avatar
-                key={testimonial2.name}
-                alt={testimonial2.name}
-                // src={require(`${testimonial2.picture}`)}
-              />
-            </Box>
-            <Box display="flex" flexDirection="column" justifyContent="flex-start" pl={3}>
-              <Box>
-                <Typography>{testimonial2.name}</Typography>
-              </Box>
-              <Box>
-                <Typography key={testimonial2.date} component="span" variant="body2" color="primary">
-                  {testimonial2.date}
-                </Typography>
-              </Box>
-            </Box>
-          </Box>
-        </Box>
-        <Divider />
-      </Box>
-    </>
-  ));
-}
-
 export default function TestimonialsSection() {
   return (
     <section id="opinie">
@@ -169,7 +127,45 @@ export default function TestimonialsSection() {
             </Typography>
           </Box>
           <Box display="flex" alignItems="center" flexDirection="column">
-            {opinion()}
+            {testimonials2.map((testimonial2) => (
+              <>
+                <Box key={`${testimonial2.id}.${testimonial2.name}`} sx={{ p: 10, pt: 4 }}>
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      mb: 3,
+                      mt: 2,
+                    }}
+                  >
+                    <ChatBubbleOutlineIcon />
+                  </Box>
+                  <Box px={8}>
+                    <Typography key={testimonial2.text}>{testimonial2.text}</Typography>
+                    <Box display="flex" py={5} alignItems="center">
+                      <Box>
+                        <Avatar
+                          key={testimonial2.name}
+                          alt={testimonial2.name}
+                          // src={require(`${testimonial2.picture}`)}
+                        />
+                      </Box>
+                      <Box display="flex" flexDirection="column" justifyContent="flex-start" pl={3}>
+                        <Box>
+                          <Typography>{testimonial2.name}</Typography>
+                        </Box>
+                        <Box>
+                          <Typography key={testimonial2.date} component="span" variant="body2" color="primary">
+                            {testimonial2.date}
+                          </Typography>
+                        </Box>
+                      </Box>
+                    </Box>
+                  </Box>
+                  <Divider />
+                </Box>
+              </>
+            ))}
             <App2 />
           </Box>
         </Box>

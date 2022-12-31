@@ -3,17 +3,16 @@ import ErrorPage from 'next/error';
 import Layout from '@/components/common/layout';
 import { getAllPostsWithSlug, getPostAndMorePosts } from '@/lib/api';
 import markdownToHtml from '@/lib/markdownToHtml';
-import { Image, StructuredText, StructuredTextGraphQlResponse } from 'react-datocms';
+import { Image, StructuredText } from 'react-datocms';
 import { Box, Container } from '@mui/material';
 import PostHeader from '@/components/blog/blog-posts/post-header';
 import MoreStories from '@/components/blog/blog-list/more-stories';
 import AppLoader from '@/components/common/app-loader';
 import { IBlogPostCard } from '@/interfaces/i-blog-post-card';
-import { LayoutProps } from '@/interfaces/i-layout-page';
 import { AvatarComponentProps } from '@/components/blog/components/avatar-component';
 
 interface PostProps {
-  post: IBlogPostCard & LayoutProps & AvatarComponentProps;
+  post: IBlogPostCard & AvatarComponentProps;
   morePosts: any;
 }
 export default function Post({ post, morePosts }: PostProps) {
@@ -22,7 +21,10 @@ export default function Post({ post, morePosts }: PostProps) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <Layout description={post.description} title={`${post.title} - Trener personalny Mokotów Rafał Kiszło`}>
+    <Layout
+      description={post.seoSettings.description}
+      title={`${post.seoSettings.title} - Trener personalny Mokotów Rafał Kiszło`}
+    >
       <div>
         {router.isFallback ? (
           <AppLoader />
@@ -30,15 +32,13 @@ export default function Post({ post, morePosts }: PostProps) {
           <>
             <Box component="article" sx={{ mt: 12 }}>
               <PostHeader
-                coverImage={post.coverImage}
+                image={post.coverImage.responsiveImage}
                 date={post.date}
                 slug={post.slug}
-                title={post.title}
+                title={post.seoSettings.title}
                 name={post?.author?.name}
                 avatarPicture={post?.author?.picture.url}
-                excerpt={post.excerpt}
               />
-              {/*<PostBody content={post.content} />*/}
               <Container maxWidth="sm" sx={{ padding: 5 }}>
                 <StructuredText
                   data={post.content}
@@ -60,15 +60,7 @@ export default function Post({ post, morePosts }: PostProps) {
                 />
               </Container>
             </Box>
-            {morePosts.length > 0 && (
-              <MoreStories
-                posts={morePosts}
-                date={post.date}
-                excerpt={post.excerpt}
-                slug={post.slug}
-                title={post.title}
-              />
-            )}
+            {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </>
         )}
       </div>
