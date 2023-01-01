@@ -1,11 +1,12 @@
 import Date from '@/components/common/date';
 import CoverImage from '@/components/blog/components/cover-image';
 import Link from 'next/link';
-import AvatarComponent, { AvatarComponentProps } from '@/components/blog/components/avatar-component';
-import { Typography } from '@mui/material';
-import { PostHeaderProps } from '@/components/blog/blog-posts/post-header';
+import AvatarComponent from '@/components/blog/components/avatar-component';
+import Typography from '@mui/material/Typography';
+import type { PostHeaderProps } from '@/components/blog/blog-posts/post-header';
+import type { AvatarComponentProps } from '@/components/blog/components/avatar-component';
 import { FC } from 'react';
-import { IBlogPostCard } from '@/interfaces/i-blog-post-card';
+import type { IBlogPostCard } from '@/interfaces/i-blog-post-card';
 
 export interface HeroPostProps {
   excerpt: string;

@@ -1,9 +1,6 @@
-import PostPreview, { PostPreviewProps } from './post-preview';
+import PostPreview from './post-preview';
 import { FunctionComponent } from 'react';
-import { IBlogPostCard } from '@/interfaces/i-blog-post-card';
-import { PostHeaderProps } from '@/components/blog/blog-posts/post-header';
-import { HeroPostProps } from '@/components/blog/blog-list/hero-post';
-import { Container } from '@mui/material';
+import Container from '@mui/material/Container';
 
 type post = {
   slug: string;

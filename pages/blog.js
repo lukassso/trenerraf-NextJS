@@ -1,8 +1,9 @@
 import Layout from '@/components/common/layout';
 import { getAllPostsForHome } from '@/lib/api';
-import MoreStories from '@/components/blog/blog-list/more-stories';
-import HeroPost from '@/components/blog/blog-list/hero-post';
+const MoreStories = dynamic(() => import('@/components/blog/blog-list/more-stories'));
+const HeroPost = dynamic(() => import('@/components/blog/blog-list/hero-post'));
 import BoxRoot from './blog.styled';
+import dynamic from 'next/dynamic';
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0];

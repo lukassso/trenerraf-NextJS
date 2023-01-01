@@ -6,10 +6,11 @@ import markdownToHtml from '@/lib/markdownToHtml';
 import { Image, StructuredText } from 'react-datocms';
 import { Box, Container } from '@mui/material';
 import PostHeader from '@/components/blog/blog-posts/post-header';
-import MoreStories from '@/components/blog/blog-list/more-stories';
+const MoreStories = dynamic(() => import('@/components/blog/blog-list/more-stories'));
 import AppLoader from '@/components/common/app-loader';
 import { IBlogPostCard } from '@/interfaces/i-blog-post-card';
 import { AvatarComponentProps } from '@/components/blog/components/avatar-component';
+import dynamic from 'next/dynamic';
 
 interface PostProps {
   post: IBlogPostCard & AvatarComponentProps;
