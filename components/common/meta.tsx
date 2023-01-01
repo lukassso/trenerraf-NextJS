@@ -16,10 +16,11 @@ export default function Meta({ title, description }: LayoutProps) {
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap"
           rel="stylesheet"
         />
+        <link rel="canonical" href="https://trenerrafal.pl" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <meta name="theme-color" content="#000" />
-        <meta property="og:image" content="/ms-icon-310x310.png" />
+        <meta property="og:image" content="https://trenerrafal.pl/trener-rafal-kiszlo.png" />
       </Head>
     </>
   );

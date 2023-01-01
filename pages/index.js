@@ -7,7 +7,7 @@ import TestimonialsSection from '@/components/one-page/testimonials-section';
 import AskYourselfSection from '@/components/one-page/ask-yourself-section';
 
 const MAIN_DESCRIPTION =
-  'Zapraszam na wspólne treningi na Mokotowie - Trener personalny Rafał Kiszło. Trening osobisty w Warszawie dostosowany do Twoich potrzeb. Stań się lepszą wersją siebie!';
+  'Zapraszam na wspólne treningi na Mokotowie. Trening osobisty w Warszawie dostosowany do Twoich potrzeb. Indywidualnie dobrane metody';
 const MAIN_TITLE = 'Trener personalny Mokotów - Rafał Kiszło';
 
 export default function Index() {
