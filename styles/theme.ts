@@ -87,7 +87,7 @@ const theme = createTheme({
     h3: {
       fontSize: '1.6rem',
       fontWeight: 600,
-      lineHeight: 1,
+      lineHeight: 1.2,
       // padding: '50px 10px 70px',
     },
     h4: {

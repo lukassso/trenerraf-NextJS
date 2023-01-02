@@ -17,6 +17,7 @@ export default function Meta({ title, description }: LayoutProps) {
           rel="stylesheet"
         />
         <link rel="canonical" href="https://trenerrafal.pl" />
+        <meta httpEquiv="content-language" content="pl" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <meta name="theme-color" content="#000" />

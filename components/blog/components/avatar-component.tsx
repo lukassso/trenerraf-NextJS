@@ -24,7 +24,7 @@ export interface AvatarComponentProps {
 const AvatarComponent: FC<AvatarComponentProps> = ({ name, avatarPicture }) => {
   return (
     <Stack direction="row" spacing={2} sx={{ pt: 3 }}>
-      <Avatar alt={name} src={avatarPicture} sx={{ width: 56, height: 56 }} />
+      <Avatar alt={name} src={avatarPicture} sx={{ width: 36, height: 36 }} />
     </Stack>
   );
 };

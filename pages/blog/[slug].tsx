@@ -11,6 +11,7 @@ import AppLoader from '@/components/common/app-loader';
 import { IBlogPostCard } from '@/interfaces/i-blog-post-card';
 import { AvatarComponentProps } from '@/components/blog/components/avatar-component';
 import dynamic from 'next/dynamic';
+import Divider from '@mui/material/Divider';
 
 interface PostProps {
   post: IBlogPostCard & AvatarComponentProps;
@@ -61,7 +62,15 @@ export default function Post({ post, morePosts }: PostProps) {
                 />
               </Container>
             </Box>
-            {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+            <Divider />
+            <Container
+              sx={{
+                pt: 10,
+              }}
+              maxWidth="sm"
+            >
+              {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+            </Container>
           </>
         )}
       </div>

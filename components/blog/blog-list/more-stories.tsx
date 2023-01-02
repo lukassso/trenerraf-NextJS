@@ -1,6 +1,6 @@
 import PostPreview from './post-preview';
 import { FunctionComponent } from 'react';
-import Container from '@mui/material/Container';
+import { Box, Typography } from '@mui/material';
 
 type post = {
   slug: string;
@@ -14,14 +14,21 @@ interface IMoreStories {
 
 const MoreStories: FunctionComponent<IMoreStories> = ({ posts }) => {
   return (
-    <Container component="section" maxWidth="sm" sx={{ padding: 5 }}>
-      <h2>More Stories</h2>
-      <div>
+    <>
+      <Typography
+        variant="h2"
+        sx={{
+          pb: 15,
+        }}
+      >
+        Więcej artykułów
+      </Typography>
+      <Box>
         {posts.map((post) => (
           <PostPreview key={post.slug} title={post.title} date={post.date} slug={post.slug} excerpt={post.excerpt} />
         ))}
-      </div>
-    </Container>
+      </Box>
+    </>
   );
 };
 
