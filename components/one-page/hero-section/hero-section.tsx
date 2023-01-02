@@ -54,7 +54,7 @@ const HeroSection = () => {
             >
               <YellowPlumSvg />
             </Box>
-            <Image src={trenerRafalHero} alt="hero picture" />
+            <Image src={trenerRafalHero} alt="Trener personalny Mokotów" />
           </Box>
         </Grid>
       </Grid>
