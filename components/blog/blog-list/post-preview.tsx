@@ -1,7 +1,7 @@
 import Avatar from '@/components/blog/components/avatar-component';
 import Date from '@/components/common/date';
-import Link from 'next/link';
 import { FunctionComponent } from 'react';
+import NextLink from '@/components/common/next-link';
 
 export interface PostPreviewProps {
   slug: string;
@@ -15,9 +15,7 @@ const PostPreview: FunctionComponent<PostPreviewProps> = ({ title, date, excerpt
     <div>
       <div>{/*<CoverImage slug={slug} title={title} responsiveImage={coverImage.responsiveImage} />*/}</div>
       <h3>
-        <Link href={`/blog/${slug}`}>
-          <a>{title}</a>
-        </Link>
+        <NextLink href={`/blog/${slug}`}>{title}</NextLink>
       </h3>
       <div>
         <Date dateString={date} />

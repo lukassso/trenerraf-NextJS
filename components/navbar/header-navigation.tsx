@@ -4,7 +4,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Navbar from '@/components/navbar/navigation';
 import { BoxStyle, MenuItemStyle } from './header-navigation.styled';
 import LogoSvg from '@/assets/logoSvg';
-import Link from 'next/link';
+import NextLink from '@/components/common/next-link';
 
 const HeaderNavigation = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -40,11 +40,11 @@ const HeaderNavigation = () => {
         <Toolbar>
           <Box display="flex" alignItems="center" justifyContent="space-between" flexGrow="1">
             <Box sx={{ display: 'flex', height: '100%', width: '100%', maxWidth: 140, maxHeight: 50 }}>
-              <Link color="inherit" href="/">
+              <NextLink color="inherit" href="/">
                 <a>
                   <LogoSvg viewBox="0 0 354 111" />
                 </a>
-              </Link>
+              </NextLink>
             </Box>
             <Box
               component="nav"

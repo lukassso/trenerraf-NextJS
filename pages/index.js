@@ -8,7 +8,7 @@ import AskYourselfSection from '@/components/one-page/ask-yourself-section';
 
 const MAIN_DESCRIPTION =
   'Zapraszam na wspólne treningi na Mokotowie. Osobisty trening dostosowany do Twoich potrzeb. Pokażę Ci jak poprawić sylwetkę za pomocą odpowiednich ćwiczeń.';
-const MAIN_TITLE = 'Trener Personalny Rafał Kiszło`';
+const MAIN_TITLE = 'Trener Personalny Rafał Kiszło';
 
 export default function Index() {
   return (

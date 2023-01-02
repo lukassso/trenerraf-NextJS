@@ -38,6 +38,7 @@ function MyApp({ Component, emotionCache = clientSideEmotionCache, pageProps }: 
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
       />
 
+      {/* eslint-disable-next-line @next/next/inline-script-id */}
       <Script strategy="lazyOnload">
         {`
                     window.dataLayer = window.dataLayer || [];

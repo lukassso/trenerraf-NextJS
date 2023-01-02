@@ -5,6 +5,13 @@ const theme = createTheme({
     MuiCssBaseline: {
       styleOverrides: {},
     },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          textDecoration: 'none',
+        },
+      },
+    },
   },
   palette: {
     mode: 'light',

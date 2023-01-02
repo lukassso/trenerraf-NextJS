@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { navigations } from './navigation.data';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { MenuItem, Box } from '@mui/material';
+import NextLink from '@/components/common/next-link';
 
 const Navigation: ({ Element, onClick }: { Element: any; onClick?: () => void }) => JSX.Element = ({
   Element = MenuItem,
@@ -38,24 +38,24 @@ const Navigation: ({ Element, onClick }: { Element: any; onClick?: () => void })
                 <Element>{label}</Element>
               </Box>
             ) : (
-              <Link key={`${label}.${id}`} href={destination}>
+              <NextLink key={`${label}.${id}`} href={destination}>
                 <Box component="a">
                   <Element>{label}</Element>
                 </Box>
-              </Link>
+              </NextLink>
             )
           ) : singlePage ? (
-            <Link key={`${destination}.${id}`} href={addRoute(destination)}>
+            <NextLink key={`${destination}.${id}`} href={addRoute(destination)}>
               <Box component="a">
                 <Element>{label}</Element>
               </Box>
-            </Link>
+            </NextLink>
           ) : (
-            <Link key={`${id}.${destination}`} href={destination}>
+            <NextLink key={`${id}.${destination}`} href={destination}>
               <Box component="a">
                 <Element>{label}</Element>
               </Box>
-            </Link>
+            </NextLink>
           )}
         </>
       ))}
