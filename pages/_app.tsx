@@ -8,6 +8,7 @@ import createEmotionCache from '@/lib/create-emotion-cache';
 import { CacheProvider, EmotionCache } from '@emotion/react';
 import 'slick-carousel/slick/slick.css';
 import { ThemeProvider } from '@mui/material';
+import Script from 'next/script';
 // import 'slick-carousel/slick/slick-theme.css';
 
 const clientSideEmotionCache = createEmotionCache();
@@ -31,12 +32,29 @@ function MyApp({ Component, emotionCache = clientSideEmotionCache, pageProps }: 
   const pageContent = loader ? <AppLoader /> : <Component {...pageProps} />;
 
   return (
-    <CacheProvider value={emotionCache}>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        {pageContent}
-      </ThemeProvider>
-    </CacheProvider>
+    <>
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
+
+      <Script strategy="lazyOnload">
+        {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+                    page_path: window.location.pathname,
+                    });
+                `}
+      </Script>
+      <CacheProvider value={emotionCache}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          {pageContent}
+        </ThemeProvider>
+      </CacheProvider>
+    </>
   );
 }
 
