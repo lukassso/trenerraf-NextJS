@@ -9,9 +9,14 @@ import { CacheProvider, EmotionCache } from '@emotion/react';
 import 'slick-carousel/slick/slick.css';
 import { ThemeProvider } from '@mui/material';
 import Script from 'next/script';
+import { DefaultSeo } from 'next-seo';
 // import 'slick-carousel/slick/slick-theme.css';
 
 const clientSideEmotionCache = createEmotionCache();
+
+export const MAIN_DESCRIPTION =
+  'Zapraszam na wspólne treningi na Mokotowie. Osobisty trening dostosowany do Twoich potrzeb. Pokażę Ci jak poprawić sylwetkę i osiągnąć sukces.';
+export const MAIN_TITLE = 'Trener personalny Mokotów, Rafał Kiszło';
 
 interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
@@ -49,6 +54,21 @@ function MyApp({ Component, emotionCache = clientSideEmotionCache, pageProps }: 
                     });
                 `}
       </Script>
+      <DefaultSeo
+        title={MAIN_TITLE}
+        description={MAIN_DESCRIPTION}
+        openGraph={{
+          title: `${MAIN_TITLE}`,
+          description: `${MAIN_DESCRIPTION}`,
+          type: 'website',
+          locale: 'pl_PL',
+          url: 'https://trenerrafal.pl',
+          siteName: 'Trener personalny Mokotów',
+        }}
+        twitter={{
+          cardType: 'summary_large_image',
+        }}
+      />
       <CacheProvider value={emotionCache}>
         <ThemeProvider theme={theme}>
           <CssBaseline />
