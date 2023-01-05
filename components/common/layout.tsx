@@ -6,6 +6,7 @@ import Footer from '@/components/common/footer';
 export default function Layout({ children, title, description }: LayoutProps) {
   return (
     <>
+      {/*<Meta description={description} title={title} />*/}
       <Meta description={description} title={title} />
       <div>
         <HeaderNavigation />

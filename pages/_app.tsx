@@ -14,9 +14,9 @@ import { DefaultSeo } from 'next-seo';
 
 const clientSideEmotionCache = createEmotionCache();
 
-export const MAIN_DESCRIPTION =
+export const INDEX_DESCRIPTION =
   'Zapraszam na wspólne treningi na Mokotowie. Osobisty trening dostosowany do Twoich potrzeb. Pokażę Ci jak poprawić sylwetkę i osiągnąć sukces.';
-export const MAIN_TITLE = 'Trener personalny Mokotów, Rafał Kiszło';
+export const INDEX_TITLE = 'Rafał Kiszło | Trener Personalny Mokotów';
 
 interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
@@ -55,15 +55,23 @@ function MyApp({ Component, emotionCache = clientSideEmotionCache, pageProps }: 
                 `}
       </Script>
       <DefaultSeo
-        title={MAIN_TITLE}
-        description={MAIN_DESCRIPTION}
+        title={INDEX_TITLE}
+        description={INDEX_DESCRIPTION}
         openGraph={{
-          title: `${MAIN_TITLE}`,
-          description: `${MAIN_DESCRIPTION}`,
+          title: `${INDEX_TITLE}`,
+          description: `${INDEX_DESCRIPTION}`,
           type: 'website',
           locale: 'pl_PL',
           url: 'https://trenerrafal.pl',
           siteName: 'Trener personalny Mokotów',
+          images: [
+            {
+              url: 'https://trenerrafal.pl/trener-rafal-og.png',
+              width: 1200,
+              height: 630,
+              alt: 'Trener personalny Rafał Kiszło',
+            },
+          ],
         }}
         twitter={{
           cardType: 'summary_large_image',

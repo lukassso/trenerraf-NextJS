@@ -1,45 +1,115 @@
-import Head from 'next/head';
-import { CMS_NAME, HOME_OG_IMAGE_URL } from '@/lib/constants';
+import { PAGE_URL } from '@/lib/constants';
 import { NextSeo } from 'next-seo';
 import { LayoutProps } from '@/interfaces/i-layout-page';
 
 export default function Meta({ title, description }: LayoutProps) {
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        {/*<meta name="description" content={description} />*/}
-        {/*<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />*/}
-        {/*<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />*/}
-        {/*<link rel="shortcut icon" href="/favicon.ico" />*/}
-        {/*<link*/}
-        {/*  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap"*/}
-        {/*  rel="stylesheet"*/}
-        {/*/>*/}
-        {/*<link rel="canonical" href="https://trenerrafal.pl" />*/}
-        {/*<meta httpEquiv="content-language" content="pl" />*/}
-        {/*<meta name="msapplication-TileColor" content="#000000" />*/}
-        {/*<meta name="msapplication-config" content="/browserconfig.xml" />*/}
-        {/*<meta name="theme-color" content="#000" />*/}
-
-        {/*<meta property="og:url" content="https://trenerrafal.pl" />*/}
-        {/*<meta property="og:type" content="website" />*/}
-        {/*<meta property="og:title" content={title} />*/}
-        {/*<meta property="og:description" content={description} />*/}
-        {/*<meta property="og:image" content="https://trenerrafal.pl/trener-rafal-og.png" />*/}
-
-        {/*<meta name="twitter:card" content="summary_large_image" />*/}
-        {/*<meta property="twitter:domain" content="trenerrafal.pl" />*/}
-        {/*<meta property="twitter:url" content="https://trenerrafal.pl" />*/}
-        {/*<meta name="twitter:title" content={title} />*/}
-        {/*<meta name="twitter:description" content={description} />*/}
-        {/*<meta name="twitter:image" content="https://trenerrafal.pl/trener-rafal-og.png" />*/}
-      </Head>
+      <NextSeo
+        // robotsProps={{
+        //   nosnippet: true,
+        //   notranslate: true,
+        //   noimageindex: true,
+        //   noarchive: true,
+        //   maxSnippet: -1,
+        //   maxImagePreview: 'none',
+        //   maxVideoPreview: -1,
+        // }}
+        title={title}
+        description={description}
+        canonical={`${PAGE_URL}`}
+        openGraph={{
+          type: 'website',
+          url: PAGE_URL,
+          title: `${title}`,
+          description: `${description}`,
+          images: [
+            {
+              url: 'https://trenerrafal.pl/trener-rafal-og.png',
+              width: 1200,
+              height: 630,
+              alt: 'Trener personalny Rafał Kiszło',
+            },
+          ],
+        }}
+        additionalLinkTags={[
+          {
+            rel: 'icon',
+            sizes: '16x16',
+            href: `${PAGE_URL}/favicon-16x16.png`,
+          },
+          {
+            rel: 'icon',
+            sizes: '32x32',
+            href: `${PAGE_URL}/favicon-32x32.png`,
+          },
+          {
+            rel: 'icon',
+            sizes: '96x96',
+            href: `${PAGE_URL}/favicon-96x96.png`,
+          },
+          {
+            rel: 'apple-touch-icon',
+            href: `${PAGE_URL}/apple-icon-57x57.png`,
+            sizes: '57x57',
+          },
+          {
+            rel: 'apple-touch-icon',
+            href: `${PAGE_URL}/apple-icon-120x120.png`,
+            sizes: '120x120',
+          },
+          {
+            rel: 'apple-touch-icon',
+            href: `${PAGE_URL}/apple-icon-152x152.png`,
+            sizes: '152x152',
+          },
+          {
+            rel: 'shortcut icon',
+            href: `${PAGE_URL}/favicon.ico`,
+          },
+          {
+            rel: 'manifest',
+            href: '/manifest.json',
+          },
+          {
+            rel: 'stylesheet',
+            href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap',
+          },
+          // {
+          //   rel: 'preload',
+          //   href: 'https://www.test.ie/font/sample-font.woof2',
+          //   as: 'font',
+          //   type: 'font/woff2',
+          //   crossOrigin: 'anonymous',
+          // },
+        ]}
+        additionalMetaTags={[
+          {
+            httpEquiv: 'content-type',
+            content: 'pl',
+          },
+          {
+            name: 'keywords',
+            content: 'trener personalny, trening, mokotów',
+          },
+          {
+            name: 'viewport',
+            content: 'width=device-width, initial-scale=1',
+          },
+          {
+            name: 'msapplication-TileColor',
+            content: '#000000',
+          },
+          {
+            name: 'msapplication-config',
+            content: '/browserconfig.xml',
+          },
+          {
+            name: 'theme-color',
+            content: '#000',
+          },
+        ]}
+      />
     </>
   );
 }

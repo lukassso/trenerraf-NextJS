@@ -7,16 +7,17 @@ import dynamic from 'next/dynamic';
 import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
 import { Box } from '@mui/material';
+import { NextSeo } from 'next-seo';
 
+export const BLOG_DESCRIPTION =
+  'Nowy rok to czas, kiedy wielu z nas postanawia zadbać o swoją kondycję lub sylwetkę. Pomogę Tobie zaplanować przyszłość i zrobić formę!';
+export const BLOG_TITLE = 'Porady | Rafał Kiszło | Trener personalny Mokotów';
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
   return (
     <>
-      <Layout
-        description="Nowy rok to czas, kiedy wielu z nas postanawia zadbać o swoją kondycję lub sylwetkę. Pomogę Tobie zaplanować przyszłość i zrobić formę!"
-        title="Rafał Kiszło | Trening personalny Mokotów"
-      >
+      <Layout description={BLOG_DESCRIPTION} title={BLOG_TITLE}>
         <BoxContainer component="main" maxWidth="sm">
           <Box
             sx={(theme) => ({
