@@ -19,8 +19,7 @@ export const INDEX_DESCRIPTION =
 export const INDEX_TITLE = 'Rafał Kiszło | Trener Personalny Mokotów';
 export const INDEX_TITLE_OG = 'Rafał Kiszło | Trener Personalny';
 export const INDEX_DESCRIPTION_OG =
-    'Zapraszam na wspólne treningi na Mokotowie i Wilanowie. Pokażę Ci jak poprawić sylwetkę i osiągnąć sukces.';
-
+  'Zapraszam na wspólne treningi na Mokotowie i Wilanowie. Pokażę Ci jak poprawić sylwetkę i osiągnąć sukces.';
 
 interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;

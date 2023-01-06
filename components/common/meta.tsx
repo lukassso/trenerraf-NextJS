@@ -17,7 +17,7 @@ export default function Meta({ title, description, ogTitle, ogDescription }: Lay
         // }}
         title={title}
         description={description}
-        canonical={`${PAGE_URL}`}
+        // canonical={`${PAGE_URL}`}
 
         additionalLinkTags={[
           {

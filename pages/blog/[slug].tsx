@@ -23,10 +23,7 @@ export default function Post({ post, morePosts }: PostProps) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <Layout
-        description={post.seoSettings.description}
-        title={`Porady | ${post.seoSettings.title}`}
-    >
+    <Layout description={post.seoSettings.description} title={`Porady | ${post.seoSettings.title}`}>
       <div>
         {router.isFallback ? (
           <AppLoader />

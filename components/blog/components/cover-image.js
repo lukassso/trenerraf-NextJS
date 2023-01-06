@@ -4,6 +4,7 @@ import NextLink from '@/components/common/next-link';
 
 export default function CoverImage({ title, responsiveImage, slug }) {
   const image = (
+    // eslint-disable-next-line jsx-a11y/alt-text
     <Image
       data={{
         ...responsiveImage,
