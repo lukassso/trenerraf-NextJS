@@ -11,6 +11,7 @@ export default function Index() {
   return (
     <>
       <Layout description={INDEX_DESCRIPTION} title={INDEX_TITLE} ogTitle={INDEX_TITLE_OG} ogDescription={INDEX_DESCRIPTION_OG}>
+
         <HeroSection />
         <SuccessStories />
         <ExperiencesSection />

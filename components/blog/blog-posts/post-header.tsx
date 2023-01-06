@@ -4,6 +4,7 @@ import { Container, Typography } from '@mui/material';
 import { IBlogPostCard } from '@/interfaces/i-blog-post-card';
 import { FC } from 'react';
 import AvatarComponent, { AvatarComponentProps } from '@/components/blog/components/avatar-component';
+import {Image} from "react-datocms";
 
 export interface PostHeaderProps {
   image: any;
@@ -14,7 +15,13 @@ export interface PostHeaderProps {
 const PostHeader: FC<PostHeaderProps & AvatarComponentProps> = ({ title, date, image, slug, name, avatarPicture }) => {
   return (
     <>
-      <CoverImage title={title} responsiveImage={image} slug={slug} />
+        {/* eslint-disable-next-line jsx-a11y/alt-text */}
+        <Image
+            data={{
+                ...image,
+                alt: `Cover Image for ${title}`,
+            }}
+        />
       <Container maxWidth="sm" sx={{ padding: 5 }}>
         <Date dateString={date} />
         <AvatarComponent name={name} avatarPicture={avatarPicture} />

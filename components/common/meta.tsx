@@ -18,20 +18,7 @@ export default function Meta({ title, description, ogTitle, ogDescription }: Lay
         title={title}
         description={description}
         canonical={`${PAGE_URL}`}
-        openGraph={{
-          type: 'website',
-          url: PAGE_URL,
-          title: `${ogTitle}`,
-          description: `${ogDescription}`,
-          images: [
-            {
-              url: 'https://trenerrafal.pl/trener-rafal-og.png',
-              width: 1200,
-              height: 630,
-              alt: 'Trener personalny Rafał Kiszło',
-            },
-          ],
-        }}
+
         additionalLinkTags={[
           {
             rel: 'icon',
