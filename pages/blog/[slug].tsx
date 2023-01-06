@@ -75,7 +75,16 @@ export default function Post({ post, morePosts }: PostProps) {
   );
 }
 
-export async function getStaticProps({ params, preview = false }: any) {
+//
+// export async function getStaticPaths() {
+//   const allPosts = await getAllPostsWithSlug();
+//   return {
+//     paths: allPosts?.map((post: { slug: string }) => `/blog/${post.slug}`) || [],
+//     fallback: 'blocking',
+//   };
+// }
+
+export async function getServerSideProps({ params, preview = false }: any) {
   const data = await getPostAndMorePosts(params.slug, preview);
   const content = await markdownToHtml(data?.post?.content || '');
 
@@ -88,13 +97,5 @@ export async function getStaticProps({ params, preview = false }: any) {
       },
       morePosts: data?.morePosts ?? [],
     },
-  };
-}
-
-export async function getStaticPaths() {
-  const allPosts = await getAllPostsWithSlug();
-  return {
-    paths: allPosts?.map((post: { slug: string }) => `/blog/${post.slug}`) || [],
-    fallback: true,
   };
 }
