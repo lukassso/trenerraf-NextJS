@@ -2,7 +2,7 @@ import { PAGE_URL } from '@/lib/constants';
 import { NextSeo } from 'next-seo';
 import { LayoutProps } from '@/interfaces/i-layout-page';
 
-export default function Meta({ title, description }: LayoutProps) {
+export default function Meta({ title, description, ogTitle, ogDescription }: LayoutProps) {
   return (
     <>
       <NextSeo
@@ -21,8 +21,8 @@ export default function Meta({ title, description }: LayoutProps) {
         openGraph={{
           type: 'website',
           url: PAGE_URL,
-          title: `${title}`,
-          description: `${description}`,
+          title: `${ogTitle}`,
+          description: `${ogDescription}`,
           images: [
             {
               url: 'https://trenerrafal.pl/trener-rafal-og.png',

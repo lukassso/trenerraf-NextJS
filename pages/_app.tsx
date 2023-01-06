@@ -17,6 +17,10 @@ const clientSideEmotionCache = createEmotionCache();
 export const INDEX_DESCRIPTION =
   'Zapraszam na wspólne treningi na Mokotowie. Osobisty trening dostosowany do Twoich potrzeb. Pokażę Ci jak poprawić sylwetkę i osiągnąć sukces.';
 export const INDEX_TITLE = 'Rafał Kiszło | Trener Personalny Mokotów';
+export const INDEX_TITLE_OG = 'Rafał Kiszło | Trener Personalny';
+export const INDEX_DESCRIPTION_OG =
+    'Zapraszam na wspólne treningi na Mokotowie i Wilanowie. Pokażę Ci jak poprawić sylwetkę i osiągnąć sukces.';
+
 
 interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
@@ -58,8 +62,8 @@ function MyApp({ Component, emotionCache = clientSideEmotionCache, pageProps }: 
         title={INDEX_TITLE}
         description={INDEX_DESCRIPTION}
         openGraph={{
-          title: `${INDEX_TITLE}`,
-          description: `${INDEX_DESCRIPTION}`,
+          title: `${INDEX_TITLE_OG}`,
+          description: `${INDEX_DESCRIPTION_OG}`,
           type: 'website',
           locale: 'pl_PL',
           url: 'https://trenerrafal.pl',
