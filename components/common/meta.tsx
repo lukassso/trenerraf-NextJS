@@ -1,8 +1,9 @@
 import { PAGE_URL } from '@/lib/constants';
 import { NextSeo } from 'next-seo';
 import { LayoutProps } from '@/interfaces/i-layout-page';
+import { INDEX_DESCRIPTION_OG, INDEX_IMAGES_URL_OG, INDEX_TITLE_OG, INDEX_URL_OG } from '../../pages/_app';
 
-export default function Meta({ title, description, ogTitle, ogDescription }: LayoutProps) {
+export default function Meta({ title, description, ogTitle, ogDescription, ogImageUrl, ogUrl }: LayoutProps) {
   return (
     <>
       <NextSeo
@@ -18,7 +19,25 @@ export default function Meta({ title, description, ogTitle, ogDescription }: Lay
         title={title}
         description={description}
         // canonical={`${PAGE_URL}`}
-
+        openGraph={{
+          title: ogTitle,
+          description: ogDescription,
+          type: 'website',
+          locale: 'pl_PL',
+          url: ogUrl,
+          siteName: 'Trener personalny Mokotów',
+          images: [
+            {
+              url: ogImageUrl,
+              width: 1200,
+              height: 630,
+              alt: 'Trener personalny Rafał Kiszło',
+            },
+          ],
+        }}
+        twitter={{
+          cardType: 'summary_large_image',
+        }}
         additionalLinkTags={[
           {
             rel: 'icon',

@@ -13,28 +13,41 @@ import { NextSeo } from 'next-seo';
 export const BLOG_DESCRIPTION =
   'Nowy rok to czas, kiedy wielu z nas postanawia zadbać o swoją kondycję lub sylwetkę. Pomogę Tobie zaplanować przyszłość i zrobić formę!';
 export const BLOG_TITLE = 'Porady | Rafał Kiszło | Trener personalny Mokotów';
-export default function Index({ allPosts }) {
+export const BLOG_TITLE_OG = 'Rafał Kiszło | Trener Personalny';
+export const BLOG_DESCRIPTION_OG =
+  'Jak słusznie zauważyli podopieczni Rafała Kiszło, samo posiadanie wiedzy nie sprawi, że osiągniesz wyznaczony cel. Pokażę Ci jak poprawić sylwetkę i osiągnąć sukces.';
+export const BLOG_IMAGES_URL_OG = 'https://trenerrafal.pl/trener-rafal-og-porady.png';
+export const BLOG_URL_OG = `${PAGE_URL}/blog`;
+
+export default function Blog({ allPosts }) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
   return (
     <>
-      <Layout description={BLOG_DESCRIPTION} title={BLOG_TITLE}>
-        <NextSeo
-          openGraph={{
-            type: 'website',
-            url: `${PAGE_URL}/blog`,
-            title: allPosts[0].seoSettings.title,
-            description: allPosts[0].seoSettings.description,
-            images: [
-              {
-                url: 'https://trenerrafal.pl/trener-rafal-og-porady.png',
-                width: 1200,
-                height: 630,
-                alt: 'Trener personalny Rafał Kiszło',
-              },
-            ],
-          }}
-        />
+      <Layout
+        description={BLOG_DESCRIPTION}
+        title={BLOG_TITLE}
+        ogTitle={BLOG_TITLE_OG}
+        ogDescription={BLOG_DESCRIPTION_OG}
+        ogUrl={BLOG_URL_OG}
+        ogImageUrl={BLOG_IMAGES_URL_OG}
+      >
+        {/*<NextSeo*/}
+        {/*  openGraph={{*/}
+        {/*    type: 'website',*/}
+        {/*    url: `${PAGE_URL}/blog`,*/}
+        {/*    title: allPosts[0].seoSettings.title,*/}
+        {/*    description: allPosts[0].seoSettings.description,*/}
+        {/*    images: [*/}
+        {/*      {*/}
+        {/*        url: 'https://trenerrafal.pl/trener-rafal-og-porady.png',*/}
+        {/*        width: 1200,*/}
+        {/*        height: 630,*/}
+        {/*        alt: 'Trener personalny Rafał Kiszło',*/}
+        {/*      },*/}
+        {/*    ],*/}
+        {/*  }}*/}
+        {/*/>*/}
         <BoxContainer component="main" maxWidth="sm">
           <Box
             sx={(theme) => ({

@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
 import Layout from '@/components/common/layout';
-import { getAllPostsWithSlug, getPostAndMorePosts } from '@/lib/api';
+import { getPostAndMorePosts } from '@/lib/api';
 import markdownToHtml from '@/lib/markdownToHtml';
 import { Image, StructuredText } from 'react-datocms';
 import { Box, Container } from '@mui/material';
@@ -12,6 +12,7 @@ import { IBlogPostCard } from '@/interfaces/i-blog-post-card';
 import { AvatarComponentProps } from '@/components/blog/components/avatar-component';
 import dynamic from 'next/dynamic';
 import Divider from '@mui/material/Divider';
+import { INDEX_DESCRIPTION_OG, INDEX_IMAGES_URL_OG, INDEX_TITLE_OG, INDEX_URL_OG } from '../_app';
 
 interface PostProps {
   post: IBlogPostCard & AvatarComponentProps;
@@ -23,7 +24,14 @@ export default function Post({ post, morePosts }: PostProps) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <Layout description={post.seoSettings.description} title={`Porady | ${post.seoSettings.title}`}>
+    <Layout
+      description={post.seoSettings.description}
+      title={`Porady | ${post.seoSettings.title}`}
+      ogUrl={INDEX_URL_OG}
+      ogImageUrl={INDEX_IMAGES_URL_OG}
+      ogTitle={INDEX_TITLE_OG}
+      ogDescription={INDEX_DESCRIPTION_OG}
+    >
       <div>
         {router.isFallback ? (
           <AppLoader />

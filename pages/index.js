@@ -5,7 +5,14 @@ import ExperiencesSection from '@/components/one-page/experiences-section';
 import AboutSection from '@/components/one-page/about-section';
 import TestimonialsSection from '@/components/one-page/testimonials-section';
 import AskYourselfSection from '@/components/one-page/ask-yourself-section';
-import { INDEX_DESCRIPTION, INDEX_DESCRIPTION_OG, INDEX_TITLE, INDEX_TITLE_OG } from './_app';
+import {
+  INDEX_DESCRIPTION,
+  INDEX_DESCRIPTION_OG,
+  INDEX_IMAGES_URL_OG,
+  INDEX_TITLE,
+  INDEX_TITLE_OG,
+  INDEX_URL_OG,
+} from './_app';
 
 export default function Index() {
   return (
@@ -15,6 +22,8 @@ export default function Index() {
         title={INDEX_TITLE}
         ogTitle={INDEX_TITLE_OG}
         ogDescription={INDEX_DESCRIPTION_OG}
+        ogImageUrl={INDEX_IMAGES_URL_OG}
+        ogUrl={INDEX_URL_OG}
       >
         <HeroSection />
         <SuccessStories />
