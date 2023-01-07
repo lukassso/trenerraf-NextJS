@@ -1,9 +1,6 @@
-import { ReactNode } from 'react';
-
-export type LayoutProps = {
+export type Imeta = {
   title: string;
   description: string;
-  // children: ReactNode;
   ogImageUrl: string;
   ogUrl: string;
   ogTitle: string;

@@ -1,5 +1,4 @@
 import { StructuredTextGraphQlResponse } from 'react-datocms';
-import { LayoutProps } from '@/interfaces/i-layout-page';
 
 export interface IBlogPostCard {
   excerpt: string;

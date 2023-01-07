@@ -7,17 +7,14 @@ import dynamic from 'next/dynamic';
 import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
 import { Box } from '@mui/material';
-import { PAGE_URL } from '@/lib/constants';
-import { NextSeo } from 'next-seo';
-
-export const BLOG_DESCRIPTION =
-  'Nowy rok to czas, kiedy wielu z nas postanawia zadbać o swoją kondycję lub sylwetkę. Pomogę Tobie zaplanować przyszłość i zrobić formę!';
-export const BLOG_TITLE = 'Porady | Rafał Kiszło | Trener personalny Mokotów';
-export const BLOG_TITLE_OG = 'Rafał Kiszło | Trener Personalny';
-export const BLOG_DESCRIPTION_OG =
-  'Jak słusznie zauważyli podopieczni Rafała Kiszło, samo posiadanie wiedzy nie sprawi, że osiągniesz wyznaczony cel. Pokażę Ci jak poprawić sylwetkę i osiągnąć sukces.';
-export const BLOG_IMAGES_URL_OG = 'https://trenerrafal.pl/trener-rafal-og-porady.png';
-export const BLOG_URL_OG = `${PAGE_URL}/blog`;
+import {
+  BLOG_DESCRIPTION,
+  BLOG_DESCRIPTION_OG,
+  BLOG_IMAGES_URL_OG,
+  BLOG_TITLE,
+  BLOG_TITLE_OG,
+  BLOG_URL_OG,
+} from '@/lib/seo-links';
 
 export default function Blog({ allPosts }) {
   const heroPost = allPosts[0];

@@ -12,7 +12,7 @@ import { IBlogPostCard } from '@/interfaces/i-blog-post-card';
 import { AvatarComponentProps } from '@/components/blog/components/avatar-component';
 import dynamic from 'next/dynamic';
 import Divider from '@mui/material/Divider';
-import { INDEX_DESCRIPTION_OG, INDEX_IMAGES_URL_OG, INDEX_TITLE_OG, INDEX_URL_OG } from '../_app';
+import { INDEX_DESCRIPTION_OG, INDEX_IMAGES_URL_OG, INDEX_TITLE_OG, INDEX_URL_OG } from '@/lib/seo-links';
 
 interface PostProps {
   post: IBlogPostCard & AvatarComponentProps;

@@ -41,9 +41,7 @@ const HeaderNavigation = () => {
           <Box display="flex" alignItems="center" justifyContent="space-between" flexGrow="1">
             <Box sx={{ display: 'flex', height: '100%', width: '100%', maxWidth: 140, maxHeight: 50 }}>
               <NextLink color="inherit" href="/">
-                <a>
-                  <LogoSvg viewBox="0 0 354 111" />
-                </a>
+                <LogoSvg viewBox="0 0 354 111" />
               </NextLink>
             </Box>
             <Box

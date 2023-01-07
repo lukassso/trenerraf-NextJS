@@ -38,23 +38,17 @@ const Navigation: ({ Element, onClick }: { Element: any; onClick?: () => void })
                 <Element>{label}</Element>
               </Box>
             ) : (
-              <NextLink key={`${label}.${id}`} href={destination}>
-                <Box component="a">
-                  <Element>{label}</Element>
-                </Box>
+              <NextLink key={`${label}-${id}`} href={destination}>
+                <Element>{label}</Element>
               </NextLink>
             )
           ) : singlePage ? (
-            <NextLink key={`${destination}.${id}`} href={addRoute(destination)}>
-              <Box component="a">
-                <Element>{label}</Element>
-              </Box>
+            <NextLink key={`${destination}_${id}`} href={addRoute(destination)}>
+              <Element>{label}</Element>
             </NextLink>
           ) : (
-            <NextLink key={`${id}.${destination}`} href={destination}>
-              <Box component="a">
-                <Element>{label}</Element>
-              </Box>
+            <NextLink key={`${id}${destination}`} href={destination}>
+              <Element>{label}</Element>
             </NextLink>
           )}
         </>

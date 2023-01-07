@@ -18,8 +18,8 @@ export default function CoverImage({ title, responsiveImage, slug }) {
   return (
     <div className="sm:mx-0">
       {slug ? (
-        <NextLink href={`/blog/${slug}`}>
-          <a aria-label={title}>{image}</a>
+        <NextLink href={`/blog/${slug}`} aria-label={title}>
+          {image}
         </NextLink>
       ) : (
         image

@@ -45,7 +45,7 @@ const HeroPost: FC<HeroPostProps & PostHeaderProps & AvatarComponentProps & IBlo
         </div>
       </Box>
       <div>
-        <p>{excerpt}</p>
+        <Typography>{excerpt}</Typography>
       </div>
       <Stack justifyContent="flex-end" flexDirection={!matchMobileView ? 'row' : 'column'}>
         <NextLink href={`/blog/${slug}`}>

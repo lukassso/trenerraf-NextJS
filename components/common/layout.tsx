@@ -1,17 +1,14 @@
-import { LayoutProps } from '@/interfaces/i-layout-page';
 import Meta from '@/components/common/meta';
 import HeaderNavigation from '@/components/navbar';
 import Footer from '@/components/common/footer';
-// import { INDEX_DESCRIPTION_OG, INDEX_TITLE_OG } from '../../pages/_app';
-// import { NextSeo } from 'next-seo';
-// import { PAGE_URL } from '@/lib/constants';
 import { FC, ReactNode } from 'react';
+import { Imeta } from '@/interfaces/i-meta';
 
-type LayoutProps2 = {
+type LayoutProps = {
   children: ReactNode;
 };
 
-const Layout: FC<LayoutProps2 & LayoutProps> = ({
+const Layout: FC<Imeta & LayoutProps> = ({
   children,
   title,
   description,

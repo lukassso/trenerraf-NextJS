@@ -10,19 +10,9 @@ import 'slick-carousel/slick/slick.css';
 import { ThemeProvider } from '@mui/material';
 import Script from 'next/script';
 import { DefaultSeo } from 'next-seo';
-import { PAGE_URL } from '@/lib/constants';
-// import 'slick-carousel/slick/slick-theme.css';
+import { INDEX_DESCRIPTION, INDEX_DESCRIPTION_OG, INDEX_TITLE, INDEX_TITLE_OG } from '@/lib/seo-links';
 
 const clientSideEmotionCache = createEmotionCache();
-
-export const INDEX_DESCRIPTION =
-  'Zapraszam na wspólne treningi na Mokotowie. Osobisty trening dostosowany do Twoich potrzeb. Pokażę Ci jak poprawić sylwetkę i osiągnąć sukces.';
-export const INDEX_TITLE = 'Rafał Kiszło | Trener Personalny Mokotów';
-export const INDEX_TITLE_OG = 'Rafał Kiszło | Trener Personalny';
-export const INDEX_DESCRIPTION_OG =
-  'Zapraszam na wspólne treningi na Mokotowie i Wilanowie. Pokażę Ci jak poprawić sylwetkę i osiągnąć sukces.';
-export const INDEX_IMAGES_URL_OG = 'https://trenerrafal.pl/trener-rafal-og.png';
-export const INDEX_URL_OG = PAGE_URL;
 
 interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;

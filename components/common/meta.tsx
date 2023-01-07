@@ -1,21 +1,11 @@
 import { PAGE_URL } from '@/lib/constants';
 import { NextSeo } from 'next-seo';
-import { LayoutProps } from '@/interfaces/i-layout-page';
-import { INDEX_DESCRIPTION_OG, INDEX_IMAGES_URL_OG, INDEX_TITLE_OG, INDEX_URL_OG } from '../../pages/_app';
+import { Imeta } from '@/interfaces/i-meta';
 
-export default function Meta({ title, description, ogTitle, ogDescription, ogImageUrl, ogUrl }: LayoutProps) {
+export default function Meta({ title, description, ogTitle, ogDescription, ogImageUrl, ogUrl }: Imeta) {
   return (
     <>
       <NextSeo
-        // robotsProps={{
-        //   nosnippet: true,
-        //   notranslate: true,
-        //   noimageindex: true,
-        //   noarchive: true,
-        //   maxSnippet: -1,
-        //   maxImagePreview: 'none',
-        //   maxVideoPreview: -1,
-        // }}
         title={title}
         description={description}
         // canonical={`${PAGE_URL}`}
