@@ -14,7 +14,8 @@ import {
   INDEX_URL_OG,
 } from '@/lib/seo-links';
 
-export default function Index() {
+export default function Index({ res }) {
+  console.log(res);
   return (
     <>
       <Layout
@@ -34,4 +35,24 @@ export default function Index() {
       </Layout>
     </>
   );
+}
+
+export async function getServerSideProps() {
+  const key = process.env.PLACES_KEY;
+  let res = null;
+
+  try {
+    const respose = await fetch(
+      `https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJf14O7JLNHkcR-AJhS_VKLCw&key=${key}`,
+    );
+    res = await respose.json();
+  } catch (error) {
+    console.log(error);
+  }
+
+  return {
+    props: {
+      res,
+    },
+  };
 }

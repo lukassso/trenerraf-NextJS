@@ -31,10 +31,12 @@ const Footer = () => {
             </Box>
           </Grid>
         </Container>
-        <Divider />
+        <Box sx={{ my: 7 }}>
+          <Divider />
+        </Box>
         <Box textAlign="center">
           <Typography variant="body2" color="initial">
-            Copyright © 2022 TrenerRafal.pl
+            Copyright © 2023 TrenerRafal.pl
           </Typography>
         </Box>
       </Box>

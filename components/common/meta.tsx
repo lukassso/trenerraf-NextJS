@@ -1,5 +1,5 @@
 import { PAGE_URL } from '@/lib/constants';
-import { NextSeo, ProductJsonLd } from 'next-seo';
+import { LocalBusinessJsonLd, NextSeo, ProductJsonLd } from 'next-seo';
 import { Imeta } from '@/interfaces/i-meta';
 
 export default function Meta({ title, description, ogTitle, ogDescription, ogImageUrl, ogUrl }: Imeta) {
@@ -9,7 +9,7 @@ export default function Meta({ title, description, ogTitle, ogDescription, ogIma
         productName="Trener Personalny Rafał Kiszło"
         images={[`${PAGE_URL}/trener-rafal-kiszlo.png`, `${PAGE_URL}/trener-rafal-og.png`]}
         description={description}
-        lowPrice={1}
+        lowPrice={50}
         priceCurrency="PLN"
         // slogan="For the business traveller looking for something to drop from a height."
         // disambiguatingDescription="Executive Anvil, perfect for the business traveller."
@@ -18,6 +18,56 @@ export default function Meta({ title, description, ogTitle, ogDescription, ogIma
           ratingValue: '5',
           reviewCount: '89',
         }}
+      />
+      <LocalBusinessJsonLd
+        type="Personal trainer"
+        id={PAGE_URL}
+        name="Trener personalny Mokotów"
+        description="Trener personalny i Trener roku w plebiscycie fitness motywatory. Dobiorę optymalną dietę oraz dopasowany zestaw ćwiczeń. Stań się lepszą wersją siebie. Zapraszam!"
+        url={PAGE_URL}
+        telephone="+48608472294"
+        address={{
+          streetAddress: 'Józefa Piusa Dziekońskiego 1',
+          addressLocality: 'Warszawa',
+          addressRegion: 'Mokotów',
+          postalCode: '00-728',
+          addressCountry: 'PL',
+        }}
+        geo={{
+          latitude: '52.1947712',
+          longitude: '21.0474938',
+        }}
+        images={[`${PAGE_URL}/trener-rafal-kiszlo.png`, `${PAGE_URL}/trener-rafal-og.png`]}
+        // sameAs={['www.company-website-url1.dev', 'www.company-website-url2.dev', 'www.company-website-url3.dev']}
+        openingHours={[
+          {
+            opens: '05:00',
+            closes: '23:00',
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+            validFrom: '2023-01-08',
+            validThrough: '2023-12-29',
+          },
+          {
+            opens: '15:00',
+            closes: '18:00',
+            dayOfWeek: ['Saturday', 'Sunday'],
+            validFrom: '2023-01-08',
+            validThrough: '2023-12-29',
+          },
+        ]}
+        rating={{
+          ratingValue: '5',
+          ratingCount: '89',
+        }}
+        areaServed={[
+          {
+            geoMidpoint: {
+              latitude: '52.1947712',
+              longitude: '21.0474938',
+            },
+            geoRadius: '9000',
+          },
+        ]}
       />
       <NextSeo
         title={title}
