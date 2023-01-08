@@ -1,10 +1,24 @@
 import { PAGE_URL } from '@/lib/constants';
-import { NextSeo } from 'next-seo';
+import { NextSeo, ProductJsonLd } from 'next-seo';
 import { Imeta } from '@/interfaces/i-meta';
 
 export default function Meta({ title, description, ogTitle, ogDescription, ogImageUrl, ogUrl }: Imeta) {
   return (
     <>
+      <ProductJsonLd
+        productName="Trener Personalny Rafał Kiszło"
+        images={[`${PAGE_URL}/trener-rafal-kiszlo.png`, `${PAGE_URL}/trener-rafal-og.png`]}
+        description={description}
+        lowPrice={1}
+        priceCurrency="PLN"
+        // slogan="For the business traveller looking for something to drop from a height."
+        // disambiguatingDescription="Executive Anvil, perfect for the business traveller."
+        award="Zwycięzca konkursu Fitness Motywatory"
+        aggregateRating={{
+          ratingValue: '5',
+          reviewCount: '89',
+        }}
+      />
       <NextSeo
         title={title}
         description={description}

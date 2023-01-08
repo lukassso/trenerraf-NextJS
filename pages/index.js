@@ -12,7 +12,7 @@ import {
   INDEX_TITLE,
   INDEX_TITLE_OG,
   INDEX_URL_OG,
-} from './_app';
+} from '@/lib/seo-links';
 
 export default function Index() {
   return (
