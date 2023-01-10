@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
 import Layout from '@/components/common/layout';
-import { getPostAndMorePosts } from '@/lib/api';
+import { getAllPostsWithSlug, getPostAndMorePosts } from '@/lib/api';
 import markdownToHtml from '@/lib/markdownToHtml';
 import { Image, StructuredText } from 'react-datocms';
 import { Box, Container } from '@mui/material';
@@ -83,18 +83,17 @@ export default function Post({ post, morePosts }: PostProps) {
   );
 }
 
-//
-// export async function getStaticPaths() {
-//   const allPosts = await getAllPostsWithSlug();
-//   return {
-//     paths: allPosts?.map((post: { slug: string }) => `/blog/${post.slug}`) || [],
-//     fallback: 'blocking',
-//   };
-// }
+export async function getStaticPaths() {
+  const allPosts = await getAllPostsWithSlug();
+  return {
+    paths: allPosts?.map((post: { slug: string }) => `/blog/${post.slug}`) || [],
+    fallback: 'blocking',
+  };
+}
 
-export async function getServerSideProps({ params, preview = false }: any) {
+export async function getStaticProps({ params, preview = false }: any) {
   const data = await getPostAndMorePosts(params.slug, preview);
-  const content = await markdownToHtml(data?.post?.content || '');
+  // const content = await markdownToHtml(data?.post?.content || '');
 
   return {
     props: {

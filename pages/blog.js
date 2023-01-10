@@ -85,7 +85,7 @@ export default function Blog({ allPosts }) {
   );
 }
 
-export async function getServerSideProps({ preview = false }) {
+export async function getStaticProps({ preview = false }) {
   const allPosts = (await getAllPostsForHome(preview)) || [];
   return {
     props: { allPosts },
