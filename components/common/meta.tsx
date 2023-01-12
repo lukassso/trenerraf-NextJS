@@ -23,7 +23,7 @@ export default function Meta({ title, description, ogTitle, ogDescription, ogIma
         type="Personal trainer"
         id={PAGE_URL}
         name={title}
-        description="Trener personalny i Trener roku w plebiscycie fitness motywatory. Dobiorę optymalną dietę oraz dopasowany zestaw ćwiczeń. Stań się lepszą wersją siebie. Zapraszam!"
+        description="Trener personalny i Trener roku w plebiscycie fitness motywatory. Treningi i plany dostosowane do twoich celów i możliwości."
         url={PAGE_URL}
         telephone="+48608472294"
         address={{
@@ -131,10 +131,10 @@ export default function Meta({ title, description, ogTitle, ogDescription, ogIma
             rel: 'manifest',
             href: '/manifest.json',
           },
-          {
-            rel: 'stylesheet',
-            href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap',
-          },
+          // {
+          //   rel: 'stylesheet',
+          //   href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap',
+          // },
           // {
           //   rel: 'preload',
           //   href: 'https://www.test.ie/font/sample-font.woof2',

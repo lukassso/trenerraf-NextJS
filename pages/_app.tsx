@@ -11,6 +11,7 @@ import { ThemeProvider } from '@mui/material';
 import Script from 'next/script';
 import { DefaultSeo } from 'next-seo';
 import { INDEX_DESCRIPTION, INDEX_DESCRIPTION_OG, INDEX_TITLE, INDEX_TITLE_OG } from '@/lib/seo-links';
+import '../styles/main.css';
 
 const clientSideEmotionCache = createEmotionCache();
 
