@@ -2,12 +2,12 @@ import Image from 'next/image';
 //
 // export default function Avatar({ name, picture }) {
 //   return (
-//     <div className="flex items-center">
-//       <div className="w-12 h-12 relative mr-4">
+//     <Box className="flex items-center">
+//       <Box className="w-12 h-12 relative mr-4">
 //         <Image src={picture.url} layout="fill" className="rounded-full" alt={name} />
-//       </div>
-//       <div className="text-xl font-bold">{name}</div>
-//     </div>
+//       </Box>
+//       <Box className="text-xl font-bold">{name}</Box>
+//     </Box>
 //   );
 // }
 

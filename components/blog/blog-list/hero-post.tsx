@@ -39,14 +39,14 @@ const HeroPost: FC<HeroPostProps & PostHeaderProps & AvatarComponentProps & IBlo
         <Typography variant="h3">
           <NextLink href={`/blog/${slug}`}>{title}</NextLink>
         </Typography>
-        <div>
+        <Box>
           <AvatarComponent name={name} avatarPicture={avatarPicture} />
           <Date dateString={date} />
-        </div>
+        </Box>
       </Box>
-      <div>
+      <Box>
         <Typography>{excerpt}</Typography>
-      </div>
+      </Box>
       <Stack justifyContent="flex-end" flexDirection={!matchMobileView ? 'row' : 'column'}>
         <NextLink href={`/blog/${slug}`}>
           <Button fullWidth endIcon={<NavigateNextIcon />} variant="outlined" size="small">

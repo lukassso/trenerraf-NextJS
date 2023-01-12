@@ -9,7 +9,7 @@ export const StyledDots = styled('ul')(({ theme }) => ({
     textAlign: 'left',
     '& li': {
       marginRight: theme.spacing(2),
-      '& .slick-active>div': {
+      '& .slick-active>Box': {
         backgroundColor: theme.palette.primary.main,
       },
     },

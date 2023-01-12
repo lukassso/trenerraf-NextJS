@@ -38,7 +38,7 @@ function App2() {
   const { loading, data, after, more } = state;
 
   return (
-    <div>
+    <Box>
       {data.map((testimonial: ITestimonials) => (
         <Box key={`${testimonial.id}.${testimonial.name}`} sx={{ p: 10, pt: 4 }}>
           <Box
@@ -107,7 +107,7 @@ function App2() {
           </Button>
         </Box>
       )}
-    </div>
+    </Box>
   );
 }
 

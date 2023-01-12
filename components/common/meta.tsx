@@ -55,10 +55,10 @@ export default function Meta({ title, description, ogTitle, ogDescription, ogIma
             validThrough: '2023-12-29',
           },
         ]}
-        rating={{
-          ratingValue: '5',
-          ratingCount: '89',
-        }}
+        // rating={{
+        //   ratingValue: '5',
+        //   ratingCount: '89',
+        // }}
         areaServed={[
           {
             geoMidpoint: {

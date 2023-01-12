@@ -1,7 +1,9 @@
+import { Box } from '@mui/material';
+
 export default function PostBody({ content }) {
   return (
-    <div className="max-w-2xl mx-auto">
-      <div dangerouslySetInnerHTML={{ __html: content }} />
-    </div>
+    <Box className="max-w-2xl mx-auto">
+      <Box dangerouslySetInnerHTML={{ __html: content }} />
+    </Box>
   );
 }

@@ -2,7 +2,6 @@ import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
 import Layout from '@/components/common/layout';
 import { getAllPostsWithSlug, getPostAndMorePosts } from '@/lib/api';
-import markdownToHtml from '@/lib/markdownToHtml';
 import { Image, StructuredText } from 'react-datocms';
 import { Box, Container } from '@mui/material';
 import PostHeader from '@/components/blog/blog-posts/post-header';
@@ -32,7 +31,7 @@ export default function Post({ post, morePosts }: PostProps) {
       ogTitle={INDEX_TITLE_OG}
       ogDescription={INDEX_DESCRIPTION_OG}
     >
-      <div>
+      <Box>
         {router.isFallback ? (
           <AppLoader />
         ) : (
@@ -55,10 +54,9 @@ export default function Post({ post, morePosts }: PostProps) {
                         // @ts-ignore
                         let responsiveImage = record?.image?.responsiveImage;
                         return (
-                          <p>
-                            {/* eslint-disable-next-line jsx-a11y/alt-text */}
-                            <Image data={responsiveImage} />
-                          </p>
+                          <>
+                            <Image data={responsiveImage} />;
+                          </>
                         );
                       default:
                         return null;
@@ -78,7 +76,7 @@ export default function Post({ post, morePosts }: PostProps) {
             </Container>
           </>
         )}
-      </div>
+      </Box>
     </Layout>
   );
 }

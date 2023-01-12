@@ -1,6 +1,7 @@
 import { Image } from 'react-datocms';
 import cn from 'classnames';
 import NextLink from '@/components/common/next-link';
+import { Box } from '@mui/material';
 
 export default function CoverImage({ title, responsiveImage, slug }) {
   const image = (
@@ -16,7 +17,7 @@ export default function CoverImage({ title, responsiveImage, slug }) {
     />
   );
   return (
-    <div className="sm:mx-0">
+    <Box className="sm:mx-0">
       {slug ? (
         <NextLink href={`/blog/${slug}`} aria-label={title}>
           {image}
@@ -24,6 +25,6 @@ export default function CoverImage({ title, responsiveImage, slug }) {
       ) : (
         image
       )}
-    </div>
+    </Box>
   );
 }

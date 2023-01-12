@@ -3,6 +3,7 @@ import HeaderNavigation from '@/components/navbar';
 import Footer from '@/components/common/footer';
 import { FC, ReactNode } from 'react';
 import { Imeta } from '@/interfaces/i-meta';
+import { Box } from '@mui/material';
 
 type LayoutProps = {
   children: ReactNode;
@@ -27,10 +28,10 @@ const Layout: FC<Imeta & LayoutProps> = ({
         ogImageUrl={ogImageUrl}
         ogUrl={ogUrl}
       />
-      <div>
+      <Box>
         <HeaderNavigation />
         {children}
-      </div>
+      </Box>
       <Footer />
     </>
   );
