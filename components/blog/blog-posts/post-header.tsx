@@ -1,7 +1,5 @@
 import Date from '@/components/common/date';
-import CoverImage from '@/components/blog/components/cover-image';
 import { Container, Typography } from '@mui/material';
-import { IBlogPostCard } from '@/interfaces/i-blog-post-card';
 import { FC } from 'react';
 import AvatarComponent, { AvatarComponentProps } from '@/components/blog/components/avatar-component';
 import { Image } from 'react-datocms';

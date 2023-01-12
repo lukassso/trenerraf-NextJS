@@ -3,7 +3,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import Image from 'next/image';
 import { FabPhonePulse, HeroClaimStyle, TextLoopStyle } from '@/components/one-page/hero-section/hero-section.styled';
 import YellowPlumSvg from '@/assets/yellowPlumSvg';
-import trenerRafalHero from '@/assets/trener-rafal-tlo-hero.png';
+import trenerRafalHero from '../../../public/trener-rafal-kiszlo.png';
 
 const HeroSection = () => {
   const { breakpoints } = useTheme();
