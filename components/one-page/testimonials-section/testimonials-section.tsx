@@ -128,8 +128,8 @@ export default function TestimonialsSection() {
           </Box>
           <Box display="flex" alignItems="center" flexDirection="column">
             {testimonials2.map((testimonial2) => (
-              <>
-                <Box key={`${testimonial2.id}.${testimonial2.name}`} sx={{ p: 10, pt: 4 }}>
+              <div key={`${testimonial2.id}.${testimonial2.name}`}>
+                <Box sx={{ p: 10, pt: 4 }}>
                   <Box
                     sx={{
                       display: 'flex',
@@ -164,7 +164,7 @@ export default function TestimonialsSection() {
                   </Box>
                   <Divider />
                 </Box>
-              </>
+              </div>
             ))}
             <App2 />
           </Box>
