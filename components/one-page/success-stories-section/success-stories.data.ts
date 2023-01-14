@@ -17,8 +17,6 @@ export const stories: Array<ISuccessStories> = [
     image: image1,
     name: 'Kasia',
     weight: '-50 kg',
-    cardTeaser:
-      'Kasia nigdy wcześniej nie ćwiczyła na siłowni. Kasia chciała poprostu schudnąć i poczuć się lepiej. Musieliśmy zacząć od podstaw..',
     text: 'Kasia nigdy wcześniej nie ćwiczyła na siłowni. Kasia chciała poprostu schudnąć i poczuć się lepiej. Musieliśmy zacząć od podstaw treningu przy zwróceniu szczególnej uwagi na przepuchline w odcinku ledzwiowym. Cel był konkretny schudnąć maksymalnie w ciągu 12 miesięcy. Efekt jest bardzo zadowalający redukcja 50kg, poprawa sprawnośći, brak bólu w odcinku ledzwiowym- czas 12 miesięcy',
   },
   {
@@ -26,8 +24,6 @@ export const stories: Array<ISuccessStories> = [
     image: image2,
     name: 'Asia i Dominik',
     weight: '-20kg / -25kg',
-    cardTeaser:
-      'Asia i Dominik nie mieli do czynienia z siłownia wcześniej. Na początku musieliśmy popracować nad zmianą zasad żywienia...',
     text: 'Asia i Dominik nie mieli do czynienia z siłownia wcześniej. Na początku musieliśmy popracować nad zmianą zasad żywienia i wprowadzeniu nowych zasad podczas zakupów. Racjonalne żywienie zawsze pomaga w budowie dobrego zdrowia i sprawności. Następnie zaczęliśmy pracować nad podstawami wzorców ruchowych. Nauczyliśmy się podstaw treningu i już po 12 miesiącach regularnych treningów 2-3 razy w tyg widać efekty:).',
   },
   {
@@ -35,8 +31,6 @@ export const stories: Array<ISuccessStories> = [
     image: image3,
     name: 'Filip',
     weight: '-30kg',
-    cardTeaser:
-      'Filip chciał lepiej się czuć, być sprawniejszy i zredukować tkankę tłuszczową. Regularne treningu były utrudnione...',
     text: 'Filip chciał lepiej się czuć, być sprawniejszy i zredukować tkankę tłuszczową. Regularne treningu były utrudnione, gdyż Filip jest mocno zajętym człowiekiem. Staraliśmy się wplatać treningi w mocno zapchany grafik Filipa. Przy okazji zmienić źle przyzwyczajenia żywieniowe. Efekty ciężkiej pracy na siłowni widać na zdjęciu.',
   },
   {
@@ -44,8 +38,6 @@ export const stories: Array<ISuccessStories> = [
     image: image4,
     name: 'Mateusz',
     weight: '-24 kg',
-    cardTeaser:
-      'Mateusz chciał zrobić życiową formę. Ważne było poprawienie jego wydolności i praca nad techniką wykonywanych ćwiczeń.',
     text: 'Mateusz chciał zrobić życiową formę. Ważne było poprawienie jego wydolności i praca nad techniką wykonywanych ćwiczeń. Cwiczylismy 2 x w tyg., a on sam przychodził 2x w tyg. Na cardio. Po 5 miesiącach efekty widać na zdjęciu, a sprawność i wydolność zmieniła się bardzo.',
   },
   {
@@ -53,8 +45,6 @@ export const stories: Array<ISuccessStories> = [
     image: image5,
     name: 'Eryk',
     weight: '-10kg',
-    cardTeaser:
-      'Eryk przyszedł do mnie z misją zrobienia six-packa na wakacje miał 6 miesięcy. Udało się! Na plaży mógł pokazać kaloryfer.',
     text: 'Eryk przyszedł do mnie z misją zrobienia six-packa na wakacje miał 6 miesięcy. Udało się! Na plaży mógł pokazać kaloryfer.',
   },
   {
@@ -62,8 +52,6 @@ export const stories: Array<ISuccessStories> = [
     image: image6,
     name: 'Michał',
     weight: '-20kg',
-    cardTeaser:
-      'Głównym celem Michała była redukcja i poprawa sprawnośći. Cal osiągnęliśmy po 12 miesiącach wspólnej pracy 2 razy w tyg.',
     text: 'Głównym celem Michała była redukcja i poprawa sprawnośći. Cal osiągnęliśmy po 12 miesiącach wspólnej pracy 2 razy w tyg. Dopasowalismy dietę do Michała',
   },
   {
@@ -71,8 +59,6 @@ export const stories: Array<ISuccessStories> = [
     image: image7,
     name: 'Dominik',
     weight: '-20kg',
-    cardTeaser:
-      'Dominik jest typowym biurkowcem. Praca 8-10 h bez ruchu powrót do domu i kanapa spowodowały nadwagę...',
     text: 'Dominik jest typowym biurkowcem. Praca 8-10 h bez ruchu powrót do domu i kanapa spowodowały nadwagę. Cel był jasny redukcja tkanki tłuszczowej, poprawa sprawnośći i nauka techniki wykonywania ćwiczeń.',
   },
   {
@@ -80,7 +66,6 @@ export const stories: Array<ISuccessStories> = [
     image: image8,
     name: 'Igor',
     weight: '-20kg',
-    cardTeaser: 'Igor chciał wyglądać atrakcyjnie. W ciągu 2 lat wspólnej pracy ( 3 razy w tyg ) sylwetka znacznie ...',
     text: 'Igor chciał wyglądać atrakcyjnie. W ciągu 2 lat wspólnej pracy ( 3 razy w tyg ) sylwetka znacznie się poprawiła. Dieta byla trzymana na 70%.',
   },
   {
@@ -88,15 +73,13 @@ export const stories: Array<ISuccessStories> = [
     image: image9,
     name: 'Ania',
     weight: '-20kg',
-    cardTeaser: 'Ania chciała się zmienić w ciągu 12 miesięcy, aby na następne wakacje wyglądać lepiej.',
-    text: '',
+    text: 'Ania chciała się zmienić w ciągu 12 miesięcy, aby na następne wakacje wyglądać lepiej.',
   },
   {
     id: 10,
     image: image10,
     name: 'Joanna',
     weight: '-20kg',
-    cardTeaser: 'Joanna chciała poprawić swoja sylwetkę po ciąży. Poczatkowe treningi były delikatne i z czasem...',
     text: 'Joanna chciała poprawić swoja sylwetkę po ciąży. Poczatkowe treningi były delikatne i z czasem zwiekszalismy poziom trudności.',
   },
   {
@@ -104,7 +87,6 @@ export const stories: Array<ISuccessStories> = [
     image: image11,
     name: 'Ania',
     weight: '-20kg',
-    cardTeaser: 'Ania potrzebowała przemiany, aby być gotowym na następne wakacje.',
-    text: '',
+    text: 'Ania potrzebowała przemiany, aby być gotowym na następne wakacje.',
   },
 ];

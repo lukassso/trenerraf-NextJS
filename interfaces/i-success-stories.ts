@@ -5,6 +5,5 @@ export interface ISuccessStories {
   image: StaticImageData;
   name: string;
   weight: string;
-  cardTeaser: string;
-  text?: string;
+  text: string;
 }

@@ -29,6 +29,7 @@ const theme = createTheme({
     },
     background: {
       default: '#ffffff',
+      paper: '#F6F6F6',
       // yellow: '#FDC100',
       // gray: '#f6f6f6',
     },

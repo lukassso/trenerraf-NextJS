@@ -67,7 +67,7 @@ const SuccessStories: FC = () => {
           xs: 0,
           md: 30,
         },
-        backgroundColor: 'background.default',
+        // backgroundColor: 'linear-gradient(0deg, rgba(255,254,252,1) 66%, rgba(255,254,252,1) 100%',
       }}
     >
       <Container maxWidth="lg">

@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useCallback, useState } from 'react';
 import Image from 'next/image';
 import Typography from '@mui/material/Typography';
 import Dialog from '@mui/material/Dialog';
@@ -56,9 +56,13 @@ const CardItem: FC<Props> = ({ story }) => {
     ) {
       return;
     }
-
     setOpenDrawer(open);
   };
+
+  const setCardTeaser = useCallback(() => {
+    const amountOfLetters = matchMobileView ? 110 : 130;
+    return story.text.length <= amountOfLetters ? story.text : `${story.text?.substring(0, amountOfLetters)}...`;
+  }, [matchMobileView, story.text]);
 
   return (
     <Card sx={{ mx: 2, mb: 5, minHeight: matchMobileView ? '540px' : '560px' }} elevation={5}>
@@ -73,7 +77,7 @@ const CardItem: FC<Props> = ({ story }) => {
           {story.name}
         </Typography>
         <Typography sx={{ marginTop: 2 }} variant="body1" color="initial">
-          {story.cardTeaser}
+          {setCardTeaser()}
         </Typography>
       </CardContent>
       <CardActions
@@ -119,7 +123,7 @@ const CardItem: FC<Props> = ({ story }) => {
         onClose={handleCloseDialog}
         aria-describedby="alert-dialog-slide-description"
       >
-        <Box sx={{ minHeight: '40vh', minWidth: '60vw' }}>body dialog</Box>
+        <Box sx={{ minHeight: '40vh', minWidth: '60vw' }}>{story.text}</Box>
       </Dialog>
     </Card>
   );
