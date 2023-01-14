@@ -3,7 +3,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import Image from 'next/image';
 import { FabPhonePulse, HeroClaimStyle, TextLoopStyle } from '@/components/one-page/hero-section/hero-section.styled';
 import YellowPlumSvg from '@/assets/yellowPlumSvg';
-import trenerRafalHero from '../../../public/trener-rafal-kiszlo.png';
+import trenerRafalHero from '../../../public/trener-rafal-kiszlo.webp';
 
 const HeroSection = () => {
   const { breakpoints } = useTheme();
@@ -54,7 +54,7 @@ const HeroSection = () => {
             >
               <YellowPlumSvg />
             </Box>
-            <Image src={trenerRafalHero} alt="Trener personalny Mokotów" />
+            <Image src={trenerRafalHero} priority={true} placeholder="blur" alt="Trener personalny Mokotów" />
           </Box>
         </Grid>
       </Grid>
