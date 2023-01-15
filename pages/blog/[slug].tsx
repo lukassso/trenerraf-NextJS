@@ -55,7 +55,8 @@ export default function Post({ post, morePosts }: PostProps) {
                         let responsiveImage = record?.image?.responsiveImage;
                         return (
                           <>
-                            <Image data={responsiveImage} />;
+                            {/* eslint-disable-next-line jsx-a11y/alt-text */}
+                            <Image data={{ ...responsiveImage, alt: post.name }} />;
                           </>
                         );
                       default:

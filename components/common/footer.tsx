@@ -1,11 +1,56 @@
 import { Container, Grid, Typography, IconButton, Divider } from '@mui/material';
 import Box from '@mui/material/Box';
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import GoogleMapReact from 'google-map-react';
+import { API_GOOGLE_KEY } from '@/lib/constants';
+
+const PinOnTheMap = ({ text }: any) => (
+  <Box
+    sx={{
+      color: 'secondary.main',
+      background: 'black',
+      padding: '15px 10px',
+      display: 'flex',
+      textAlign: 'center',
+      minWidth: 100,
+      width: '100%',
+      fontWeight: 'bold',
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderRadius: 2,
+      transform: 'translate(-50%, -50%)',
+    }}
+  >
+    {text}
+  </Box>
+);
 
 const Footer = () => {
+  const defaultProps = {
+    center: {
+      lat: 52.1947712,
+      lng: 21.0474938,
+    },
+    zoom: 13,
+  };
+
+  const mapViewCallback = useMemo(() => {
+    return (
+      <GoogleMapReact
+        // @ts-ignore
+        bootstrapURLKeys={{ key: API_GOOGLE_KEY }}
+        center={defaultProps.center}
+        defaultZoom={defaultProps.zoom}
+        options={{ disableDefaultUI: true }}
+      >
+        <PinOnTheMap lat={defaultProps.center.lat} lng={defaultProps.center.lng} text="TrenerRafal.pl" />
+      </GoogleMapReact>
+    );
+  }, [defaultProps.center, defaultProps.zoom]);
+
   return (
     <>
       <Box id="kontakt" />
@@ -30,11 +75,24 @@ const Footer = () => {
               </IconButton>
             </Box>
           </Grid>
+          <Box
+            sx={{
+              width: '100%',
+              height: '100vh',
+              maxHeight: '300px',
+              overflow: 'hidden',
+              '& div>div': {
+                borderRadius: 4,
+              },
+            }}
+          >
+            {mapViewCallback}
+          </Box>
         </Container>
         <Box sx={{ my: 7 }}>
           <Divider />
         </Box>
-        <Box textAlign="center">
+        <Box sx={{ my: 7, textAlign: 'center' }}>
           <Typography variant="body2" color="initial">
             Copyright © 2023 TrenerRafal.pl
           </Typography>

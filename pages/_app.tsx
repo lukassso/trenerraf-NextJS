@@ -87,7 +87,7 @@ function MyApp({ Component, emotionCache = clientSideEmotionCache, pageProps }: 
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <DefaultSeo {...defaultSeo} />
-          <Component {...pageProps} />;
+          <Component {...pageProps} />
         </ThemeProvider>
       </CacheProvider>
     </>
