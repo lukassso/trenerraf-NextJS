@@ -10,6 +10,9 @@ import {
   CardActions,
   CardContent,
   CardMedia,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
   IconButton,
   SwipeableDrawer,
   useMediaQuery,
@@ -65,7 +68,7 @@ const CardItem: FC<Props> = ({ story }) => {
   }, [matchMobileView, story.text]);
 
   return (
-    <Card sx={{ mx: 2, mb: 5, minHeight: matchMobileView ? '540px' : '560px' }} elevation={5}>
+    <Card sx={{ mx: 3, my: 5, minHeight: matchMobileView ? '560px' : '590px', position: 'relative' }} elevation={5}>
       <CardMedia key={story.id} title={story.name}>
         <Image src={story.image} alt={`Efekty treningu osobistego ` + story.name} />
       </CardMedia>
@@ -84,29 +87,29 @@ const CardItem: FC<Props> = ({ story }) => {
         sx={{
           display: 'block',
           position: 'absolute',
-          textAlign: 'center',
+          textAlign: 'left',
           bottom: 0,
-          pb: 10,
+          pb: 5,
+          pl: 4,
         }}
       >
         <Button variant="outlined" onClick={matchMobileView ? toggleDrawer(true) : handleClickOpenDialog}>
-          More
+          Więcej
         </Button>
       </CardActions>
-      <SwipeableDrawer anchor="bottom" open={openDrawer} onClose={toggleDrawer(false)} onOpen={toggleDrawer(true)}>
-        <Box sx={{ minHeight: '40vh' }}>
-          <Box
-            sx={{
-              pt: 2,
-              pr: 5,
-              display: 'flex',
-              justifyContent: 'flex-end',
-            }}
-          >
-            <IconButton onClick={toggleDrawer(false)} aria-label="delete">
-              <CloseIcon />
-            </IconButton>
-          </Box>
+      <SwipeableDrawer
+        sx={{
+          '& .MuiPaper-elevation': {
+            borderRadius: '16px 16px 0 0',
+          },
+        }}
+        anchor="bottom"
+        open={openDrawer}
+        onClose={toggleDrawer(false)}
+        onOpen={toggleDrawer(true)}
+      >
+        <Box sx={{ minHeight: '90vh' }}>
+          <Image src={story.image} alt={`Efekty treningu osobistego ` + story.name} />
           <Box
             sx={{
               p: 4,
@@ -120,10 +123,30 @@ const CardItem: FC<Props> = ({ story }) => {
         open={openDialog}
         TransitionComponent={Transition}
         keepMounted
+        maxWidth="xs"
         onClose={handleCloseDialog}
         aria-describedby="alert-dialog-slide-description"
       >
-        <Box sx={{ minHeight: '40vh', minWidth: '60vw' }}>{story.text}</Box>
+        <DialogTitle sx={{ m: 0, p: 2 }}>
+          {story.name}
+          {openDialog ? (
+            <IconButton
+              aria-label="close"
+              onClick={handleCloseDialog}
+              sx={{
+                position: 'absolute',
+                right: 8,
+                top: 8,
+                color: (theme) => theme.palette.grey[500],
+              }}
+            >
+              <CloseIcon />
+            </IconButton>
+          ) : null}
+        </DialogTitle>
+        <DialogContent dividers>
+          <Typography gutterBottom>{story.text}</Typography>
+        </DialogContent>
       </Dialog>
     </Card>
   );

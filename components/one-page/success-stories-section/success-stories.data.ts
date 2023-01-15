@@ -24,14 +24,14 @@ export const stories: Array<ISuccessStories> = [
     image: image2,
     name: 'Asia i Dominik',
     weight: '-20kg / -25kg',
-    text: 'Asia i Dominik nie mieli do czynienia z siłownia wcześniej. Na początku musieliśmy popracować nad zmianą zasad żywienia i wprowadzeniu nowych zasad podczas zakupów. Racjonalne żywienie zawsze pomaga w budowie dobrego zdrowia i sprawności. Następnie zaczęliśmy pracować nad podstawami wzorców ruchowych. Nauczyliśmy się podstaw treningu i już po 12 miesiącach regularnych treningów 2-3 razy w tyg widać efekty:).',
+    text: 'Asia i Dominik nie mieli do czynienia z siłownia wcześniej. Na początku musieliśmy popracować nad zmianą zasad żywienia i wprowadzeniu nowych zasad podczas zakupów. Racjonalne żywienie zawsze pomaga w budowie dobrego zdrowia i sprawności. Następnie zaczęliśmy pracować nad podstawami wzorców ruchowych. Nauczyliśmy się podstaw treningu i już po 12 miesiącach regularnych treningów 2-3 razy w tyg widać efekty.',
   },
   {
     id: 3,
     image: image3,
     name: 'Filip',
     weight: '-30kg',
-    text: 'Filip chciał lepiej się czuć, być sprawniejszy i zredukować tkankę tłuszczową. Regularne treningu były utrudnione, gdyż Filip jest mocno zajętym człowiekiem. Staraliśmy się wplatać treningi w mocno zapchany grafik Filipa. Przy okazji zmienić źle przyzwyczajenia żywieniowe. Efekty ciężkiej pracy na siłowni widać na zdjęciu.',
+    text: 'Filip chciał lepiej się czuć, być sprawniejszy i zredukować tkankę tłuszczową. Regularne treningi były utrudnione, gdyż Filip jest mocno zajętym człowiekiem. Staraliśmy się wplatać treningi w mocno zapchany grafik Filipa. Przy okazji zmienić źle przyzwyczajenia żywieniowe. Efekty ciężkiej pracy na siłowni widać na zdjęciu.',
   },
   {
     id: 4,
