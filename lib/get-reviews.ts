@@ -11,9 +11,9 @@ export type Review = {
 const getReviews = async (req: NextApiRequest, res: NextApiResponse<Review[]>) => {
   const details = await fetch(URL_GOOGLE_API_PLACE_ID);
   const {
-    result: { response },
+    result: { reviews },
   } = await details.json();
-  res.status(200).json(response);
+  res.status(200).json(reviews);
 };
 
 export default getReviews;

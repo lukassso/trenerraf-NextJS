@@ -9,28 +9,42 @@
 // };
 // export default Reviews;
 
-import { FC } from 'react';
+import React, { FC } from 'react';
 import { URL_GOOGLE_API_PLACE_ID } from '@/lib/constants';
 import StarIcon from '@mui/icons-material/Star';
+import { Avatar, Box, Typography } from '@mui/material';
+import Stack from '@mui/material/Stack';
 
 export type ReviewProps = {
   src: string;
   rating: number;
   name: string;
   text: string;
-  res: any;
+  // res: Review;
 };
 
-const Review: FC<ReviewProps> = ({ res }) => {
+const Review: FC<ReviewProps> = ({ res }: any) => {
   console.log(res);
   return (
     <div>
-      essa
-      {/*{res.result.rating}*/}
-      {Array.from({ length: res.result.rating }).map((_, i) => (
-        <li key={i}>
-          <StarIcon />
-        </li>
+      Ilość opinii: {res.result.user_ratings_total}
+      Ogólna ocena:
+      <Stack direction="row" spacing={2}>
+        {Array.from({ length: res.result.rating }).map((_, i) => (
+          <div key={i}>
+            <StarIcon />
+          </div>
+        ))}
+      </Stack>
+      {res.result.reviews.map((review, index) => (
+        <div key={index}>
+          <Box>
+            {review.author_name}, {review.rating},
+          </Box>
+          <Typography>{review.relative_time_description}</Typography>
+          <Avatar alt="Remy Sharp" src={review.profile_photo_url} />
+          <Typography>{review.text}</Typography>
+        </div>
       ))}
     </div>
   );
