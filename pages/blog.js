@@ -29,27 +29,10 @@ export default function Blog({ allPosts }) {
         ogUrl={BLOG_URL_OG}
         ogImageUrl={BLOG_IMAGES_URL_OG}
       >
-        {/*<NextSeo*/}
-        {/*  openGraph={{*/}
-        {/*    type: 'website',*/}
-        {/*    url: `${PAGE_URL}/blog`,*/}
-        {/*    title: allPosts[0].seoSettings.title,*/}
-        {/*    description: allPosts[0].seoSettings.description,*/}
-        {/*    images: [*/}
-        {/*      {*/}
-        {/*        url: 'https://trenerrafal.pl/trener-rafal-og-porady.png',*/}
-        {/*        width: 1200,*/}
-        {/*        height: 630,*/}
-        {/*        alt: 'Trener personalny Rafał Kiszło',*/}
-        {/*      },*/}
-        {/*    ],*/}
-        {/*  }}*/}
-        {/*/>*/}
-        <BoxContainer component="main" maxWidth="sm">
+        <BoxContainer component="main" maxWidth="sm" sx={{ pb: 16 }}>
           <Box
             sx={(theme) => ({
-              padding: 4,
-
+              p: 4,
               [theme.breakpoints.down('md')]: {
                 backgroundColor: theme.palette.grey[200],
                 borderRadius: 4,

@@ -44,10 +44,20 @@ const HeroPost: FC<HeroPostProps & PostHeaderProps & AvatarComponentProps & IBlo
           <Date dateString={date} />
         </Box>
       </Box>
-      <Box>
+      <Box
+        sx={{
+          my: 6,
+        }}
+      >
         <Typography>{excerpt}</Typography>
       </Box>
-      <Stack justifyContent="flex-end" flexDirection={!matchMobileView ? 'row' : 'column'}>
+      <Stack
+        justifyContent="flex-end"
+        flexDirection={!matchMobileView ? 'row' : 'column'}
+        sx={{
+          pb: 3,
+        }}
+      >
         <NextLink href={`/blog/${slug}`}>
           <Button fullWidth endIcon={<NavigateNextIcon />} variant="outlined" size="small">
             Cały artykuł

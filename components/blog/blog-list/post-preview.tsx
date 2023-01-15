@@ -17,7 +17,8 @@ const PostPreview: FunctionComponent<PostPreviewProps> = ({ title, date, excerpt
   return (
     <Box
       sx={(theme) => ({
-        padding: 4,
+        p: 4,
+        pt: 6,
         mb: 3,
         [theme.breakpoints.down('md')]: {
           backgroundColor: theme.palette.grey[200],
@@ -33,13 +34,13 @@ const PostPreview: FunctionComponent<PostPreviewProps> = ({ title, date, excerpt
 
       <Box
         sx={{
-          py: 3,
+          py: 5,
         }}
       >
         <Typography component="p">{excerpt}</Typography>
         {/*<Avatar name={author.name} picture={author.picture} />*/}
       </Box>
-      <Stack justifyContent="flex-end" flexDirection="row">
+      <Stack justifyContent="flex-end" flexDirection="row" sx={{ pb: 3 }}>
         <NextLink href={`/blog/${slug}`}>
           <Button
             sx={{
