@@ -4,6 +4,9 @@ import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import React, { useReducer } from 'react';
 import { ITestimonials } from '@/interfaces/i-testimonials';
+import Reviews from '@/components/one-page/testimonials-section/reviews';
+import Stack from '@mui/material/Stack';
+import StarIcon from '@mui/icons-material/Star';
 
 const SHOW_PER_PAGE = 4;
 const types = {
@@ -111,7 +114,7 @@ function App2() {
   );
 }
 
-export default function TestimonialsSection() {
+export default function TestimonialsSection({ res }: any) {
   return (
     <section id="opinie">
       <Container maxWidth="md">
@@ -127,45 +130,104 @@ export default function TestimonialsSection() {
             </Typography>
           </Box>
           <Box display="flex" alignItems="center" flexDirection="column">
-            {testimonials2.map((testimonial2) => (
-              <div key={`${testimonial2.id}.${testimonial2.name}`}>
-                <Box sx={{ p: 10, pt: 4 }}>
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      justifyContent: 'center',
-                      mb: 3,
-                      mt: 2,
-                    }}
-                  >
-                    <ChatBubbleOutlineIcon />
-                  </Box>
-                  <Box px={8}>
-                    <Typography key={testimonial2.text}>{testimonial2.text}</Typography>
-                    <Box display="flex" py={5} alignItems="center">
-                      <Box>
-                        <Avatar
-                          key={testimonial2.name}
-                          alt={testimonial2.name}
-                          // src={require(`${testimonial2.picture}`)}
-                        />
+            {/*<Reviews res={res} />*/}
+            <div>
+              Ilość opinii: {res.result.user_ratings_total}
+              Ogólna ocena:
+              <Stack direction="row" spacing={2}>
+                {Array.from({ length: res.result.rating }).map((_, i) => (
+                  <div key={i}>
+                    <StarIcon />
+                  </div>
+                ))}
+              </Stack>
+              <Box display="flex" alignItems="center" flexDirection="column">
+                {res.result.reviews.map((review: any) => (
+                  <div key={review.name}>
+                    <Box sx={{ p: 1, pt: 4 }}>
+                      <Box
+                        sx={{
+                          display: 'flex',
+                          justifyContent: 'center',
+                          mb: 3,
+                          mt: 2,
+                        }}
+                      >
+                        <ChatBubbleOutlineIcon />
                       </Box>
-                      <Box display="flex" flexDirection="column" justifyContent="flex-start" pl={3}>
-                        <Box>
-                          <Typography>{testimonial2.name}</Typography>
-                        </Box>
-                        <Box>
-                          <Typography key={testimonial2.date} component="span" variant="body2" color="primary">
-                            {testimonial2.date}
-                          </Typography>
+                      <Box px={8}>
+                        <Typography>{review.relative_time_description}</Typography>
+                        <Box display="flex" py={5} alignItems="center">
+                          <Box>
+                            <Avatar src={review.profile_photo_url} alt={review.author_name} />
+                          </Box>
+                          <Box display="flex" flexDirection="column" justifyContent="flex-start" pl={3}>
+                            <Box>
+                              <Typography> {review.author_name}</Typography>
+                            </Box>
+                            <Box>
+                              <Typography component="span" variant="body2" color="primary">
+                                {review.date}
+                              </Typography>
+                            </Box>
+                            <Box>
+                              <Stack direction="row" spacing={2}>
+                                {Array.from({ length: res.result.rating }).map((_, i) => (
+                                  <div key={i}>
+                                    <StarIcon />
+                                  </div>
+                                ))}
+                              </Stack>
+                            </Box>
+                          </Box>
                         </Box>
                       </Box>
+                      <Divider />
                     </Box>
-                  </Box>
-                  <Divider />
-                </Box>
-              </div>
-            ))}
+                  </div>
+                ))}
+              </Box>
+            </div>
+
+            {/*{testimonials2.map((testimonial2) => (*/}
+            {/*  <div key={`${testimonial2.id}.${testimonial2.name}`}>*/}
+            {/*    <Box sx={{ p: 1, pt: 4 }}>*/}
+            {/*      <Box*/}
+            {/*        sx={{*/}
+            {/*          display: 'flex',*/}
+            {/*          justifyContent: 'center',*/}
+            {/*          mb: 3,*/}
+            {/*          mt: 2,*/}
+            {/*        }}*/}
+            {/*      >*/}
+            {/*        <ChatBubbleOutlineIcon />*/}
+            {/*      </Box>*/}
+            {/*      <Box px={8}>*/}
+            {/*        <Typography key={testimonial2.text}>{testimonial2.text}</Typography>*/}
+            {/*        <Box display="flex" py={5} alignItems="center">*/}
+            {/*          <Box>*/}
+            {/*            <Avatar*/}
+            {/*              key={testimonial2.name}*/}
+            {/*              alt={testimonial2.name}*/}
+            {/*              // src={require(`${testimonial2.picture}`)}*/}
+            {/*            />*/}
+            {/*          </Box>*/}
+            {/*          <Box display="flex" flexDirection="column" justifyContent="flex-start" pl={3}>*/}
+            {/*            <Box>*/}
+            {/*              <Typography>{testimonial2.name}</Typography>*/}
+            {/*            </Box>*/}
+            {/*            <Box>*/}
+            {/*              <Typography key={testimonial2.date} component="span" variant="body2" color="primary">*/}
+            {/*                {testimonial2.date}*/}
+            {/*              </Typography>*/}
+            {/*            </Box>*/}
+            {/*          </Box>*/}
+            {/*        </Box>*/}
+            {/*      </Box>*/}
+            {/*      <Divider />*/}
+            {/*    </Box>*/}
+            {/*  </div>*/}
+            {/*))}*/}
             <App2 />
           </Box>
         </Box>
