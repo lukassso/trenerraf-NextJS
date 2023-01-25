@@ -12,6 +12,8 @@ import { AvatarComponentProps } from '@/components/blog/components/avatar-compon
 import dynamic from 'next/dynamic';
 import Divider from '@mui/material/Divider';
 import { INDEX_DESCRIPTION_OG, INDEX_IMAGES_URL_OG, INDEX_TITLE_OG, INDEX_URL_OG } from '@/lib/seo-links';
+import { ArticleJsonLd } from 'next-seo';
+import { PAGE_URL } from '@/lib/constants';
 
 interface PostProps {
   post: IBlogPostCard & AvatarComponentProps;
@@ -22,6 +24,7 @@ export default function Post({ post, morePosts }: PostProps) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+
   return (
     <Layout
       description={post.seoSettings.description}
@@ -31,6 +34,16 @@ export default function Post({ post, morePosts }: PostProps) {
       ogTitle={INDEX_TITLE_OG}
       ogDescription={INDEX_DESCRIPTION_OG}
     >
+      <ArticleJsonLd
+        type="Article"
+        url={`${PAGE_URL}/blog/${post.slug}`}
+        title={`Porady | ${post.seoSettings.title}`}
+        images={[post.ogImage.url]}
+        datePublished={post.date}
+        // dateModified="2015-02-05T09:00:00+08:00"
+        authorName={post?.author?.name}
+        description={post.excerpt}
+      />
       <Box>
         {router.isFallback ? (
           <AppLoader />

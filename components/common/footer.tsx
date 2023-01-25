@@ -104,7 +104,7 @@ const Footer = () => {
           <Divider />
         </Box>
         <Box sx={{ my: 7, textAlign: 'center' }}>
-          <LogoJsonLd logo={`${PAGE_URL}/public/rafal-kiszlo-trener-personalny.png`} url={PAGE_URL} />
+          <LogoJsonLd logo={`${PAGE_URL}/rafal-kiszlo-trener-personalny.png`} url={PAGE_URL} />
           <Typography variant="body2" color="initial">
             Copyright © 2023 TrenerRafal.pl
           </Typography>

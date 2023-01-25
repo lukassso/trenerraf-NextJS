@@ -9,6 +9,9 @@ export interface IBlogPostCard {
   coverImage: {
     responsiveImage: string;
   };
+  ogImage: {
+    url: string;
+  };
   seoSettings: {
     description: string;
     title: string;
