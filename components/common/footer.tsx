@@ -6,7 +6,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import GoogleMapReact from 'google-map-react';
 import { API_GOOGLE_KEY, PAGE_URL } from '@/lib/constants';
-import { LogoJsonLd } from 'next-seo';
+import { LogoJsonLd, SocialProfileJsonLd } from 'next-seo';
 
 const PinOnTheMap = ({ text }: any) => (
   <Box
@@ -76,6 +76,16 @@ const Footer = () => {
               </IconButton>
             </Box>
           </Grid>
+          <SocialProfileJsonLd
+            type="Person"
+            name="Trener Personalny Rafał Kiszło"
+            url={PAGE_URL}
+            sameAs={[
+              'https://www.facebook.com/trenerrafalkiszlo/',
+              'https://www.instagram.com/trener_rafal_kiszlo',
+              'https://www.youtube.com/channel/UCV70wJdF3cotToSLfV0gO8w',
+            ]}
+          />
           <Box
             sx={{
               width: '100%',
