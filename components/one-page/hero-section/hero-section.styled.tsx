@@ -25,6 +25,10 @@ export const FabPhonePulse = styled(Fab)(({ theme }) => ({
   borderRadius: '50%',
   background: theme.palette.primary.main,
   animation: `pulse 3.5s infinite linear`,
+  [theme.breakpoints.down('lg')]: {
+    width: theme.spacing(26),
+    height: theme.spacing(26),
+  },
   [theme.breakpoints.down('sm')]: {
     width: theme.spacing(22),
     height: theme.spacing(22),
@@ -37,9 +41,13 @@ export const HeroClaimStyle = styled(Box)(({ theme }) => ({
   flexDirection: 'column',
   height: '100%',
   lineHeight: theme.spacing(1),
-  [theme.breakpoints.down('lg')]: {
+  [theme.breakpoints.down('xl')]: {
     padding: theme.spacing(28),
-    paddingTop: theme.spacing(35),
+    paddingTop: theme.spacing(25),
+  },
+  [theme.breakpoints.down('lg')]: {
+    padding: theme.spacing(20),
+    paddingTop: theme.spacing(20),
   },
   [theme.breakpoints.down('md')]: {
     padding: theme.spacing(10),
@@ -47,16 +55,17 @@ export const HeroClaimStyle = styled(Box)(({ theme }) => ({
   },
   [theme.breakpoints.down('sm')]: {
     padding: theme.spacing(5),
-    paddingTop: theme.spacing(27),
+    paddingTop: theme.spacing(23),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     lineHeight: theme.spacing(1),
   },
 
-  '& h3': {
+  '& h2': {
     fontSize: '3.3rem',
     textAlign: 'left',
+    lineHeight: 1.4,
     paddingBottom: theme.spacing(8),
     paddingTop: theme.spacing(5),
     [theme.breakpoints.down('lg')]: {
@@ -67,7 +76,7 @@ export const HeroClaimStyle = styled(Box)(({ theme }) => ({
       fontSize: '2.2rem',
     },
   },
-  '& h2': {
+  '& h1, span': {
     fontSize: '1.6rem',
     fontWeight: 200,
     textAlign: 'left',
@@ -80,12 +89,15 @@ export const HeroClaimStyle = styled(Box)(({ theme }) => ({
     },
     [theme.breakpoints.down('md')]: {
       fontSize: '1.1rem',
+      '& span': {
+        position: 'relative',
+        top: 1,
+      },
     },
     [theme.breakpoints.down('sm')]: {
-      paddingTop: theme.spacing(5),
-      paddingBottom: theme.spacing(10),
+      paddingTop: theme.spacing(2),
+      paddingBottom: theme.spacing(5),
       textAlign: 'center',
-      fontSize: '1rem',
     },
   },
 }));

@@ -14,11 +14,9 @@ const HeroSection = () => {
       <Grid container>
         <Grid item xs={12} md={7}>
           <HeroClaimStyle>
-            <Box>
-              <Typography variant="h1" component="h3">
-                Stań się lepszą wersją siebie!
-              </Typography>
-              <Typography variant="h3" component="h2">
+            <Box sx={{ pb: 10 }}>
+              <Typography component="h2">Stań się lepszą wersją siebie!</Typography>
+              <Typography component="h1">
                 Rafał Kiszło - Trener Personalny i najlepszy motywator w mieście! Zapraszam na wspólne treningi
                 <TextLoopStyle
                   springConfig={{
@@ -28,14 +26,14 @@ const HeroSection = () => {
                   interval={5000}
                   adjustingSpeed={500}
                 >
-                  <Typography> na Mokotowie</Typography>
-                  <Typography> na Wilanowie </Typography>
+                  <Typography component="span"> na Mokotowie</Typography>
+                  <Typography component="span"> na Wilanowie </Typography>
                 </TextLoopStyle>
               </Typography>
             </Box>
             <Box display="flex" alignItems="center" justifyContent="center" height="100%">
               <FabPhonePulse color="primary" aria-label="call" href="tel:+48608472294">
-                <PhoneIcon color="secondary" style={{ fontSize: 57 }} />
+                <PhoneIcon color="secondary" style={{ fontSize: matchMobileView ? 50 : 57 }} />
               </FabPhonePulse>
             </Box>
           </HeroClaimStyle>

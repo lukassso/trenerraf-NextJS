@@ -80,7 +80,11 @@ const SuccessStories: FC = () => {
             justifyContent: { xs: 'center', md: 'flex-start' },
           }}
         >
-          <Typography variant="h1" sx={{ mt: { xs: 15, md: 0 }, mb: { xs: 18, md: 2 }, fontSize: { xs: 30, md: 48 } }}>
+          <Typography
+            component="h3"
+            variant="h1"
+            sx={{ mt: { xs: 15, md: 0 }, mb: { xs: 18, md: 2 }, fontSize: { xs: 30, md: 48 } }}
+          >
             Metamorfozy
           </Typography>
         </Box>

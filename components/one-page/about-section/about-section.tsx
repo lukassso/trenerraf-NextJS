@@ -20,7 +20,7 @@ export default function AboutSection() {
               pb: 20,
             }}
             variant="h3"
-            component="h1"
+            component="h2"
           >
             Trener personalny Rafał Kiszło
           </Typography>
