@@ -72,7 +72,7 @@ export default function Meta({ title, description, ogTitle, ogDescription, ogIma
       <NextSeo
         title={title}
         description={description}
-        // canonical={`${PAGE_URL}`}
+        canonical={PAGE_URL}
         openGraph={{
           title: ogTitle,
           description: ogDescription,
