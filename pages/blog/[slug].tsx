@@ -11,7 +11,13 @@ import { IBlogPostCard } from '@/interfaces/i-blog-post-card';
 import { AvatarComponentProps } from '@/components/blog/components/avatar-component';
 import dynamic from 'next/dynamic';
 import Divider from '@mui/material/Divider';
-import { INDEX_DESCRIPTION_OG, INDEX_IMAGES_URL_OG, INDEX_TITLE_OG, INDEX_URL_OG } from '@/lib/seo-links';
+import {
+  BLOG_IMAGES_URL_OG,
+  INDEX_DESCRIPTION_OG,
+  INDEX_IMAGES_URL_OG,
+  INDEX_TITLE_OG,
+  INDEX_URL_OG,
+} from '@/lib/seo-links';
 import { ArticleJsonLd } from 'next-seo';
 import { PAGE_URL } from '@/lib/constants';
 
@@ -29,10 +35,10 @@ export default function Post({ post, morePosts }: PostProps) {
     <Layout
       description={post.seoSettings.description}
       title={`Porady | ${post.seoSettings.title}`}
-      ogUrl={INDEX_URL_OG}
-      ogImageUrl={INDEX_IMAGES_URL_OG}
-      ogTitle={INDEX_TITLE_OG}
-      ogDescription={INDEX_DESCRIPTION_OG}
+      ogUrl={`${PAGE_URL}/blog/${post.slug}`}
+      ogImageUrl={post.ogImage.url}
+      ogTitle={`Porady | ${post.seoSettings.title}`}
+      ogDescription={post.seoSettings.description}
     >
       <ArticleJsonLd
         type="Article"
