@@ -5,7 +5,8 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import GoogleMapReact from 'google-map-react';
-import { API_GOOGLE_KEY } from '@/lib/constants';
+import { API_GOOGLE_KEY, PAGE_URL } from '@/lib/constants';
+import { LogoJsonLd } from 'next-seo';
 
 const PinOnTheMap = ({ text }: any) => (
   <Box
@@ -93,6 +94,7 @@ const Footer = () => {
           <Divider />
         </Box>
         <Box sx={{ my: 7, textAlign: 'center' }}>
+          <LogoJsonLd logo={`${PAGE_URL}/public/rafal-kiszlo-trener-personalny.png`} url={PAGE_URL} />
           <Typography variant="body2" color="initial">
             Copyright © 2023 TrenerRafal.pl
           </Typography>
