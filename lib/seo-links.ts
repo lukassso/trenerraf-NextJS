@@ -12,7 +12,8 @@ export const BLOG_URL_OG = `${PAGE_URL}/blog`;
 
 // main page
 export const INDEX_DESCRIPTION =
-  'Zapraszam na wspólne treningi na Mokotowie. Pokażę Ci jak poprawić sylwetkę i osiągnąć sukces.';
+  // 01/25 - 'Zapraszam na wspólne treningi na Mokotowie. Pokażę Ci jak poprawić sylwetkę i osiągnąć sukces.';
+  'Wykwalifikowany trener personalny z wieloletnim doświadczeniem. Treningi i plany dostosowane do twoich celów i możliwości.';
 export const INDEX_TITLE = 'Rafał Kiszło | Trener Personalny Mokotów';
 export const INDEX_TITLE_OG = 'Rafał Kiszło | Trener Personalny';
 export const INDEX_DESCRIPTION_OG =

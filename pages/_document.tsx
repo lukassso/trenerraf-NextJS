@@ -7,7 +7,7 @@ import { Box } from '@mui/material';
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html lang="pl">
+      <Html lang="pl-PL">
         <Head>
           <meta name="emotion-insertion-point" content="" />
           {(this.props as any).emotionStyleTags}
