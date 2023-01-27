@@ -1,5 +1,7 @@
 import { Box, Container, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { BoxRoot } from '@/components/one-page/about-section/about-section.styled';
+import { SectionMainHeader } from '@/components/common/section-main-header';
+import React from 'react';
 
 export default function AboutSection() {
   const { breakpoints } = useTheme();
@@ -9,29 +11,20 @@ export default function AboutSection() {
       <Container
         maxWidth="md"
         sx={{
-          pt: matchMobileView ? 30 : 40,
+          pt: matchMobileView ? 10 : 20,
           pb: 40,
         }}
       >
-        <Box>
-          <Typography
-            sx={{
-              textAlign: 'center',
-              pb: 20,
-            }}
-            variant="h3"
-            component="h2"
-          >
-            Trener personalny Rafał Kiszło
-          </Typography>
+        <SectionMainHeader sectionTitle="Trener personalny Rafał Kiszło" />
 
+        <Box sx={{ px: 8 }}>
           <Typography>
-            Nazywam się Rafał Kiszło i jestem wykwalifikowanym trenerem personalnym. Pracuje wiele lat nad formą swoich
-            podopiecznych. Pomagam w uzyskaniu wymarzonej sylwetki, poprawie sprawności, motoryki, przygotowaniu się do
-            różnych dyscyplin sportu, wyjściu z kontuzji, czyli byciu lepszą wersją siebie. Swoją wiedzy zdobywałem
-            między innymi w Wyższej Szkole Wychowania Fizycznego i Turystyki w Białymstoku ( wychowanie fizyczne ) czy
-            podczas wieloletnich treningi w klubie sportowym. Od ponad 14 lat pomagam podopiecznym w osiąganiu ich
-            zamierzonych celów.
+            Nazywam się Rafał Kiszło i jestem wykwalifikowanym trenerem personalnym. Od wielu lat pracuje nad formą
+            swoich podopiecznych. Pomagam w uzyskaniu wymarzonej sylwetki, poprawie sprawności, motoryki, przygotowaniu
+            się do różnych dyscyplin sportu, wyjściu z kontuzji, czyli byciu lepszą wersją siebie. Swoją wiedzę
+            zdobywałem między innymi w Wyższej Szkole Wychowania Fizycznego i Turystyki w Białymstoku (Wychowanie
+            Fizyczne) czy podczas wieloletnich treningów w klubie sportowym. Od 15 lat pomagam podopiecznym w osiąganiu
+            ich zamierzonych celów.
           </Typography>
           <Typography sx={{ pt: 20 }}>
             W mojej pracy najważniejszy jest Ty i z Twojego sukcesu czerpie energię do pracy. Cały czas się rozwijam,
@@ -40,11 +33,10 @@ export default function AboutSection() {
             zamierzonego celu.
           </Typography>
           <Typography sx={{ pt: 20 }}>
-            Najważniejszy jesteś Ty i podczas wspólnej pracy sprawimy, abyś wracał na treningi z radością i uśmiechem! W
-            2017 roku wygrałem konkurs Fitness Motywatory w kat. Trener personalny. Postaram się również ułożyć ci
-            zbilansowaną dietę, która również przyczyni się do osiągnięcia celu sportowego. Każdy trening jest
-            indywidualny, personalny i dostosowany pod twoich celów. Podczas treningów używam zróżnicowanych metod
-            treningu, aby trening był atrakcyjny dla Ciebie.
+            Najlepszy motywator w mieście - dewiza zobowiązuje! Sprawię abyś wracał na treningi z radością i uśmiechem!
+            Postaram się również ułożyć ci zbilansowaną dietę, która również przyczynia się do osiągnięcia celu
+            sportowego. Każdy trening jest indywidualny poodczas którego używam zróżnicowanych metod tak aby był
+            atrakcyjny dla Ciebie.
           </Typography>
           <Typography variant="body1" component="h2" sx={{ pt: 20, fontSize: '1.2rem' }} align="center">
             Bądź lepszą wersją siebie! Zapraszam do współpracy!

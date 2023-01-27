@@ -13,9 +13,10 @@ import {
   INDEX_TITLE_OG,
   INDEX_URL_OG,
 } from '@/lib/seo-links';
+import { URL_GOOGLE_API_PLACE_ID } from '@/lib/constants';
 
-export default function Index() {
-  // console.log(res);
+export default function Index({ res }) {
+  console.log(res);
   return (
     <>
       <Layout
@@ -30,29 +31,24 @@ export default function Index() {
         <SuccessStories />
         <ExperiencesSection />
         <AboutSection />
-        <TestimonialsSection />
+        <TestimonialsSection res={res} />
         {/*<AskYourselfSection />*/}
       </Layout>
     </>
   );
 }
-//
-// export async function getStaticProps() {
-//   const key = process.env.PLACES_KEY;
-//   let res = null;
-//
-//   try {
-//     const respose = await fetch(
-//       `https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJf14O7JLNHkcR-AJhS_VKLCw&key=${key}`,
-//     );
-//     res = await respose.json();
-//   } catch (error) {
-//     console.log(error);
-//   }
-//
-//   return {
-//     props: {
-//       res,
-//     },
-//   };
-// }
+
+export async function getServerSideProps() {
+  let res = null;
+  try {
+    const response = await fetch(URL_GOOGLE_API_PLACE_ID);
+    res = await response.json();
+  } catch (error) {
+    console.log(error);
+  }
+  return {
+    props: {
+      res,
+    },
+  };
+}

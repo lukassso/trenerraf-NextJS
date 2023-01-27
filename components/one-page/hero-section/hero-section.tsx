@@ -1,7 +1,12 @@
 import { Box, Grid, Typography, useMediaQuery, useTheme, Fade, Fab } from '@mui/material';
 import PhoneIcon from '@mui/icons-material/Phone';
 import Image from 'next/image';
-import { FabPhonePulse, HeroClaimStyle, TextLoopStyle } from '@/components/one-page/hero-section/hero-section.styled';
+import {
+  FabPhonePulse,
+  HeroClaimStyle,
+  HeroImage,
+  TextLoopStyle,
+} from '@/components/one-page/hero-section/hero-section.styled';
 import YellowPlumSvg from '@/assets/yellowPlumSvg';
 import trenerRafalHero from '../../../public/trener-rafal-kiszlo.webp';
 
@@ -39,7 +44,7 @@ const HeroSection = () => {
           </HeroClaimStyle>
         </Grid>
         <Grid item xs={12} md={5}>
-          <Box sx={{ p: 4, overflow: 'hidden', position: 'relative', height: 'auto' }}>
+          <HeroImage>
             <Box
               sx={{
                 position: 'absolute',
@@ -52,8 +57,15 @@ const HeroSection = () => {
             >
               <YellowPlumSvg />
             </Box>
-            <Image src={trenerRafalHero} priority={true} placeholder="blur" alt="Trener personalny Mokotów" />
-          </Box>
+            <Box
+              sx={{ display: 'flex' }}
+              component={Image}
+              src={trenerRafalHero}
+              priority={true}
+              placeholder="blur"
+              alt="Trener personalny Mokotów"
+            />
+          </HeroImage>
         </Grid>
       </Grid>
     </section>

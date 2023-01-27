@@ -101,3 +101,19 @@ export const HeroClaimStyle = styled(Box)(({ theme }) => ({
     },
   },
 }));
+
+export const HeroImage = styled(Box)(({ theme }) => ({
+  margin: 20,
+  overflow: 'hidden',
+  position: 'relative',
+  height: 'auto',
+  '&:before': {
+    zIndex: 1,
+    position: 'absolute',
+    content: '""',
+    bottom: 0,
+    width: '100%',
+    height: 50,
+    backgroundImage: `linear-gradient(180deg, transparent 20%, ${theme.palette.background.default} 60%)`,
+  },
+}));

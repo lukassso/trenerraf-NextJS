@@ -4,5 +4,5 @@ export interface ITestimonials {
   name: string;
   position: string;
   picture: string;
-  date?: string;
+  date: string;
 }
