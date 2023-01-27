@@ -2,6 +2,30 @@ import { ITestimonials } from '@/interfaces/i-testimonials';
 
 export const testimonials: Array<ITestimonials> = [
   {
+    id: 1,
+    text: 'Pełen profesjonalizm i zaangażowanie pracą z klientem. Przemiłe usposobienie i świetne podejście do treningu. Gorąco polecam.',
+    name: 'Maciej',
+    position: 'Pozycja',
+    picture: './images/1.jpg',
+    date: 'styczeń, 2020',
+  },
+  {
+    id: 2,
+    text: 'Rafała lubię i polecam każdemu leniwcowi. Wcześniej nie rozumiałam, po co ludzie chodzą do trenerów personalnych, wydawało mi się, że można ćwiczyć samemu przecież. No nie można, bo po pierwsze nie znamy się na tych wszystkich mięśniach, przeciążeniach itp., a po drugie nie ma nic lepszego jak ,,żywy bat" nad ćwiczącym. A jeśli ten ,,żywy bat" jest jeszcze miły, uśmiechnięty i ma ogromne poczucie humoru, to ćwiczenia są przyjemnością. Rafał jest też po prostu fajnym kolegą. Polecam!',
+    name: 'Agnieszka',
+    position: 'Zawód',
+    picture: './images/2.jpg',
+    date: 'styczeń, 2020',
+  },
+  {
+    id: 3,
+    text: 'Jako nieaktywna fizycznie 28 latka, pracująca przy biurku i z dużą nadwagą, postanowiłam wziąć się za siebie i zacząć trenować na siłowni. Zależało mi na tym, żeby schudnąć, ale jednocześnie chciałam ćwiczyć bezpiecznie i prawidłowo technicznie. Oczywistą sprawą było, że potrzebuje pomocy profesjonalisty - internet i dobre opinie skierowały mnie do Rafała. Ćwiczyliśmy razem rok. Po tym czasie mogę stwierdzić z pełnym przekonaniem, że Rafał nie tylko bardzo dobrze zna się na tym, co robi, ale treningi z nim to czysta przyjemność. Potrafi bardzo dobrze zmotywować do wysiłku, ale też zarazić tą pasją. Każdemu kto zastanawia się czy warto - gorąco polecam.',
+    name: 'Kasia',
+    position: 'Zawód',
+    picture: './images/3.jpg',
+    date: 'styczeń, 2020',
+  },
+  {
     id: 4,
     text: 'Rafal has really helped me to get back to the gym, stay consistent with my trainings, and take care of my body. Rafal understands my physical strengths and weaknesses and tailors my workouts to challenge me and avoid injuring areas where I am building strength. The workouts are both rigorous, but also enjoyable for me. I look for to meeting up with Rafal for my trainings which has kept me coming back to the gym more consistently than ever. I highly recommend Rafal to anyone who is seeking a knowledgeable and attentive personal trainer.',
     name: 'Dave',
@@ -87,33 +111,6 @@ export const testimonials: Array<ITestimonials> = [
     name: 'Imię',
     position: 'Zawód',
     picture: './images/14.jpg',
-    date: 'styczeń, 2020',
-  },
-];
-
-export const testimonials2: Array<ITestimonials> = [
-  {
-    id: 1,
-    text: 'Pełen profesjonalizm i zaangażowanie pracą z klientem. Przemiłe usposobienie i świetne podejście do treningu. Gorąco polecam.',
-    name: 'Maciej',
-    position: 'Pozycja',
-    picture: './images/1.jpg',
-    date: 'styczeń, 2020',
-  },
-  {
-    id: 2,
-    text: 'Rafała lubię i polecam każdemu leniwcowi. Wcześniej nie rozumiałam, po co ludzie chodzą do trenerów personalnych, wydawało mi się, że można ćwiczyć samemu przecież. No nie można, bo po pierwsze nie znamy się na tych wszystkich mięśniach, przeciążeniach itp., a po drugie nie ma nic lepszego jak ,,żywy bat" nad ćwiczącym. A jeśli ten ,,żywy bat" jest jeszcze miły, uśmiechnięty i ma ogromne poczucie humoru, to ćwiczenia są przyjemnością. Rafał jest też po prostu fajnym kolegą. Polecam!',
-    name: 'Agnieszka',
-    position: 'Zawód',
-    picture: './images/2.jpg',
-    date: 'styczeń, 2020',
-  },
-  {
-    id: 3,
-    text: 'Jako nieaktywna fizycznie 28 latka, pracująca przy biurku i z dużą nadwagą, postanowiłam wziąć się za siebie i zacząć trenować na siłowni. Zależało mi na tym, żeby schudnąć, ale jednocześnie chciałam ćwiczyć bezpiecznie i prawidłowo technicznie. Oczywistą sprawą było, że potrzebuje pomocy profesjonalisty - internet i dobre opinie skierowały mnie do Rafała. Ćwiczyliśmy razem rok. Po tym czasie mogę stwierdzić z pełnym przekonaniem, że Rafał nie tylko bardzo dobrze zna się na tym, co robi, ale treningi z nim to czysta przyjemność. Potrafi bardzo dobrze zmotywować do wysiłku, ale też zarazić tą pasją. Każdemu kto zastanawia się czy warto - gorąco polecam.',
-    name: 'Kasia',
-    position: 'Zawód',
-    picture: './images/3.jpg',
     date: 'styczeń, 2020',
   },
 ];

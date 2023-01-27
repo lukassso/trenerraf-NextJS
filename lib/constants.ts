@@ -5,5 +5,5 @@ export const API_GOOGLE_KEY = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
 export const API_GOOGLE_LOCALHOST_KEY = process.env.NEXT_PUBLIC_LOCALHOST_GOOGLE_API_KEY;
 export const GOOGLE_PLACE_ID = 'ChIJf14O7JLNHkcR-AJhS_VKLCw';
 export const URL_GOOGLE_API = 'https://maps.googleapis.com/maps/api';
-export const URL_GOOGLE_API_CONTACT_MAP = `${URL_GOOGLE_API}/js?key=${API_GOOGLE_KEY}&callback=initMap`;
-export const URL_GOOGLE_API_PLACE_ID = `${URL_GOOGLE_API}/place/details/json?placeid=${GOOGLE_PLACE_ID}&reviews_sort=newest&reviews_no_translations=true&key=${API_GOOGLE_LOCALHOST_KEY}`;
+// export const URL_GOOGLE_API_CONTACT_MAP = `${URL_GOOGLE_API}/js?key=${API_GOOGLE_KEY}&callback=initMap`;
+export const URL_GOOGLE_API_PLACE_ID = `${URL_GOOGLE_API}/place/details/json?placeid=${GOOGLE_PLACE_ID}&reviews_sort=newest&reviews_no_translations=true&key=${API_GOOGLE_KEY}`;

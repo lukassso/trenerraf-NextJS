@@ -39,49 +39,16 @@ export default function Index({ res }) {
 }
 
 export async function getServerSideProps() {
-  // const key = process.env.NEXT_PUBLIC_LOCALHOST_GOOGLE_API_KEY;
   let res = null;
-
-  // try {
-  //   const respose = await fetch(
-  //       `https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJf14O7JLNHkcR-AJhS_VKLCw&key=${key}`,
-  //   );
-  //   res = await respose.json();
-  // } catch (error) {
-  //   console.log(error);
-  // }
-
   try {
     const response = await fetch(URL_GOOGLE_API_PLACE_ID);
     res = await response.json();
   } catch (error) {
     console.log(error);
   }
-
   return {
     props: {
       res,
     },
   };
 }
-
-//
-// export async function getStaticProps() {
-//   const key = process.env.PLACES_KEY;
-//   let res = null;
-//
-//   try {
-//     const respose = await fetch(
-//       `https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJf14O7JLNHkcR-AJhS_VKLCw&key=${key}`,
-//     );
-//     res = await respose.json();
-//   } catch (error) {
-//     console.log(error);
-//   }
-//
-//   return {
-//     props: {
-//       res,
-//     },
-//   };
-// }
