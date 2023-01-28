@@ -23,12 +23,18 @@ export const PaperBox = styled(Paper)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  borderColor: theme.palette.primary.main,
+  borderColor: theme.palette.secondary.main,
   minHeight: 120,
   padding: 25,
   [theme.breakpoints.down('sm')]: {
     minHeight: 120,
   },
+  '& svg': {
+    position: 'absolute',
+
+    top: -10,
+  },
+
   '& h2': {
     fontSize: '1.2rem',
     fontWeight: 600,

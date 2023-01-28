@@ -3,6 +3,7 @@ import { Box, Container, Grid, Paper, Typography } from '@mui/material';
 import { PaperBox, PrizeHeader, PrizesText } from '@/components/one-page/experiences-section/experience-section.styled';
 import SuperfmSvg from '@/assets/superfmSvg';
 import { SectionMainHeader } from '@/components/common/section-main-header';
+import CertIconSvg from '@/assets/cert-icon-svg';
 
 export default function ExperiencesSection() {
   return (
@@ -38,6 +39,7 @@ export default function ExperiencesSection() {
                   <Typography variant="body1" key={experience.area}>
                     {experience.area}
                   </Typography>
+                  <CertIconSvg />
                 </PaperBox>
               </Grid>
             ))}
