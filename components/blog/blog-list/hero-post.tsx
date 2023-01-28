@@ -31,11 +31,7 @@ const HeroPost: FC<HeroPostProps & PostHeaderProps & AvatarComponentProps & IBlo
   return (
     <>
       <CoverImage title={title} responsiveImage={coverImage} slug={slug} />
-      <Box
-        sx={{
-          pt: 3,
-        }}
-      >
+      <Box>
         <Typography variant="h3">
           <NextLink href={`/blog/${slug}`}>{title}</NextLink>
         </Typography>
@@ -44,20 +40,10 @@ const HeroPost: FC<HeroPostProps & PostHeaderProps & AvatarComponentProps & IBlo
           <Date dateString={date} />
         </Box>
       </Box>
-      <Box
-        sx={{
-          my: 6,
-        }}
-      >
+      <Box>
         <Typography>{excerpt}</Typography>
       </Box>
-      <Stack
-        justifyContent="flex-end"
-        flexDirection={!matchMobileView ? 'row' : 'column'}
-        sx={{
-          pb: 3,
-        }}
-      >
+      <Stack justifyContent="flex-end" flexDirection={!matchMobileView ? 'row' : 'column'}>
         <NextLink href={`/blog/${slug}`}>
           <Button fullWidth endIcon={<NavigateNextIcon />} variant="outlined" size="small">
             Cały artykuł
