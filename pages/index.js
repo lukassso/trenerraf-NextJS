@@ -16,7 +16,6 @@ import {
 import { URL_GOOGLE_API_PLACE_ID } from '@/lib/constants';
 
 export default function Index({ res }) {
-  console.log(res);
   return (
     <>
       <Layout

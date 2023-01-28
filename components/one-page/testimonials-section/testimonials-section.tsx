@@ -85,7 +85,6 @@ function AdditionalTestimonials() {
 }
 
 export default function TestimonialsSection({ res }: any) {
-  console.log(res);
   return (
     <Box component="section" id="opinie">
       <SectionMainHeader sectionTitle="Opinie Klientów" />
