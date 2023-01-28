@@ -2,6 +2,7 @@ import { experiencesSectionData } from '@/components/one-page/experiences-sectio
 import { Box, Container, Grid, Paper, Typography } from '@mui/material';
 import { PaperBox, PrizeHeader, PrizesText } from '@/components/one-page/experiences-section/experience-section.styled';
 import SuperfmSvg from '@/assets/superfmSvg';
+import { SectionMainHeader } from '@/components/common/section-main-header';
 
 export default function ExperiencesSection() {
   return (
@@ -24,17 +25,7 @@ export default function ExperiencesSection() {
             </Box>
           </PrizeHeader>
 
-          <Box pt={12} pb={1}>
-            <Typography
-              sx={{
-                textAlign: 'center',
-                pb: 10,
-              }}
-              variant="h3"
-            >
-              Przebyte kursy i szkolenia
-            </Typography>
-          </Box>
+          <SectionMainHeader sectionTitle="Przebyte kursy i szkolenia" />
         </Container>
         <Container maxWidth="md">
           <Grid container spacing={5}>

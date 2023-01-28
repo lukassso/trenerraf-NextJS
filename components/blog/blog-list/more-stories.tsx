@@ -1,6 +1,7 @@
 import PostPreview from './post-preview';
 import { FunctionComponent } from 'react';
 import { Box, Typography } from '@mui/material';
+import { SectionMainHeader } from '@/components/common/section-main-header';
 
 type post = {
   slug: string;
@@ -15,14 +16,7 @@ interface IMoreStories {
 const MoreStories: FunctionComponent<IMoreStories> = ({ posts }) => {
   return (
     <>
-      <Typography
-        variant="h2"
-        sx={{
-          pb: 15,
-        }}
-      >
-        Więcej artykułów
-      </Typography>
+      <SectionMainHeader sectionTitle="Więcej artykułów" />
       <Box>
         {posts.map((post) => (
           <PostPreview key={post.slug} title={post.title} date={post.date} slug={post.slug} excerpt={post.excerpt} />

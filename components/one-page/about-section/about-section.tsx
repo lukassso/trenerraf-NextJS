@@ -15,7 +15,7 @@ export default function AboutSection() {
           pb: 40,
         }}
       >
-        <SectionMainHeader sectionTitle="Trener personalny Rafał Kiszło" />
+        <SectionMainHeader sectionTitle="Trener personalny" />
 
         <Box sx={{ px: 8 }}>
           <Typography>

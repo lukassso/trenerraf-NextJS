@@ -5,6 +5,7 @@ import IconArrowBack from '@mui/icons-material/ArrowBack';
 import IconArrowForward from '@mui/icons-material/ArrowForward';
 import { stories } from '@/components/one-page/success-stories-section/success-stories.data';
 import CardItem from '@/components/one-page/success-stories-section/card-item';
+import { SectionMainHeader } from '@/components/common/section-main-header';
 
 interface SliderArrowArrow {
   onClick?: () => void;
@@ -71,23 +72,7 @@ const SuccessStories: FC = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Box
-          sx={{
-            height: '100%',
-            width: { xs: '100%', md: '90%' },
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: { xs: 'center', md: 'flex-start' },
-          }}
-        >
-          <Typography
-            component="h3"
-            variant="h1"
-            sx={{ mt: { xs: 15, md: 0 }, mb: { xs: 18, md: 2 }, fontSize: { xs: 30, md: 48 } }}
-          >
-            Metamorfozy
-          </Typography>
-        </Box>
+        <SectionMainHeader sectionTitle="Metamorfozy" />
 
         <Slider {...sliderConfig}>
           {stories.map((item, index) => (
