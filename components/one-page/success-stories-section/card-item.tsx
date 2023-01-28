@@ -122,7 +122,7 @@ const CardItem: FC<Props> = ({ story }) => {
       <Dialog
         open={openDialog}
         TransitionComponent={Transition}
-        keepMounted
+        // keepMounted
         maxWidth="xs"
         onClose={handleCloseDialog}
         aria-describedby="alert-dialog-slide-description"
