@@ -33,6 +33,10 @@ export default function Blog({ allPosts }) {
           <Box
             sx={(theme) => ({
               p: 4,
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              minHeight: '85vh',
               [theme.breakpoints.down('md')]: {
                 backgroundColor: theme.palette.grey[200],
                 borderRadius: 4,
