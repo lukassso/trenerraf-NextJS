@@ -32,7 +32,7 @@ const HeroPost: FC<HeroPostProps & PostHeaderProps & AvatarComponentProps & IBlo
     <>
       <CoverImage title={title} responsiveImage={coverImage} slug={slug} />
       <Box>
-        <Typography variant="h3">
+        <Typography variant="h3" component="h2">
           <NextLink href={`/blog/${slug}`}>{title}</NextLink>
         </Typography>
         <Box>

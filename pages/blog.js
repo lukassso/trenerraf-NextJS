@@ -6,7 +6,7 @@ import BoxContainer from './blog.styled';
 import dynamic from 'next/dynamic';
 import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import {
   BLOG_DESCRIPTION,
   BLOG_DESCRIPTION_OG,
@@ -29,7 +29,16 @@ export default function Blog({ allPosts }) {
         ogUrl={BLOG_URL_OG}
         ogImageUrl={BLOG_IMAGES_URL_OG}
       >
+        <Box></Box>
         <BoxContainer component="main" maxWidth="sm" sx={{ pb: 16 }}>
+          <Typography
+            sx={{
+              p: 4,
+            }}
+            component="h1"
+          >
+            Trener Personalny - Porady
+          </Typography>
           <Box
             sx={(theme) => ({
               p: 4,

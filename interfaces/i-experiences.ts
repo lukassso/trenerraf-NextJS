@@ -5,4 +5,5 @@ export interface IExperiences {
   area: string;
   name: string;
   content?: ReactNode;
+  blogArticles: boolean;
 }

@@ -3,7 +3,7 @@ import { Container } from '@mui/material';
 
 const BoxContainer = styled(Container)(({ theme }) => ({
   backgroundColor: 'transparent',
-  marginTop: '10vh',
+  marginTop: '7vh',
   marginBottom: 20,
 }));
 

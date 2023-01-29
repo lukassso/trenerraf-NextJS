@@ -5,6 +5,7 @@ import { Container, Typography } from '@mui/material';
 export const experiencesSectionData: Array<IExperiences> = [
   {
     id: 1,
+    blogArticles: true,
     name: 'Trener personalny',
     area: 'Instruktor',
     content: (
@@ -22,6 +23,7 @@ export const experiencesSectionData: Array<IExperiences> = [
   },
   {
     id: 2,
+    blogArticles: false,
     name: 'Nurek CMASS',
     area: 'Instruktor',
     content: (
@@ -41,6 +43,7 @@ export const experiencesSectionData: Array<IExperiences> = [
   },
   {
     id: 3,
+    blogArticles: false,
     name: 'Kettlebells',
     area: 'Instruktor',
     content:
@@ -48,14 +51,18 @@ export const experiencesSectionData: Array<IExperiences> = [
   },
   {
     id: 4,
+    blogArticles: false,
+
     name: 'Kulturystyka',
     area: 'Instruktor',
     content:
       'Kurs trenera personalnego zrobiłem w Polskim Związku Kulturystyki i Fitness. To miejsce wydaje najbardziej prestiżowe uprawnienia trenera personalnego. Podczas kursu nauczyłem się prawidłowego podejścia i pracy z zawodnikiem czyli z Tobą. Wieloletnie doświadczenie szkoleniowców pozwoliło edukować mnie na najwyższych standardach światowych. Dzięki temu i innym kursom moge pracować z Toba na ciężarach, maszynach, TRX, Bosu, treningu funkcjonalnym, treningu z ciężarem własnego ciała, ketlach, workach bułgarskich. Zapraszam do współpracy i poprawiania swojego wyglądu, sprawności.',
   },
-  { id: 5, name: 'Trening funkcjonalny', area: 'Instruktor' },
+
+  { id: 5, blogArticles: false, name: 'Trening funkcjonalny', area: 'Instruktor' },
   {
     id: 7,
+    blogArticles: false,
     name: 'Trójbój siłowy',
     area: 'Instruktor',
     content:
@@ -63,6 +70,7 @@ export const experiencesSectionData: Array<IExperiences> = [
   },
   {
     id: 8,
+    blogArticles: false,
     name: 'Samoobrona',
     area: 'Instruktor',
     content:
@@ -70,6 +78,7 @@ export const experiencesSectionData: Array<IExperiences> = [
   },
   {
     id: 9,
+    blogArticles: false,
     name: 'Indoor cycling',
     area: 'Instruktor',
     content:
@@ -77,6 +86,7 @@ export const experiencesSectionData: Array<IExperiences> = [
   },
   {
     id: 10,
+    blogArticles: false,
     name: 'Speening star',
     area: 'Instruktor',
     content:
@@ -84,6 +94,7 @@ export const experiencesSectionData: Array<IExperiences> = [
   },
   {
     id: 11,
+    blogArticles: false,
     name: 'Zdrowy kręgosłup',
     area: 'Certyfikat IFAA',
     content:
@@ -91,6 +102,7 @@ export const experiencesSectionData: Array<IExperiences> = [
   },
   {
     id: 12,
+    blogArticles: false,
     name: 'Patologie kręgosłupa',
     area: 'Certyfikat IFAA',
     content:
@@ -98,14 +110,16 @@ export const experiencesSectionData: Array<IExperiences> = [
   },
   {
     id: 13,
+    blogArticles: false,
     name: 'Biodro staw życia',
     area: 'Biernat',
     content:
       ' Na treningu chciałbym również przedstawić rolę biodra w funkcjonowaniu człowieka, opisanie typowych problemów, jeżeli takie posiadasz. Podpowiem, jak radzić sobie z różnymi zaburzeniami i bólem w okolicy biodra. Nauczę Cie również  wszystkiego, co na dzień dzisiejszy jest ważne w odniesieniu do biodra i postępowania z nim. Opowiem jak analizować i świadomie ćwiczyć, aby biodro mogło spełniać swoje funkcje. Było zdrowe i odpowiednio działało. Tak, abys nigdy nie czuł bólu. Wiedza praktyczna przyda Ci się zarówno na treningu jak i w życiu poza silownia. Postaram się ci zrozumieć interakcję mięśni wokół biodra oraz jaki wpływ mają na ustawienie stawu biodrowego, który jest bardzo ważnym stawem w twoim funkcjonowaniu. Praca siedzaca i zly rodzaj ruchu może źle wpłynąć na biodro.',
   },
-  { id: 14, name: 'Kolano - biodra i stopy', area: 'Biernat' },
+  { id: 14, blogArticles: false, name: 'Kolano - biodra i stopy', area: 'Biernat' },
   {
     id: 15,
+    blogArticles: false,
     name: 'Stopa - nasza podpora',
     area: 'Biernat',
     content:
@@ -113,23 +127,26 @@ export const experiencesSectionData: Array<IExperiences> = [
   },
   {
     id: 16,
+    blogArticles: false,
     name: 'Bark nie musi być skomplikowany',
     area: 'Biernat',
     content:
       'Bark nie musi być skomplikowany ten kursu pomógł dowiedzieć się mi jak chronić staw barkowy przed bólem oraz jak prawidłowo ćwiczyć, aby zmniejszyć ryzyko urazu oraz w możliwie najlepszy sposób usprawnić funkcjonowanie okolicy obręczy barkowej i całego otoczenia barku. Znam i potrafię określić wpływy, zarówno te negatywne i pozytywne, wybranych ćwiczeń na kompleks barkowy.  Praktyczne nowinki i niuanse potrafię zastosować w treningu. Wyniesione doświadczenie z codziennej pracy ze sportowcami i pacjentami na treningu pomoże w budowaniu twojej sprawności.',
   },
-  { id: 17, name: 'Kształtowanie kobiecej sylwetki ', area: 'CSS' },
+  { id: 17, blogArticles: false, name: 'Kształtowanie kobiecej sylwetki ', area: 'CSS' },
   {
     id: 18,
+    blogArticles: false,
     name: 'Redukacja bez liczenia kalorii',
     area: 'Tadeusz Sowinski',
     content:
       'Odchudzanie bez liczenia kalorii ten kurs to jeden z wielu, który pomógł mi praktycznym okiem spojrzeć na aspekty dietetyczne przy pracy z podopiecznym. Z doświadczenia wiem, ze wielu z Was nie chce liczyć kalorii, a chce schudnąć. I teraz moje zadanie jest takie, aby podczas treningu przekazać Wam wiedzę również z dziedziny dietetyki. Tak jeść i stosować pewne zasady, które pomogą osiągnąć wam wymarzoną sylwetkę. To może być naprawdę łatwe i do zrobienia wystarczy spełnić parę punktów. Wiec podczas treningu staram się również znaleźć złoty środek tak, aby Twoje odżywianie było zdrowe. W otaczającym nas świecie jest wiele pokus, a ja wiem jak ich uniknąć...i ty to tez będziesz wiedział, stosował!',
   },
-  { id: 19, name: 'Tułów - baza do ruchu ', area: 'Biernat' },
-  { id: 20, name: 'Kończyna dolna', area: 'Movement strategy' },
+  { id: 19, blogArticles: false, name: 'Tułów - baza do ruchu ', area: 'Biernat' },
+  { id: 20, blogArticles: false, name: 'Kończyna dolna', area: 'Movement strategy' },
   {
     id: 21,
+    blogArticles: false,
     name: 'Trening TRX ',
     area: 'Certyfikat',
     content: (
@@ -151,6 +168,7 @@ export const experiencesSectionData: Array<IExperiences> = [
   },
   {
     id: 22,
+    blogArticles: false,
     name: 'Worek bułgarski ',
     area: 'Certyfikat IFAA',
     content: (
@@ -171,6 +189,7 @@ export const experiencesSectionData: Array<IExperiences> = [
   },
   {
     id: 23,
+    blogArticles: false,
     name: 'Ergometr wioślarski',
     area: 'Jatomi',
     content:
@@ -178,6 +197,7 @@ export const experiencesSectionData: Array<IExperiences> = [
   },
   {
     id: 24,
+    blogArticles: false,
     name: 'Mobility Conditioning ',
     area: 'Maxwell SC™',
     content:

@@ -1,5 +1,5 @@
 import { styled } from '@mui/system';
-import { Box, Paper } from '@mui/material';
+import { Box, Button, Paper } from '@mui/material';
 
 export const PrizeHeader = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -29,11 +29,6 @@ export const PaperBox = styled(Paper)(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
     minHeight: 120,
   },
-  '& svg': {
-    position: 'absolute',
-
-    top: -10,
-  },
 
   '& h2': {
     fontSize: '1.2rem',
@@ -47,9 +42,31 @@ export const PaperBox = styled(Paper)(({ theme }) => ({
   },
   '& p': {
     position: 'absolute',
-    bottom: 20,
+    bottom: 23,
     [theme.breakpoints.down('sm')]: {
       fontSize: '0.8rem',
     },
+  },
+}));
+export const CertIcon = styled(Box)(({ theme }) => ({
+  position: 'absolute',
+
+  top: -10,
+}));
+export const ButtonBlog = styled(Box)(({ theme }) => ({
+  position: 'absolute',
+  bottom: -25,
+  left: 10,
+  width: '100%',
+  '& p': {
+    padding: 0,
+    textAlign: 'center',
+    width: '100%',
+    fontSize: '0.9rem',
+  },
+  '& svg': {
+    position: 'relative',
+    top: 6,
+    left: -5,
   },
 }));
