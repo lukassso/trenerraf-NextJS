@@ -28,7 +28,7 @@ export const SectionMainHeader: FC<SectionMainHeaderProps> = ({ sectionTitle }) 
           }}
         >
           <Box>
-            <Typography variant="h3">{sectionTitle}</Typography>
+            <Typography variant="h2">{sectionTitle}</Typography>
           </Box>
           <Box
             sx={{

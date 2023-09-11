@@ -47,11 +47,23 @@ export const PaperBox = styled(Paper)(({ theme }) => ({
       fontSize: '0.8rem',
     },
   },
+  '& span': {
+    display: 'block',
+  }
 }));
 export const CertIcon = styled(Box)(({ theme }) => ({
   position: 'absolute',
 
   top: -10,
+}));
+export const OpisKursyStyled = styled(Box)(({ theme }) => ({
+  '& p': {
+    padding: '0px 0px 20px 0px',
+  },
+  '& span': {
+    display: 'block',
+    padding: '10px 0px',
+  }
 }));
 export const ButtonBlog = styled(Box)(({ theme }) => ({
   position: 'absolute',

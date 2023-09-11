@@ -13,9 +13,11 @@ interface SliderArrowArrow {
   className?: 'string';
 }
 
+
 const SliderArrow: FC<SliderArrowArrow> = (props) => {
   const { onClick, type, className } = props;
   return (
+    
     <IconButton
       sx={{
         backgroundColor: 'background.paper',
@@ -31,6 +33,7 @@ const SliderArrow: FC<SliderArrowArrow> = (props) => {
       color="inherit"
       onClick={onClick}
       className={className}
+      aria-label={type === 'next' ? 'Pokaż poprzednie' : 'Pokaż następne'}
     >
       {type === 'next' ? <IconArrowForward sx={{ fontSize: 22 }} /> : <IconArrowBack sx={{ fontSize: 22 }} />}
     </IconButton>

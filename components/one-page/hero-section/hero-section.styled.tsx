@@ -62,10 +62,11 @@ export const HeroClaimStyle = styled(Box)(({ theme }) => ({
     lineHeight: theme.spacing(1),
   },
 
-  '& h2': {
-    fontSize: '3.3rem',
+  '& h2, h3': {
+    fontSize: '1.6rem',
     textAlign: 'left',
-    lineHeight: 1.4,
+    lineHeight: 1.5,
+    textDecorationLine: 'underline',
     paddingBottom: theme.spacing(8),
     paddingTop: theme.spacing(5),
     [theme.breakpoints.down('lg')]: {
@@ -77,9 +78,34 @@ export const HeroClaimStyle = styled(Box)(({ theme }) => ({
     },
   },
   '& h1, span': {
-    fontSize: '1.6rem',
+    fontSize: '3.3rem',
     fontWeight: 200,
     textAlign: 'left',
+    // paddingBottom: theme.spacing(20),
+    lineHeight: 1.4,
+    // transform: 'translateX(12.5em)',
+    // transition: 'transform 2s ease-in-out',
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '3rem',
+    },
+    [theme.breakpoints.down('md')]: {
+      fontSize: '2.2rem',
+      '& span': {
+        position: 'relative',
+        top: 1,
+      },
+    },
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: theme.spacing(2),
+      paddingBottom: theme.spacing(5),
+      textAlign: 'center',
+    },
+  },
+  '& p, span': {
+    fontSize: '1.1rem',
+    fontWeight: 200,
+    textAlign: 'left',
+    padding: '20px 0 0 0',
     // paddingBottom: theme.spacing(20),
     lineHeight: 1.5,
     // transform: 'translateX(12.5em)',
@@ -99,6 +125,9 @@ export const HeroClaimStyle = styled(Box)(({ theme }) => ({
       paddingBottom: theme.spacing(5),
       textAlign: 'center',
     },
+  },
+  '&.opis_p': {
+    margin: '20px 0 0 0',
   },
 }));
 
