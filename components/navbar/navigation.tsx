@@ -32,9 +32,17 @@ const Navigation: ({ Element, onClick }: { Element: any; onClick?: () => void })
                 smooth={true}
                 duration={350}
                 onClick={onClick}
-                sx={{ cursor: 'pointer' }}
+                sx={{ 
+                  color: '#101010',
+                  cursor: 'pointer',
+                  textDecoration: 'none',
+                  '&:hover': {
+                    color: '#0086b3',
+                  }
+              }}
+                href={destination}
               >
-                <Element>{label}</Element>
+                <Element >{label}</Element>
               </Box>
             ) : (
               <NextLink key={`${label}-${id}`} href={destination}>

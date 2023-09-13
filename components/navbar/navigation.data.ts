@@ -28,7 +28,7 @@ export const navigations: INavbar[] = [
   {
     id: 5,
     path: '/blog',
-    label: 'Porady',
+    label: 'Blog',
     singlePage: false,
   },
   {

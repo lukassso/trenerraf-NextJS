@@ -20,12 +20,13 @@ export default function Meta({ title, description, ogTitle, ogDescription, ogIma
       {/*  }}*/}
       {/*/>*/}
       <LocalBusinessJsonLd
-        type="Store"
+        type="ProfessionalService"
         id={PAGE_URL}
-        name={title}
-        description="Trener personalny i Trener roku w plebiscycie Fitness Motywatory. Treningi i plany dostosowane do twoich celów i możliwości."
+        name="Trener personalny Mokotów - Rafał Kiszło"
+        description="Treningi personalne na Mokotowie. Ponad 15 lat doświadczenia. Setki skutecznych metamorfoz. Nauczę Cię jak poprawnie trenować i kontrolować dietę. Razem osiągnijmy Twoją wymarzoną sylwetkę."
         url={PAGE_URL}
         telephone="+48608472294"
+        pricerange="100PLN - 200PLN"
         address={{
           streetAddress: 'Józefa Piusa Dziekońskiego 1',
           addressLocality: 'Warszawa',
@@ -43,14 +44,21 @@ export default function Meta({ title, description, ogTitle, ogDescription, ogIma
           {
             opens: '05:00',
             closes: '23:00',
-            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
             validFrom: '2023-01-08',
             validThrough: '2023-12-29',
           },
           {
-            opens: '15:00',
+            opens: '05:00',
             closes: '18:00',
-            dayOfWeek: ['Saturday', 'Sunday'],
+            dayOfWeek: ['Saturday'],
+            validFrom: '2023-01-08',
+            validThrough: '2023-12-29',
+          },
+          {
+            opens: '05:00',
+            closes: '17:00',
+            dayOfWeek: ['Sunday'],
             validFrom: '2023-01-08',
             validThrough: '2023-12-29',
           },
@@ -62,8 +70,8 @@ export default function Meta({ title, description, ogTitle, ogDescription, ogIma
         areaServed={[
           {
             geoMidpoint: {
-              latitude: '52.1947712',
-              longitude: '21.0474938',
+              latitude: '52.1949294',
+              longitude: '21.0478308',
             },
             geoRadius: '9000',
           },
@@ -79,13 +87,13 @@ export default function Meta({ title, description, ogTitle, ogDescription, ogIma
           type: 'website',
           locale: 'pl_PL',
           url: ogUrl,
-          siteName: 'Trener personalny Mokotów',
+          siteName: 'Trener personalny Mokotów - Rafał Kiszło',
           images: [
             {
               url: ogImageUrl,
               width: 1200,
               height: 630,
-              alt: 'Trener personalny Rafał Kiszło',
+              alt: 'Trener personalny mokotów - Rafał Kiszło',
             },
           ],
         }}

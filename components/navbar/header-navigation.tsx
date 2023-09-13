@@ -40,9 +40,9 @@ const HeaderNavigation = () => {
         <Toolbar>
           <Box display="flex" alignItems="center" justifyContent="space-between" flexGrow="1">
             <Box sx={{ display: 'flex', height: '100%', width: '100%', maxWidth: 140, maxHeight: 50 }}>
-              <NextLink color="inherit" href="/">
-                <LogoSvg viewBox="0 0 354 111" />
-              </NextLink>
+                <a href="/" aria-label="Trener personalny Mokotów - Rafał Kiszło">
+                  <LogoSvg viewBox="0 0 354 111" />
+                </a>
             </Box>
             <Box
               component="nav"
@@ -58,6 +58,7 @@ const HeaderNavigation = () => {
                     id="basic-button"
                     aria-controls={isMenuOpen ? 'basic-menu' : undefined}
                     aria-haspopup="true"
+                    aria-label="Otwórz menu"
                     aria-expanded={isMenuOpen ? 'true' : undefined}
                     onClick={handleMobileMenuOpen}
                     color="inherit"

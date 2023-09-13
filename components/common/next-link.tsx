@@ -12,7 +12,7 @@ const NextLink = ({ href, as, prefetch, ...props }: LinkProps, ref: Ref<LinkRef>
       {...props}
       sx={{
         '&:hover': {
-          color: 'primary.light',
+          color: '#0086b3',
         },
       }}
     />
