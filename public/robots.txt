@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: localhost
+Host: https://trenerrafal.pl
 
 # Sitemaps
-Sitemap: localhost/sitemap.xml
+Sitemap: https://trenerrafal.pl/sitemap.xml

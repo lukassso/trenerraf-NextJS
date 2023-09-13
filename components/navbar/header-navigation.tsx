@@ -5,6 +5,7 @@ import Navbar from '@/components/navbar/navigation';
 import { BoxStyle, MenuItemStyle } from './header-navigation.styled';
 import LogoSvg from '@/assets/logoSvg';
 import NextLink from '@/components/common/next-link';
+import Link from 'next/link';
 
 const HeaderNavigation = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -40,9 +41,10 @@ const HeaderNavigation = () => {
         <Toolbar>
           <Box display="flex" alignItems="center" justifyContent="space-between" flexGrow="1">
             <Box sx={{ display: 'flex', height: '100%', width: '100%', maxWidth: 140, maxHeight: 50 }}>
-                <a href="/" aria-label="Trener personalny Mokotów - Rafał Kiszło">
-                  <LogoSvg viewBox="0 0 354 111" />
-                </a>
+            <NextLink href="/" aria-label="Trener personalny Mokotów - Rafał Kiszło">
+              <LogoSvg viewBox="0 0 354 111" />
+            </NextLink>
+
             </Box>
             <Box
               component="nav"
