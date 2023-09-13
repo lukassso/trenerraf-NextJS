@@ -9,6 +9,7 @@ import {
 } from '@/components/one-page/hero-section/hero-section.styled';
 import YellowPlumSvg from '@/assets/yellowPlumSvg';
 import trenerRafalHero from '../../../public/trener-rafal-kiszlo.webp';
+import NextLink from '@/components/common/next-link';
 
 const HeroSection = () => {
   const { breakpoints } = useTheme();
@@ -38,7 +39,8 @@ const HeroSection = () => {
                   <Typography component="span"><strong> na Mokotowie</strong></Typography>
                   <Typography component="span"><strong> na Wilanowie </strong></Typography>
                 </TextLoopStyle>
-                , mój dokłady adres to ul. Józefa Piusa Dziekońskiego 1, 00-728 Warszawa - <a href="https://goo.gl/maps/dz3y2GhBGZQE8w6A6" target="_blank" style={{ textDecoration: 'none', color: '#0086b3', fontWeight: '600' }}>Zobacz adres na mapie</a>
+                , mój dokłady adres to ul. Józefa Piusa Dziekońskiego 1, 00-728 Warszawa - <NextLink href="https://goo.gl/maps/dz3y2GhBGZQE8w6A6" target="_blank" sx={{ textDecoration: 'none', color: '#0086b3', fontWeight: '600' }}>Zobacz adres na mapie</NextLink>
+
                 </Typography>
                 </Typography>
                 <Typography component="p">
