@@ -24,7 +24,7 @@ export const FabPhonePulse = styled(Fab)(({ theme }) => ({
   height: theme.spacing(30),
   borderRadius: '50%',
   background: theme.palette.primary.main,
-  animation: `pulse 3.5s infinite linear`,
+  animation: `pulse 3s infinite linear`,
   [theme.breakpoints.down('lg')]: {
     width: theme.spacing(26),
     height: theme.spacing(26),
@@ -132,7 +132,7 @@ export const HeroClaimStyle = styled(Box)(({ theme }) => ({
 }));
 
 export const HeroImage = styled(Box)(({ theme }) => ({
-  margin: 20,
+  margin: 0,
   overflow: 'hidden',
   position: 'relative',
   height: 'auto',
@@ -144,5 +144,17 @@ export const HeroImage = styled(Box)(({ theme }) => ({
     width: '100%',
     height: 50,
     backgroundImage: `linear-gradient(180deg, transparent 20%, ${theme.palette.background.default} 60%)`,
+  },
+}));
+
+export const imgRafMobile = styled(Box)(({ theme }) => ({
+  width: theme.spacing(30),
+  height: theme.spacing(30),
+  borderRadius: '50%',
+  background: theme.palette.primary.main,
+  animation: `pulse 3.5s infinite linear`,
+  [theme.breakpoints.down('sm')]: {
+    width: theme.spacing(22),
+    height: theme.spacing(22),
   },
 }));

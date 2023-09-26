@@ -6,6 +6,7 @@ import {
   HeroClaimStyle,
   HeroImage,
   TextLoopStyle,
+  imgRafMobile,
 } from '@/components/one-page/hero-section/hero-section.styled';
 import YellowPlumSvg from '@/assets/yellowPlumSvg';
 import trenerRafalHero from '../../../public/trener-rafal-kiszlo.webp';
@@ -20,7 +21,7 @@ const HeroSection = () => {
       <Grid container>
         <Grid item xs={12} md={7}>
           <HeroClaimStyle>
-            <Box sx={{ pb: 10 }}>
+            <Box sx={{ pb: 0 }}>
               <Typography component="h1">
                 Trener personalny Mokotów - Rafał Kiszło
               </Typography>
@@ -49,7 +50,7 @@ const HeroSection = () => {
                 </Typography>
               <Typography component="h2">Stań się lepszą wersją siebie!</Typography>
             </Box>
-            <Box display="flex" alignItems="center" justifyContent="center" height="100%">
+            <Box style={{ display: 'flex', alignItems: 'center', position: 'fixed', bottom: '0px', right: '0px', zIndex: 999, padding: '50px' }}>
               <FabPhonePulse color="primary" aria-label="call" href="tel:+48608472294">
                 <PhoneIcon color="secondary" style={{ fontSize: matchMobileView ? 50 : 57 }} />
               </FabPhonePulse>
