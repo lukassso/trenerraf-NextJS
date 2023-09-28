@@ -58,7 +58,7 @@ export const CertIcon = styled(Box)(({ theme }) => ({
 }));
 export const OpisKursyStyled = styled(Box)(({ theme }) => ({
   '& p': {
-    padding: '0px 0px 20px 0px',
+    padding: '0px 45px 20px 45px',
   },
   '& span': {
     display: 'block',

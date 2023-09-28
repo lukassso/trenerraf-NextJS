@@ -10,6 +10,32 @@ import { LogoJsonLd, SocialProfileJsonLd } from 'next-seo';
 import {
   FooterStyled
 } from '@/components/common/footer.styled';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+import ImageListItemBar from '@mui/material/ImageListItemBar';
+
+const itemData = [
+  {
+    img: '../trener-personalny-mokotow-rafal-kiszlo1.png',
+    title: 'Treningi personalne Mokotów',
+    author: 'Rafał Kiszło',
+  },
+  {
+    img: '../trener-personalny-mokotow-rafal-kiszlo2.png',
+    title: 'Treningi personalne Mokotów',
+    author: 'Rafał Kiszło',
+  },
+  {
+    img: '../trener-personalny-mokotow-rafal-kiszlo3.png',
+    title: 'Treningi personalne Mokotów',
+    author: 'Rafał Kiszło',
+  },
+  {
+    img: '../trener-personalny-mokotow-rafal-kiszlo4.png',
+    title: 'Treningi personalne Mokotów',
+    author: 'Rafał Kiszło',
+  },
+];
 
 const PinOnTheMap = ({ text }: any) => (
   <Box
@@ -139,18 +165,55 @@ const Footer = () => {
           </Grid>
         </FooterStyled>
         </Container>
+        <Container maxWidth="md">
+          <FooterStyled>
+            <Grid container spacing={2}>
+              <Grid item xs={12} md={12}>
+                <Typography component="h3">
+                  Wspólne treningi personalne na Mokotowie - Galeria
+                </Typography>
+              </Grid>
+            </Grid>
+              <Grid container spacing={5}
+                sx={{
+                  mt: 2,
+                  px: 5,
+                }}>
+              <ImageList sx={{ width: '100%', height: '100%'}}>
+                {itemData.map((item) => (
+                  <ImageListItem key={item.img}>
+                    <img
+                      srcSet={`${item.img}`}
+                      src={`${item.img}`}
+                      alt={item.title}
+                      loading="lazy"
+                    />
+                    <ImageListItemBar
+                      title={item.title}
+                      subtitle={<span>by: {item.author}</span>}
+                      position="below"
+                    />
+                  </ImageListItem>
+                ))}
+              </ImageList>
+              </Grid>
+          </FooterStyled>
+        </Container>
         <Box sx={{ my: 7 }}>
           <Divider />
         </Box>
         <Box sx={{ my: 7, textAlign: 'center' }}>
           <LogoJsonLd logo={`${PAGE_URL}/rafal-kiszlo-trener-personalny.png`} url={PAGE_URL} />
           <Typography variant="body2" color="initial">
-          2023 Prawa autorskie © Trener personalny Mokotów - Rafał Kiszło
+          2023 Prawa autorskie © Trener personalny Mokotów -  Rafał Kiszło
           </Typography>
         </Box>
       </Box>
     </>
+
   );  
+
 };
 
 export default Footer;
+
