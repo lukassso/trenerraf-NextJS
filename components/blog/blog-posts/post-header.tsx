@@ -24,7 +24,7 @@ const PostHeader: FC<PostHeaderProps & AvatarComponentProps> = ({ title, date, i
         <Date dateString={date} />
         <AvatarComponent name={name} avatarPicture={avatarPicture} />
 
-        <Typography variant="h2" sx={{ pt: 5 }}>
+        <Typography variant="h1" sx={{ pt: 5 }}>
           {title}
         </Typography>
       </Container>

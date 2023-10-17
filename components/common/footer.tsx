@@ -4,7 +4,7 @@ import React, { useCallback, useMemo } from 'react';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
-import GoogleMapReact from 'google-map-react';
+/*import GoogleMapReact from 'google-map-react';*/
 import { API_GOOGLE_KEY, PAGE_URL } from '@/lib/constants';
 import { LogoJsonLd, SocialProfileJsonLd } from 'next-seo';
 import {
@@ -16,23 +16,23 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 
 const itemData = [
   {
-    img: '../trener-personalny-mokotow-rafal-kiszlo1.png',
-    title: 'Treningi personalne Mokotów',
+    img: '../trener-personalny-mokotow-rafal-kiszlo1.webp',
+    title: 'Trener personalny Mokotów',
     author: 'Rafał Kiszło',
   },
   {
-    img: '../trener-personalny-mokotow-rafal-kiszlo2.png',
-    title: 'Treningi personalne Mokotów',
+    img: '../trener-personalny-mokotow-rafal-kiszlo2.webp',
+    title: 'Trener personalny Mokotów',
     author: 'Rafał Kiszło',
   },
   {
-    img: '../trener-personalny-mokotow-rafal-kiszlo3.png',
-    title: 'Treningi personalne Mokotów',
+    img: '../trener-personalny-mokotow-rafal-kiszlo3.webp',
+    title: 'Trener personalny Mokotów',
     author: 'Rafał Kiszło',
   },
   {
-    img: '../trener-personalny-mokotow-rafal-kiszlo4.png',
-    title: 'Treningi personalne Mokotów',
+    img: '../trener-personalny-mokotow-rafal-kiszlo4.webp',
+    title: 'Trener personalny Mokotów',
     author: 'Rafał Kiszło',
   },
 ];
@@ -67,7 +67,7 @@ const Footer = () => {
     zoom: 13,
   };
 
-  const mapViewCallback = useMemo(() => {
+  /*const mapViewCallback = useMemo(() => {
     return (
       <GoogleMapReact
         // @ts-ignore
@@ -79,7 +79,7 @@ const Footer = () => {
         <PinOnTheMap lat={defaultProps.center.lat} lng={defaultProps.center.lng} text="TrenerRafal.pl" />
       </GoogleMapReact>
     );
-  }, [defaultProps.center, defaultProps.zoom]);
+  }, [defaultProps.center, defaultProps.zoom]);*/
 
   return (
     <>
@@ -146,6 +146,7 @@ const Footer = () => {
                 allowFullScreen={true}
                 aria-hidden="false"
                 tabIndex={0}
+                title="Trener personalny mokotów - Rafał Kiszło"
               />
 
               {/*mapViewCallback*/} 
@@ -159,7 +160,7 @@ const Footer = () => {
                 <Typography component="span">Rafał Kiszło</Typography>
                 <Typography component="span">ul. Józefa Piusa Dziekońskiego 1</Typography>
                 <Typography component="span">00-728 Warszawa, Mokotów</Typography>
-                <Typography component="span"><a href="tel:+48608472294" style={{ textDecoration: 'none', color: '#0086b3', fontWeight: '600' }}>tel. +48 608 472 294</a></Typography>
+                <Typography component="span"><a href="tel:+48608472294" style={{ textDecoration: 'none', color: '#00394d', fontWeight: '600' }}>tel. +48 608 472 294</a></Typography>
               </Typography>
             </Grid>
           </Grid>
@@ -205,7 +206,7 @@ const Footer = () => {
         <Box sx={{ my: 7, textAlign: 'center' }}>
           <LogoJsonLd logo={`${PAGE_URL}/rafal-kiszlo-trener-personalny.png`} url={PAGE_URL} />
           <Typography variant="body2" color="initial">
-          2023 Prawa autorskie © Trener personalny Mokotów -  Rafał Kiszło
+          2023 Prawa autorskie © Trener personalny Mokotów - Rafał Kiszło
           </Typography>
         </Box>
       </Box>

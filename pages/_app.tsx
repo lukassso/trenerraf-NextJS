@@ -66,22 +66,9 @@ function MyApp({ Component, emotionCache = clientSideEmotionCache, pageProps }: 
 
   return (
     <>
-      <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-      />
 
       {/* eslint-disable-next-line @next/next/inline-script-id */}
-      <Script strategy="lazyOnload">
-        {`
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-                    page_path: window.location.pathname,
-                    });
-                `}
-      </Script>
+
 
       <CacheProvider value={emotionCache}>
         <ThemeProvider theme={theme}>
