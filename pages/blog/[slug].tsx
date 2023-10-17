@@ -34,7 +34,7 @@ export default function Post({ post, morePosts }: PostProps) {
   return (
     <Layout
       description={post.seoSettings.description}
-      title={`Poradyyyy | ${post.seoSettings.title}`}
+      title={`Blog | ${post.seoSettings.title}`}
       ogUrl={`${PAGE_URL}/blog/${post.slug}`}
       ogImageUrl={post.ogImage.url}
       ogTitle={`Porady | ${post.seoSettings.title}`}
@@ -43,7 +43,7 @@ export default function Post({ post, morePosts }: PostProps) {
       <ArticleJsonLd
         type="Article"
         url={`${PAGE_URL}/blog/${post.slug}`}
-        title={`Poradyyyyy | ${post.seoSettings.title}`}
+        title={`Blog | ${post.seoSettings.title}`}
         images={[post.ogImage.url]}
         datePublished={post.date}
         // dateModified="2015-02-05T09:00:00+08:00"
